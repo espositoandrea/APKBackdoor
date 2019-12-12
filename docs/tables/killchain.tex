@@ -1,0 +1,18 @@
+\begin{table}
+    \centering
+    \caption{Killchain}
+    \label{tab:killchain}
+
+    \begin{longtable}{@{}m{.3\linewidth}c>{\raggedleft\arraybackslash}m{.3\linewidth}@{}}
+        \toprule
+        Red team                                                                                                         & Step               & Blue team                                                                 \\\midrule
+        Utilizzo di \texttt{nmap} per individuare l'OS e le porte target. Uso di Social Engineering per definire le mail & Reconnaisance      &                                                                           \\
+        Utilizzo di un file PDF infetto                                                                                  & Weaponization      & Utilizzo di un antivirus                                                  \\
+        Invio di una mail con allegati malevoli                                                                          & Delivery           & Verifica della correttezza e della certificazione del mittente            \\
+        Creazione di un servizio e attivazione del microfono                                                             & Exploit            & Non avviare il file come amministratore                                   \\
+        Creazione di un servizio                                                                                         & Installation       & Verifica dei servizi attivi                                               \\
+        Scoperta delle directory e attivazione del microfono                                                             & Command \& Control & Non avere cartelle o file sensibili non protetti                          \\
+        Invio dei file in rete                                                                                           & Action             & Eliminare la connettività di rete, uso di un firewall a livello di router \\
+        \bottomrule
+    \end{longtable}
+\end{table}
