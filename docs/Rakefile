@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require "asciidoctor"
+
+task :asciidoc do
+  Asciidoctor.convert_file "content.adoc", backend: "docbook5", safe: :unsafe
+end
+
+task :default => :asciidoc do
+  command = 'pandoc -f docbook .\content.xml -t latex -o content.tex --top-level-division=chapter --filter pandoc-citeproc --biblatex'
+  puts command
+  `#{command}`
+
+  (1..3).each do |i|
+    if i == 2
+      command = "biber CyberSecurity"
+      puts command
+      `#{command}`
+    end
+    command = "pdflatex --interaction=nonstopmode CyberSecurity.tex"
+    puts command
+    `#{command}`
+  end
+end
