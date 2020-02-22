@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@drawable/overlay_background_purple" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/modal_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_gravity="end|center|top" android:id="@id/dismiss_button" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:contentDescription="@string/content_description_close_notification_button" paste:iconType="icon_x_24" xmlns:paste="http://schemas.android.com/apk/res-auto" />
+    <com.spotify.paste.widgets.ViewPagerIndicator android:layout_gravity="bottom|center" android:id="@id/modal_viewpager_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:layout_marginBottom="48.0dip" app:indicatorActiveColor="@color/glue_white" app:indicatorInactiveColor="@color/glue_gray_hover" />
+</FrameLayout>

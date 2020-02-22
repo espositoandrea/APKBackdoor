@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_16dp" android:layout_marginTop="@dimen/std_8dp" android:layout_marginRight="@dimen/std_16dp" android:layout_marginBottom="@dimen/std_8dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.common.view.StartPageBackgroundView android:id="@id/background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignTop="@id/content" android:layout_alignBottom="@id/content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:padding="@dimen/std_24dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Header2Bold" android:textSize="22.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/std_16dp" android:maxLines="2" />
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Body2" android:textColor="?pasteColorTextSecondary" android:ellipsize="end" android:gravity="center" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+        <Button android:layout_gravity="center" android:id="@id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:filterTouchesWhenObscured="true" style="?pasteButtonStyleSmall" />
+    </LinearLayout>
+</RelativeLayout>

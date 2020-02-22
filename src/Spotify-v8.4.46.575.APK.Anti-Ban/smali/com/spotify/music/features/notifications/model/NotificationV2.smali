@@ -1,0 +1,89 @@
+.class public abstract Lcom/spotify/music/features/notifications/model/NotificationV2;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/spotify/mobile/android/cosmos/JacksonModel;
+
+
+# annotations
+.annotation runtime Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties;
+    ignoreUnknown = true
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static create(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Lcom/spotify/music/features/notifications/model/NotificationV2;
+    .locals 6
+    .param p0    # Ljava/lang/String;
+        .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
+            value = "name"
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
+            value = "description"
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
+            value = "key"
+        .end annotation
+    .end param
+    .param p3    # Z
+        .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
+            value = "email"
+        .end annotation
+    .end param
+    .param p4    # Z
+        .annotation runtime Lcom/fasterxml/jackson/annotation/JsonProperty;
+            value = "push"
+        .end annotation
+    .end param
+    .annotation runtime Lcom/fasterxml/jackson/annotation/JsonCreator;
+    .end annotation
+
+    .prologue
+    .line 20
+    new-instance v0, Lcom/spotify/music/features/notifications/model/AutoValue_NotificationV2;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/spotify/music/features/notifications/model/AutoValue_NotificationV2;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public abstract getDescription()Ljava/lang/String;
+.end method
+
+.method public abstract getKey()Ljava/lang/String;
+.end method
+
+.method public abstract getName()Ljava/lang/String;
+.end method
+
+.method public abstract isEmailEnabled()Z
+.end method
+
+.method public abstract isPushEnabled()Z
+.end method

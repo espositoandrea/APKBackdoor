@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/bg_picker" android:paddingTop="@dimen/actionbar_height" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="25.0dip" android:paddingBottom="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/steps_icon" android:layout_width="212.0dip" android:layout_height="92.0dip" android:scaleType="fitXY" />
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/steps_list" android:paddingLeft="28.0dip" android:paddingRight="28.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_24dp" android:layout_marginBottom="@dimen/std_24dp" />
+        <Button android:id="@id/steps_got_it" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/connect_education_got_it" android:filterTouchesWhenObscured="false" style="?glueButtonPrimaryGreen" />
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:textColor="@color/glue_white" android:id="@id/steps_additional" android:paddingTop="@dimen/device_picker_education_link_padding" android:paddingBottom="@dimen/device_picker_education_link_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

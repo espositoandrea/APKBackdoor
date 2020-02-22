@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="13.0dip" android:textColor="@color/cat_white_70" android:gravity="center" android:id="@id/connect_playing_from_bar" android:background="@drawable/bg_connect_playing_from_bar_cat" android:layout_width="fill_parent" android:layout_height="@dimen/connect_playing_from_bar_height" style="@style/MarqueeTextRepeatForever"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

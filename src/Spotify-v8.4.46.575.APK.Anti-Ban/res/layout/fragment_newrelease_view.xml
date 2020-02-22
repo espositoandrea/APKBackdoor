@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@color/glue_black_30" android:scaleType="centerCrop" />
+    <RelativeLayout android:orientation="vertical" android:padding="32.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <me.grantland.widget.AutofitTextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="40.0dip" android:text="@string/new_release_dialog_description" android:maxLines="2" android:maxLength="73" android:layout_alignParentTop="true" style="@style/TextAppearance.Glue.Body1Bold" />
+        <LinearLayout android:orientation="vertical" android:id="@id/newrelease_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:layout_alignParentBottom="true">
+            <me.grantland.widget.AutofitTextView android:ellipsize="end" android:gravity="bottom|center" android:id="@id/album_title" android:layout_width="fill_parent" android:layout_height="0.0dip" android:maxLines="2" android:maxLength="73" android:layout_weight="1.0" style="@style/TextAppearance.Glue.Body1Bold" />
+            <me.grantland.widget.AutofitTextView android:textColor="@color/white" android:ellipsize="end" android:gravity="bottom|center" android:id="@id/artist_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="2" android:maxLength="255" style="@style/TextAppearance.Glue.Body2" />
+            <me.grantland.widget.AutofitTextView android:textSize="14.0sp" android:ellipsize="none" android:gravity="center" android:layout_gravity="center" android:id="@id/go_to_album_button" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginTop="16.0dip" android:text="@string/new_release_dialog_action" android:singleLine="true" android:maxLength="28" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="?glueButtonPrimaryWhite" />
+        </LinearLayout>
+        <com.spotify.mobile.android.ui.view.AspectRatioFrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/newrelease_bottom" android:layout_below="@id/header">
+            <ImageView android:layout_gravity="center" android:id="@id/album_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        </com.spotify.mobile.android.ui.view.AspectRatioFrameLayout>
+    </RelativeLayout>
+</FrameLayout>

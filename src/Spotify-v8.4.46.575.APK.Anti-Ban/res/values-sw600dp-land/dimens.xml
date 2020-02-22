@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="auto_trial_end_card_text_size">20.0sp</dimen>
+    <dimen name="carousel_margin_bottom">48.0dip</dimen>
+    <dimen name="carousel_margin_top">48.0dip</dimen>
+    <dimen name="concert_card_calendar_day_text_size">26.0sp</dimen>
+    <dimen name="concert_card_calendar_month_text_size">13.0sp</dimen>
+    <dimen name="new_player_controls_width_landscape">416.0dip</dimen>
+    <dimen name="new_player_controls_width_landscape_negative">-416.0dip</dimen>
+</resources>

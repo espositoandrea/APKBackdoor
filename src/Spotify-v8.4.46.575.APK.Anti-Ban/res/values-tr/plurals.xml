@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d TKR Ç.</item>
+        <item quantity="one">%1$,d TKR Ç.</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d TAKİPÇİ</item>
+        <item quantity="one">%1$,d TAKİPÇİ</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d TAKİPÇİ</item>
+        <item quantity="one">%1$,d TAKİPÇİ</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d şarkı</item>
+        <item quantity="one">%1$,d/%2$,d şarkı</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d şarkı</item>
+        <item quantity="one">%1$,d şarkı</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">Takip ediliyor • %1$,d şarkısı</item>
+        <item quantity="one">Takip ediliyor • %1$,d şarkısı</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">%1$,d Günlük Çalma</item>
+        <item quantity="one">%1$,d Günlük Çalma</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d Yeni Kayıt</item>
+        <item quantity="one">%1$,d Yeni Kayıt</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">En sevdiğin müziklerden %1$,d derleme. Sen dinledikçe yenilenir.</item>
+        <item quantity="one">En sevdiğin müziklerden %1$,d derleme. Sen dinledikçe yenilenir.</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">%1$d gün önce güncellendi</item>
+        <item quantity="one">%1$d gün önce güncellendi</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">%1$,d kişinin tümünü takip etmek istediğinden emin misin?</item>
+        <item quantity="one">%1$,d kişiyi takip etmek istediğinden emin misin?</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d TAKİPÇİ</item>
+        <item quantity="one">%1$,d TAKİPÇİ</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">%1$s BEĞENİ</item>
+        <item quantity="one">%1$s BEĞENİ</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">%1$s tarafından  •  %2$s BEĞENME</item>
+        <item quantity="one">%1$s tarafından  •  %2$s BEĞENME</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d TAKİPÇİ</item>
+        <item quantity="one">%1$,d TAKİPÇİ</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">%1$,d BEĞENİ</item>
+        <item quantity="one">%1$,d BEĞENİ</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">Kitaplığındaki Şarkılara %1$,d şarkı eklendi</item>
+        <item quantity="one">Kitaplığındaki Şarkılara %1$,d şarkı eklendi</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d şarkı</item>
+        <item quantity="one">%1$,d şarkı</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d şarkı</item>
+        <item quantity="one">%1$,d şarkı</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d / %2$,d (%%%3$,d tamamlandı)</item>
+        <item quantity="one">%1$,d / %2$,d (%%%3$,d tamamlandı)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">%1$,d beğenme</item>
+        <item quantity="one">%1$,d beğenme</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d klasör</item>
+        <item quantity="one">%1$,d klasör</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d çalma listesi</item>
+        <item quantity="one">%1$,d çalma listesi</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d şarkı</item>
+        <item quantity="one">%1$,d şarkı</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d takipçi</item>
+        <item quantity="one">%1$,d takipçi</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d takipçi</item>
+        <item quantity="one">%1$,d takipçi</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d takipçi</item>
+        <item quantity="one">%1$,d takipçi</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">Dinlediklerini paylaşmak istemiyorsan Gizli Oturum seç. Her Oturum %1$,d saat kullanılmadığında sona erer.</item>
+        <item quantity="one">Dinlediklerini paylaşmak istemiyorsan Gizli Oturum seç. Her Oturum %1$,d saat kullanılmadığında sona erer.</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">%1$,d şarkı eklendi</item>
+        <item quantity="one">%1$,d şarkı eklendi</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">"Güncellenen Şartlar ve Koşulları kabul etmeden Spotify'ı &lt;b>%1$,d gün&lt;/b> daha kullanmaya devam edebilirsin. Bu sürenin sonunda, Spotify'ı kullanmaya devam etmek için yeni koşulları kabul etmen istenecektir."</item>
+        <item quantity="one">"Güncellenen Şartlar ve Koşulları kabul etmeden Spotify'ı &lt;b>%1$,d gün&lt;/b> daha kullanmaya devam edebilirsin. Bu sürenin sonunda, Spotify'ı kullanmaya devam etmek için yeni koşulları kabul etmen istenecektir."</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">"Güncellenen Şartlar ve Koşulları kabul etmeden Spotify'ı &lt;b>%1$,d gün&lt;/b> daha kullanmaya devam edebilirsin. Yeni şartları kabul etmezsen bu sürenin sonunda Spotify'ı kullanamayacaksın."</item>
+        <item quantity="one">"Güncellenen Şartlar ve Koşulları kabul etmeden Spotify'ı &lt;b>%1$,d gün&lt;/b> daha kullanmaya devam edebilirsin. Yeni şartları kabul etmezsen bu sürenin sonunda Spotify'ı kullanamayacaksın."</item>
+    </plurals>
+</resources>

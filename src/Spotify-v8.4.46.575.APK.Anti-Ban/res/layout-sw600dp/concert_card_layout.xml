@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/concert_card_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/offline_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="64.0dip" android:layout_marginTop="130.0dip" android:layout_marginRight="64.0dip" android:layout_marginBottom="100.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/offline_icon" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_marginTop="@dimen/concert_now_playing_view_offline_margin" />
+        <me.grantland.widget.AutofitTextView android:textAppearance="?pasteTextAppearanceArticle" android:textSize="13.0sp" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/offline_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/concert" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="44.0dip" android:layout_marginTop="36.0dip" android:layout_marginRight="44.0dip" android:layout_marginBottom="36.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="5.0">
+            <TextView android:textAppearance="?pasteTextAppearanceArticle" android:textSize="12.0sp" android:textColor="@color/white" android:ellipsize="end" android:layout_gravity="center_horizontal" android:paddingBottom="@dimen/concert_now_playing_view_on_tour_text_bottom_margin_tablets" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/events_hub_concert_card_on_tour" android:maxLines="1" />
+            <ImageView android:layout_gravity="center" android:id="@id/concert_cal" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_marginBottom="@dimen/concert_now_playing_view_calendar_bottom_margin_tablets" />
+            <me.grantland.widget.AutofitTextView android:textAppearance="@style/TextAppearance.Glue.Header1" android:textSize="22.0sp" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/Title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/concert_now_playing_view_title_bottom_margin_tablets" android:maxLines="2" />
+            <TextView android:textAppearance="?pasteTextAppearanceArticle" android:textSize="@dimen/concert_entity_subtitle_text_npv" android:textColor="@color/glue_row_subtitle_color" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/venue_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <Button android:layout_gravity="center" android:id="@id/see_more_btn" android:layout_width="wrap_content" android:layout_height="@dimen/concert_now_playing_button_height_tablets" android:text="@string/events_hub_concert_card_learn_more_button" android:filterTouchesWhenObscured="true" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

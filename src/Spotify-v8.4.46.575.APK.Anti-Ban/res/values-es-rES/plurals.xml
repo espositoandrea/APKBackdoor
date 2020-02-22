@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d REPRODUCCIONES</item>
+        <item quantity="one">%1$,d REPRODUCCIÓN</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d SEGUIDORES</item>
+        <item quantity="one">%1$,d SEGUIDOR</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d SEGUIDORES</item>
+        <item quantity="one">%1$,d SEGUIDOR</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d canciones</item>
+        <item quantity="one">%1$,d/%2$,d canción</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d canciones</item>
+        <item quantity="one">%1$,d canción</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">Siguiendo • %1$,d canciones</item>
+        <item quantity="one">Siguiendo • %1$,d canción</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">%1$,d reproducciones diarias</item>
+        <item quantity="one">%1$,d reproducción diaria</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d entradas nuevas</item>
+        <item quantity="one">%1$,d entrada nueva</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">%1$,d mixes de tu música favorita, ¡siempre fresca!</item>
+        <item quantity="one">%1$,d mix de tu música favorita, ¡siempre fresca!</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">Actualizado hace %1$d días</item>
+        <item quantity="one">Actualizado hace %1$d día</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">¿Seguro que quieres seguir a los %1$,d?</item>
+        <item quantity="one">¿Seguro que quieres seguir a los %1$,d?</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d SEGUIDORES</item>
+        <item quantity="one">%1$,d SEGUIDOR</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">LES GUSTA A %1$s</item>
+        <item quantity="one">LE GUSTA A %1$s</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">de %1$s  •  LES GUSTA A %2$s</item>
+        <item quantity="one">de %1$s  •  LE GUSTA A %2$s</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d SEGUIDORES</item>
+        <item quantity="one">%1$,d SEGUIDOR</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">LES GUSTA A %1$,d</item>
+        <item quantity="one">LE GUSTA A %1$,d</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">%1$,d canciones añadidas a Canciones en Tu biblioteca</item>
+        <item quantity="one">%1$,d canción añadida a Canciones en Tu biblioteca</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d canciones</item>
+        <item quantity="one">%1$,d canción</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d canciones</item>
+        <item quantity="one">%1$,d canción</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d de %2$,d (%3$,d %% completado)</item>
+        <item quantity="one">%1$,d de %2$,d (%3$,d %% completado)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">%1$,d \"me gusta\"</item>
+        <item quantity="one">%1$,d \"me gusta\"</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d carpetas</item>
+        <item quantity="one">%1$,d carpeta</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d playlists</item>
+        <item quantity="one">%1$,d playlist</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d canciones</item>
+        <item quantity="one">%1$,d canción</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d seguidores</item>
+        <item quantity="one">%1$,d seguidor</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d seguidores</item>
+        <item quantity="one">%1$,d seguidor</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d seguidores</item>
+        <item quantity="one">%1$,d seguidor</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">Elige Sesión privada si no quieres compartir lo que estás escuchando. Cada sesión dura hasta que pases %1$,d horas sin actividad.</item>
+        <item quantity="one">Elige Sesión privada si no quieres compartir lo que estás escuchando. Cada sesión dura hasta que pases %1$,d hora sin actividad.</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">%1$,d canciones añadidas</item>
+        <item quantity="one">%1$,d canción añadida</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">Puedes continuar usando Spotify durante &lt;b>%1$,d días&lt;/b> sin aceptar los Términos y Condiciones y la Política de Privacidad actualizados. Al terminarse este tiempo, tendrás que aceptar las nuevas condiciones para poder seguir usando Spotify.</item>
+        <item quantity="one">Puedes continuar usando Spotify durante &lt;b>%1$,d día&lt;/b> sin aceptar los Términos y Condiciones y la Política de Privacidad actualizados. Al terminarse este tiempo, tendrás que aceptar las nuevas condiciones para poder seguir usando Spotify.</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">Puedes continuar usando Spotify sin aceptar los Términos y Condiciones actualizados durante &lt;b>%1$,d días&lt;/b>. Si pasado este tiempo no has aceptado las nuevas condiciones, dejarás de poder usar Spotify.</item>
+        <item quantity="one">Puedes continuar usando Spotify sin aceptar los Términos y Condiciones actualizados durante &lt;b>%1$,d día&lt;/b>. Si pasado este tiempo no has aceptado las nuevas condiciones, dejarás de poder usar Spotify.</item>
+    </plurals>
+</resources>

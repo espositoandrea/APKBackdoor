@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/btn_prev" android:background="@null" android:layout_width="@dimen/player_regular_button_size" android:layout_height="@dimen/player_regular_button_size" android:layout_marginRight="@dimen/player_v2_margin_prev_next_buttons" android:contentDescription="@string/player_content_description_prev" />
+    <ImageButton android:id="@id/btn_play" android:background="@null" android:layout_width="72.0dip" android:layout_height="72.0dip" android:scaleType="fitCenter" android:contentDescription="@string/player_content_description_play" />
+    <ImageButton android:id="@id/btn_next" android:background="@null" android:layout_width="@dimen/player_regular_button_size" android:layout_height="@dimen/player_regular_button_size" android:layout_marginLeft="@dimen/player_v2_margin_prev_next_buttons" android:contentDescription="@string/player_content_description_next" />
+</merge>

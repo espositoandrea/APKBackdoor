@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/Theme.Glue" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Body2Bold" android:textSize="24.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" />
+    <com.spotify.paste.spotifyicon.SpotifyIconView android:gravity="center" android:id="@id/check" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:iconSize="24.0dip" app:iconType="icon_check_24" />
+</LinearLayout>

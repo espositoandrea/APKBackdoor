@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d ΕΠΑΝΑΛΗΨΕΙΣ</item>
+        <item quantity="one">%1$,d ΕΠΑΝΑΛΗΨΗ</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d ΟΠΑΔΟΙ</item>
+        <item quantity="one">%1$,d ΟΠΑΔΟΣ</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d ΟΠΑΔΟΙ</item>
+        <item quantity="one">%1$,d ΟΠΑΔΟΣ</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d τραγούδια</item>
+        <item quantity="one">%1$,d/%2$,d τραγούδι</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d τραγούδια</item>
+        <item quantity="one">%1$,d τραγούδι</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">Ακολουθείς• %1$,d τραγούδια</item>
+        <item quantity="one">Ακολουθείς• %1$,d τραγούδι</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">%1$,d ημερήσιες αναπαραγωγές</item>
+        <item quantity="one">%1$,d ημερήσια αναπαραγωγή</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d νέες αφίξεις</item>
+        <item quantity="one">%1$,d νέα άφιξη</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">%1$,d mix της αγαπημένης σου μουσικής. Φρέσκοι ήχοι, κάθε στιγμή.</item>
+        <item quantity="one">%1$,d mix της αγαπημένης σου μουσικής. Φρέσκοι ήχοι, κάθε στιγμή.</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">Ενημερώθηκε πριν από %1$d ημέρες</item>
+        <item quantity="one">Ενημερώθηκε πριν από %1$d ημέρα</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">Θέλεις σίγουρα να ακολουθήσεις και τα %1$,d άτομα;</item>
+        <item quantity="one">Θέλεις σίγουρα να ακολουθήσεις αυτό το %1$,d άτομο;</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d ΟΠΑΔΟΙ</item>
+        <item quantity="one">%1$,d ΟΠΑΔΟΣ</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">%1$s ΜΟΥ ΑΡΕΣΕΙ</item>
+        <item quantity="one">%1$s ΜΟΥ ΑΡΕΣΕΙ</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">από %1$s  •  %2$s ΜΟΥ ΑΡΕΣΕΙ</item>
+        <item quantity="one">από %1$s  •  %2$s ΜΟΥ ΑΡΕΣΕΙ</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d ΟΠΑΔΟΙ</item>
+        <item quantity="one">%1$,d ΟΠΑΔΟΣ</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">%1$,d ΜΟΥ ΑΡΕΣΕΙ</item>
+        <item quantity="one">%1$,d ΜΟΥ ΑΡΕΣΕΙ</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">%1$,d τραγούδια προστέθηκαν στα Τραγούδια στη Βιβλιοθήκη</item>
+        <item quantity="one">%1$,d τραγούδι προστέθηκε στα Τραγούδια στη Βιβλιοθήκη</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d τραγούδια</item>
+        <item quantity="one">%1$,d τραγούδι</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d τραγούδια</item>
+        <item quantity="one">%1$,d τραγούδι</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d από %2$,d (%3$,d%% ολοκληρώθηκαν)</item>
+        <item quantity="one">%1$,d από %2$,d (%3$,d%% ολοκληρώθηκε)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">Αρέσει σε %1$,d</item>
+        <item quantity="one">Αρέσει σε %1$,d</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d φάκελοι</item>
+        <item quantity="one">%1$,d φάκελος</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d λίστες</item>
+        <item quantity="one">%1$,d λίστα</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d τραγούδια</item>
+        <item quantity="one">%1$,d τραγούδι</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d οπαδοί</item>
+        <item quantity="one">%1$,d οπαδός</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d οπαδοί</item>
+        <item quantity="one">%1$,d οπαδός</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d οπαδοί</item>
+        <item quantity="one">%1$,d οπαδός</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">Επίλεξε την «Ιδιωτική σύνδεση» εάν δεν θέλεις να μοιραστείς τα τραγούδια που ακούς. Κάθε περίοδος σύνδεσης διακόπτεται μετά από %1$,d ώρες αδράνειας.</item>
+        <item quantity="one">Επίλεξε την «Ιδιωτική σύνδεση» εάν δεν θέλεις να μοιραστείς τα τραγούδια που ακούς. Κάθε περίοδος σύνδεσης διακόπτεται μετά από %1$,d ώρα αδράνειας.</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">%1$,d τραγούδια προστέθηκαν</item>
+        <item quantity="one">%1$,d τραγούδι προστέθηκε</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">Μπορείς να συνεχίσεις να χρησιμοποιείς το Spotify για &lt;b>%1$,d ημέρες&lt;/b> χωρίς να έχεις αποδεχτεί τους ενημερωμένους Όρους και Προϋποθέσεις και την Πολιτική Απορρήτου. Μετά από αυτή την περίοδο, θα πρέπει να αποδεχτείς τους νέους όρους, προκειμένου να συνεχίσεις να χρησιμοποιείς το Spotify.</item>
+        <item quantity="one">Μπορείς να συνεχίσεις να χρησιμοποιείς το Spotify για &lt;b>%1$,d ημέρα&lt;/b> χωρίς να έχεις αποδεχτεί τους ενημερωμένους Όρους και Προϋποθέσεις και την Πολιτική Απορρήτου. Μετά από αυτή την περίοδο, θα πρέπει να αποδεχτείς τους νέους όρους, προκειμένου να συνεχίσεις να χρησιμοποιείς το Spotify.</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">Μπορείς να συνεχίσεις να χρησιμοποιείς το Spotify για &lt;b>%1$,d ημέρες&lt;/b> χωρίς να αποδεχθείς τους ενημερωμένους Όρους και Προϋποθέσεις. Εάν δεν αποδεχθείς τους νέους όρους μέσα σε αυτό το διάστημα, δεν θα μπορείς πλέον να χρησιμοποιείς το Spotify.</item>
+        <item quantity="one">Μπορείς να συνεχίσεις να χρησιμοποιείς το Spotify για &lt;b>%1$,d ημέρα&lt;/b> χωρίς να αποδεχθείς τους ενημερωμένους Όρους και Προϋποθέσεις. Εάν δεν αποδεχθείς τους νέους όρους μέσα σε αυτό το διάστημα, δεν θα μπορείς πλέον να χρησιμοποιείς το Spotify.</item>
+    </plurals>
+</resources>

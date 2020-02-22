@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/lyrics_card" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/cat_white" android:gravity="center" android:id="@id/lyrics_hint" android:paddingTop="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/lyrics_hint" android:alpha="0.0" android:textAllCaps="true" />
+    <ImageView android:gravity="center" android:id="@id/hint_arrow" android:paddingTop="35.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerInside" android:alpha="0.0" />
+</FrameLayout>

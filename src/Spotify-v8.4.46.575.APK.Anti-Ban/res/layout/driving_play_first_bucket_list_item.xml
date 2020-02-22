@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/glue_black_90" android:layout_width="fill_parent" android:layout_height="112.0dip" android:minHeight="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bucket_item_cover" android:duplicateParentState="true" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="8.0dip" android:scaleType="centerCrop" />
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:textSize="28.0sp" android:textColor="?glueRowTitleColor" android:ellipsize="end" android:id="@id/bucket_item_title" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+</LinearLayout>

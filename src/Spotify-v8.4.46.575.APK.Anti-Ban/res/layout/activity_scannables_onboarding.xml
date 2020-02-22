@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/glue_gray_background_90" android:padding="@dimen/std_16dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/scannables_onboarding_gradient" android:paddingTop="@dimen/std_16dp" android:paddingBottom="@dimen/std_16dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/scannable_onboarding_icon" android:background="@drawable/scannable_onboarding_hero" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:contentDescription="@null" />
+        <TextView android:textColor="@color/glue_white" android:gravity="center" android:layout_width="@dimen/scannables_onboarding_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_16dp" android:text="@string/scannables_onboarding_title" android:maxLines="2" style="@style/TextAppearance.Glue.Header2" />
+        <TextView android:textColor="@color/glue_white" android:gravity="center_horizontal" android:layout_width="@dimen/scannables_onboarding_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_16dp" android:text="@string/scannables_onboarding_content" style="@style/TextAppearance.Glue.Body2" />
+        <Button android:id="@id/btn_scan_a_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_16dp" android:text="@string/scannables_onboarding_scan_a_code" android:filterTouchesWhenObscured="false" style="?glueButtonPrimaryWhite" />
+    </LinearLayout>
+    <Button android:textSize="@dimen/std_12sp" android:id="@id/btn_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scannables_onboarding_cancel" android:filterTouchesWhenObscured="false" style="@style/Widget.Glue.Button.Tertiary" />
+</LinearLayout>

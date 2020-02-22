@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/list_and_footer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_controls" />
+            <include android:id="@id/bottom_controls" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_alignParentBottom="true" layout="@layout/local_files_footer" />
+        </RelativeLayout>
+    </FrameLayout>
+</FrameLayout>

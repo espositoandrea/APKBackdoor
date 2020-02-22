@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:id="@id/search_toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/search_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/search_field" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_marginRight="@dimen/actionbar_search_img_width" android:alpha="0.0">
+            <ImageButton android:id="@id/cancel_button" android:background="@null" android:layout_width="@dimen/actionbar_search_img_width" android:layout_height="@dimen/actionbar_search_img_width" android:contentDescription="@string/two_button_dialog_button_cancel" />
+            <com.spotify.mobile.android.spotlets.search.view.BackKeyEditText android:id="@id/query" android:background="@null" android:layout_width="0.0dip" android:layout_height="?android:actionBarSize" android:maxLines="1" android:freezesText="true" android:layout_weight="1.0" android:inputType="textNoSuggestions" android:privateImeOptions="nm" android:imeOptions="actionSearch|flagNoExtractUi" android:textCursorDrawable="@drawable/cursor_green" />
+        </LinearLayout>
+        <Button android:textAppearance="@style/TextAppearance.Glue.Body1Bold" android:layout_gravity="center" android:id="@id/search_placeholder" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_default_title" android:drawablePadding="8.0dip" android:filterTouchesWhenObscured="false" />
+        <ImageButton android:layout_gravity="end|center" android:id="@id/search_right_button" android:background="@null" android:layout_width="@dimen/actionbar_search_img_width" android:layout_height="@dimen/actionbar_search_img_width" android:layout_marginRight="4.0dip" />
+    </FrameLayout>
+    <ImageButton android:layout_gravity="end|bottom|center" android:id="@id/scannables_camera" android:background="@null" android:visibility="gone" android:layout_width="@dimen/actionbar_search_img_width" android:layout_height="?android:actionBarSize" />
+</merge>

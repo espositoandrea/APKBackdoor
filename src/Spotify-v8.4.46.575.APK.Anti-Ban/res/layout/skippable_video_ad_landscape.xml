@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:id="@id/constraintLayout" android:background="#70121314" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.Guideline android:orientation="horizontal" android:id="@id/guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.1" app:layout_constraintStart_toStartOf="parent" />
+    <android.support.constraint.Guideline android:orientation="horizontal" android:id="@id/guideline2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintGuide_percent="0.6" />
+    <com.spotify.mobile.android.video.VideoSurfaceView android:id="@id/video_surface" android:layout_width="0.0dip" android:layout_height="0.0dip" app:fullscreen="false" app:layout_constraintBottom_toBottomOf="@id/guideline2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/guideline" app:layout_constraintVertical_bias="1.0" />
+</android.support.constraint.ConstraintLayout>

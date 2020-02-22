@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/cat_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/arsenal_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="center" android:id="@id/sp_logo" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:src="@drawable/sp_logo" android:layout_toLeftOf="@id/arsenal_arrow" />
+        <ImageView android:id="@id/arsenal_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arsenal_arrow" android:layout_alignTop="@id/sp_logo" android:layout_alignBottom="@id/sp_logo" android:layout_centerHorizontal="true" />
+        <ImageView android:gravity="center" android:id="@id/psn_icon" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/psn_icon" android:layout_toRightOf="@id/arsenal_arrow" />
+    </RelativeLayout>
+    <TextView android:textColor="@color/cat_white" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="4.0dip" android:text="@string/arsenal_dywla_title" android:maxLines="1" android:layout_below="@id/arsenal_header" android:layout_centerHorizontal="true" style="@style/StartPageTitleTextAppearance" />
+    <TextView android:gravity="center" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/arsenal_dywla_subtitle_permissions" android:layout_below="@id/title" android:layout_centerHorizontal="true" style="@style/StartPageDescriptionTextAppearance" />
+    <ProgressBar android:id="@id/throbber" android:visibility="visible" android:layout_centerInParent="true" style="@style/indeterminateProgressBar" />
+</RelativeLayout>

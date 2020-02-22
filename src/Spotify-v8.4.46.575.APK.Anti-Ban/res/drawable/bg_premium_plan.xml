@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient android:startColor="#ff149b6c" android:endColor="#ff62ad6d" android:angle="315.0" />
+        </shape>
+    </item>
+    <item android:gravity="bottom" android:drawable="@drawable/bg_offer_scrim" />
+</layer-list>

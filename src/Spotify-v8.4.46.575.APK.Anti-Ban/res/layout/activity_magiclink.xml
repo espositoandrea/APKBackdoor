@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/container" android:background="@drawable/login_background_gradient" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icn_spotify_login" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:paddingTop="@dimen/std_24dp" android:visibility="visible" style="@style/indeterminateProgressBar" />
+</LinearLayout>

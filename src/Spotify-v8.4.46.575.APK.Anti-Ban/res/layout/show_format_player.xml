@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.mobile.android.ui.view.OverlayHidingFrameLayout android:orientation="vertical" android:id="@id/overlay_hiding_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.music.nowplaying.common.view.pager.TrackCarouselView android:id="@id/track_carousel" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.spotify.music.nowplaying.common.view.progressbar.TrackProgressBar android:layout_gravity="bottom" android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/player_v2_progress_bar_height" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/show_format_player_overlay" />
+</com.spotify.mobile.android.ui.view.OverlayHidingFrameLayout>

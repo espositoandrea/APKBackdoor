@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="48.0dip" android:paddingRight="48.0dip" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_width="128.0dip" android:layout_height="128.0dip" android:layout_marginBottom="16.0dip" app:iconSize="128.0dip" app:iconType="icon_spotifylogo_32" />
+        <TextView android:textSize="24.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="48.0dip" android:text="@string/onboarding_taste_goodbye_body" android:maxLines="4" style="?pasteTextAppearance" />
+        <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.spotify.paste.widgets.SquareImageView android:layout_gravity="center_vertical" android:id="@id/indicator_0" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/taste_onboarding_indicator" />
+            <com.spotify.paste.widgets.SquareImageView android:layout_gravity="center_vertical" android:id="@id/indicator_1" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/taste_onboarding_indicator" />
+            <com.spotify.paste.widgets.SquareImageView android:layout_gravity="center_vertical" android:id="@id/indicator_2" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/taste_onboarding_indicator" />
+        </LinearLayout>
+        <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="16.0dip" />
+    </LinearLayout>
+</FrameLayout>

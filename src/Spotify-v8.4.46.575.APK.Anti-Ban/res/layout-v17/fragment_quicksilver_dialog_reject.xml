@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/section_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="6.0dip" android:text="@string/reject_message_hint" />
+        <View android:id="@id/horizontal_divider" android:background="@color/glue_green" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/section_header" />
+        <CheckBox android:id="@id/exceeded_characters" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/option_exceeded_character_limit" android:layout_below="@id/horizontal_divider" style="@style/Widget.Glue.CompoundButton.CheckBox" />
+        <CheckBox android:id="@id/wrong_translation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/option_wrong_translation" android:layout_below="@id/exceeded_characters" style="@style/Widget.Glue.CompoundButton.CheckBox" />
+        <CheckBox android:id="@id/other" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/option_other" android:layout_below="@id/wrong_translation" style="@style/Widget.Glue.CompoundButton.CheckBox" />
+        <EditText android:gravity="start|center|top" android:id="@id/rejection_description" android:background="#ff222326" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="88.0dip" android:hint="@string/other_reason" android:layout_below="@id/other" android:inputType="textMultiLine" />
+        <com.spotify.mobile.android.ui.view.FontFitButton android:ellipsize="none" android:gravity="center" android:id="@id/submit_rejected_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/send_feedback" android:layout_below="@id/rejection_description" android:filterTouchesWhenObscured="false" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" style="?pasteButtonStylePrimary" />
+    </RelativeLayout>
+</ScrollView>

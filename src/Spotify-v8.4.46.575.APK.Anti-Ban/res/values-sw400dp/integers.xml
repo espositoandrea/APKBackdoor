@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="lyrics_fullscreen_line_count">16</integer>
+</resources>

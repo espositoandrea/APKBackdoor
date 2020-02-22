@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.percent.PercentFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.spotify.paste.widgets.SquareImageView android:id="@id/track_image" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.spotify.music.features.tasteonboarding.swipetracks.view.DisappearingTrackFeedbackView android:layout_gravity="center" android:id="@id/like_badge" android:tag="like" android:background="@null" android:padding="4.0dip" android:scaleType="fitCenter" android:contentDescription="@string/player_content_description_play" app:layout_heightPercent="50.0%" app:layout_widthPercent="50.0%" />
+        <com.spotify.music.features.tasteonboarding.swipetracks.view.DisappearingTrackFeedbackView android:layout_gravity="center" android:id="@id/skip_badge" android:tag="skip" android:background="@null" android:padding="4.0dip" android:scaleType="fitCenter" android:contentDescription="@string/player_content_description_skip_next" app:layout_heightPercent="50.0%" app:layout_widthPercent="50.0%" />
+    </android.support.percent.PercentFrameLayout>
+</android.support.v7.widget.CardView>

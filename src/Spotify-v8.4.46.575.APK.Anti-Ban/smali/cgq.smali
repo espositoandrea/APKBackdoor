@@ -1,0 +1,43 @@
+.class final synthetic Lcgq;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lchb;
+
+
+# static fields
+.field static final a:Lchb;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcgq;
+
+    invoke-direct {v0}, Lcgq;-><init>()V
+
+    sput-object v0, Lcgq;->a:Lchb;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/util/Map;)V
+    .locals 0
+
+    check-cast p1, Ldpi;
+
+    invoke-static {p1, p2}, Lcgl;->a(Ldpi;Ljava/util/Map;)V
+
+    return-void
+.end method

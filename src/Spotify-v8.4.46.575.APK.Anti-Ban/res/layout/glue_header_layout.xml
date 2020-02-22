@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.android.glue.patterns.header.GlueHeaderLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/glue_behavior_scrolling" />
+    <com.spotify.paste.widgets.recyclerview.fastscroll.RecyclerViewFastScroller android:layout_gravity="right" android:id="@id/recycler_view_fast_scroll" android:layout_width="wrap_content" android:layout_height="fill_parent" app:layout_behavior="com.spotify.android.glue.patterns.header.behavior.GlueFastScrollerBehavior" />
+</com.spotify.android.glue.patterns.header.GlueHeaderLayout>

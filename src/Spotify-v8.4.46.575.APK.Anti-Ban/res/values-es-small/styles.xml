@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="StartPageButton.Primary.Start" parent="@style/StartPageButton.Primary">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="StartPageButton.Secondary.Start" parent="@style/StartPageButton.Secondary">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+</resources>

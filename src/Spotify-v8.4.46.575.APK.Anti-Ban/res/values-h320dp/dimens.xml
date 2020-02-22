@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="showcase_dismiss_margin_top">24.0dip</dimen>
+    <dimen name="showcase_padding">32.0dip</dimen>
+    <dimen name="showcase_padding_small">16.0dip</dimen>
+    <dimen name="showcase_small_button_padding">40.0sp</dimen>
+</resources>

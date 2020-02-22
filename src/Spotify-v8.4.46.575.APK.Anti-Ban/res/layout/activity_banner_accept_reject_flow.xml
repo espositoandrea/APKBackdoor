@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.mobile.android.ui.view.snackbar.SnackBar android:id="@id/snack_bar_top" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/accept_reject_buttons_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:textColor="@color/glue_white" android:gravity="center" android:id="@id/accept" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/message_accept" android:filterTouchesWhenObscured="false" style="?pasteButtonStylePrimary" />
+        <Button android:textColor="@color/glue_black" android:gravity="center" android:id="@id/reject" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/message_reject" android:filterTouchesWhenObscured="false" style="?glueButtonPrimaryWhite" />
+    </LinearLayout>
+</merge>

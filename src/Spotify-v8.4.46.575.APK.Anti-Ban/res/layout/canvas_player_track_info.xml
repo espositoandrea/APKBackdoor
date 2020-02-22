@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.music.nowplaying.common.view.collection.CollectionButton android:id="@id/collection_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.spotify.music.nowplaying.common.view.trackinfo.TrackInfoView android:id="@id/track_info_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.spotify.music.nowplaying.common.view.contextmenu.ContextMenuButton android:id="@id/context_menu_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/content_description_show_context_menu" />
+</LinearLayout>

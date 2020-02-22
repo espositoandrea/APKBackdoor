@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/canvas_artist_avatar" android:layout_width="@dimen/canvas_artist_image_size" android:layout_height="@dimen/canvas_artist_image_size" android:layout_marginLeft="@dimen/canvas_artist_margin_horizontal" android:layout_marginRight="@dimen/canvas_artist_margin_horizontal" android:scaleType="centerCrop" android:contentDescription="@string/artist_default_title" android:layout_marginStart="@dimen/canvas_artist_margin_horizontal" android:layout_marginEnd="@dimen/canvas_artist_margin_horizontal" />
+    <TextView android:layout_gravity="center" android:id="@id/canvas_uploaded_by_artist_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

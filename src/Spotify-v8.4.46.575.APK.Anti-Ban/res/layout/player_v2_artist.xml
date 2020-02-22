@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_background" android:layout_width="fill_parent" android:layout_height="270.0dip" />
+    <ImageView android:id="@id/img_gradient" android:layout_width="fill_parent" android:layout_height="270.0dip" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="270.0dip">
+        <me.grantland.widget.AutofitTextView android:textAppearance="?pasteTextAppearanceHeaderMedium" android:id="@id/txt_artist_name" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textAppearance="?pasteTextAppearanceBodySmall" android:ellipsize="end" android:id="@id/txt_artist_biography" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:maxLines="3" />
+        <TextView android:textAppearance="?pasteTextAppearanceButtonSmall" android:textColor="@color/glue_green" android:id="@id/btn_view_artist" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/player_artist_view_artist_button" />
+    </LinearLayout>
+</merge>

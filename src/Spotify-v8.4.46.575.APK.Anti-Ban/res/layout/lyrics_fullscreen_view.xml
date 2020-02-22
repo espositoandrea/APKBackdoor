@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/fullscreen_lyrics_listview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice" android:keepScreenOn="true" />
+    <TextView android:textAppearance="@style/TextAppearance.Player.Subtitle" android:gravity="center" android:id="@id/fullscreen_lyrics_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/generic_content_description_close" />
+    <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:textAppearance="@style/TextAppearance.Lyrics.Fullscreen.Title" android:id="@id/fullscreen_lyrics_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MarqueeText" />
+    <TextView android:textAppearance="@style/TextAppearance.Lyrics.Fullscreen.Subtitle" android:id="@id/fullscreen_lyrics_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+</merge>

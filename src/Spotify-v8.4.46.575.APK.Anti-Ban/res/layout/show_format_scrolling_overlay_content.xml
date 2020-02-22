@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/overlay_container" android:background="@drawable/player_overlay_gradient" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/player_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/player_v2_scrolling_controls_content_margin_bottom">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/show_format_player_overlay_header" />
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <include android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/show_format_player_track_info" />
+        <LinearLayout android:orientation="vertical" android:id="@id/controls_container" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="@dimen/player_v2_scrolling_controls_height" layout="@layout/show_format_scrolling_player_controls" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/connect_unit" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" layout="@layout/show_format_player_content_widgets" />
+</LinearLayout>

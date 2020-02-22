@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha android:interpolator="@anim/in_hard_interpolator" android:duration="@integer/view_transition_duration_fade_in" android:startOffset="@integer/view_transition_duration_fade_out" android:fromAlpha="0.0" android:toAlpha="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

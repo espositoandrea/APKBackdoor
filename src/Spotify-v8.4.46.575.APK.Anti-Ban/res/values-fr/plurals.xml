@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d ÉCOUTES</item>
+        <item quantity="one">%1$,d ÉCOUTE</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d ABONNÉS</item>
+        <item quantity="one">%1$,d ABONNÉ</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d ABONNÉS</item>
+        <item quantity="one">%1$,d ABONNÉ</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d titres</item>
+        <item quantity="one">%1$,d/%2$,d titre</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d titres</item>
+        <item quantity="one">%1$,d titre</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">Abonné à• %1$,d titres</item>
+        <item quantity="one">Abonné à • %1$,d titre</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">%1$,d écoutes quotidiennes</item>
+        <item quantity="one">%1$,d écoute quotidienne</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d nouvelles entrées</item>
+        <item quantity="one">%1$,d nouvelle entrée</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">%1$,d mixes avec vos titres favoris. Du neuf, rien que pour vous.</item>
+        <item quantity="one">%1$,d mix avec vos titres favoris. Du neuf, rien que pour vous.</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">Mise à jour : il y a %1$d jours</item>
+        <item quantity="one">Mise à jour : il y a %1$d jour</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">Voulez-vous vraiment vous abonner aux %1$,d membres sans exception ?</item>
+        <item quantity="one">Voulez-vous vraiment vous abonner à %1$,d membre ?</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d ABONNÉS</item>
+        <item quantity="one">%1$,d ABONNÉ</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">"%1$s mentions « J'aime »"</item>
+        <item quantity="one">"%1$s mention « J'aime »"</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">"de %1$s  •  %2$s J'AIME"</item>
+        <item quantity="one">"de %1$s  •  %2$s J'AIME"</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d ABONNÉS</item>
+        <item quantity="one">%1$,d ABONNÉ</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">"%1$,d mentions « J'aime »"</item>
+        <item quantity="one">"%1$,d mention « J'aime »"</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">%1$,d morceaux ajoutés aux titres de Bibliothèque</item>
+        <item quantity="one">%1$,d morceau ajouté aux titres de Bibliothèque</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d titres</item>
+        <item quantity="one">%1$,d titre</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d titres</item>
+        <item quantity="one">%1$,d titre</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d sur %2$,d (%3$,d %% terminés)</item>
+        <item quantity="one">%1$,d sur %2$,d (%3$,d %% terminé)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">"%1$,dmentions « J'aime »"</item>
+        <item quantity="one">"%1$,d mention « J'aime »"</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d dossiers</item>
+        <item quantity="one">%1$,d dossier</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d playlists</item>
+        <item quantity="one">%1$,d playlist</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d titres</item>
+        <item quantity="one">%1$,d titre</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d abonnés</item>
+        <item quantity="one">%1$,d abonné</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d abonnés</item>
+        <item quantity="one">%1$,d abonné</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d abonnés</item>
+        <item quantity="one">%1$,d abonné</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">"Optez pour une session d'écoute privée si vous ne souhaitez pas partager ce que vous écoutez. Chaque session expire après %1$,d heures d'inactivité."</item>
+        <item quantity="one">"Optez pour une session d'écoute privée si vous ne souhaitez pas partager ce que vous écoutez. Chaque session expire après %1$,d heure d'inactivité."</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">%1$,d titres ajoutés</item>
+        <item quantity="one">%1$,d titre ajouté</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">"Vous pouvez continuer à utiliser Spotify pendant &lt;b>%1$,d jours&lt;/b> sans accepter les Conditions d'utilisation et la Politique de confidentialité. Après cela, vous devrez accepter les nouvelles conditions pour continuer à utiliser Spotify."</item>
+        <item quantity="one">"Vous pouvez continuer à utiliser Spotify pendant &lt;b>%1$,d jour&lt;/b> sans accepter les Conditions d'utilisation et la Politique de confidentialité. Après cela, vous devrez accepter les nouvelles conditions pour continuer à utiliser Spotify."</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">"Vous pouvez continuer à utiliser Spotify pendant &lt;b>%1$,d jours&lt;/b> sans accepter la nouvelle version des Conditions d'utilisation. Si passé ce délai vous n'avez toujours pas accepté les nouvelles conditions, vous ne serez plus autorisé à utiliser Spotify."</item>
+        <item quantity="one">"Vous pouvez continuer à utiliser Spotify pendant &lt;b>%1$,d jour&lt;/b> sans accepter la nouvelle version des Conditions d'utilisation. Si passé ce délai vous n'avez toujours pas accepté les nouvelles conditions, vous ne serez plus autorisé à utiliser Spotify."</item>
+    </plurals>
+</resources>

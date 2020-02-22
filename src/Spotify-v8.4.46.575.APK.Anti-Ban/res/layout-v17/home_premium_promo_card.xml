@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:layout_width="136.0dip" android:layout_height="136.0dip" android:src="@drawable/cat_placeholder_album" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginStart="16.0dip">
+        <TextView android:textAppearance="@style/TextAppearance.Solar.BodyMedium.Bold" android:textColor="@color/glue_white" android:ellipsize="end" android:gravity="bottom" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="0.0dip" android:maxLines="4" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TextAppearance.Solar.BodySmall" android:textColor="@color/glue_gray_70" android:ellipsize="end" android:gravity="bottom" android:id="@id/subtitle" android:paddingTop="2.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="4" />
+        <TextView android:textAppearance="@style/TextAppearance.Solar.Metadata" android:textColor="@color/glue_gray_70" android:ellipsize="end" android:gravity="bottom" android:id="@id/accessory" android:paddingTop="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+</LinearLayout>

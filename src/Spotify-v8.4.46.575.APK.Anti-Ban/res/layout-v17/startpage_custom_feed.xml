@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/remove" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_gravity="center_horizontal" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" app:iconSize="32.0dip" app:iconType="icon_x_32" />
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Body2" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/remove_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:maxLines="3" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_16dp" android:layout_marginTop="@dimen/std_8dp" android:layout_marginRight="@dimen/std_16dp" android:layout_marginBottom="@dimen/std_8dp">
+        <com.android.common.view.StartPageBackgroundView android:id="@id/background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignTop="@id/content" android:layout_alignBottom="@id/content" app:lightGradient="true" />
+        <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/card" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:padding="@dimen/std_16dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="128.0dip">
+                    <com.spotify.paste.widgets.SquareImageView android:layout_gravity="center_vertical" android:id="@id/image" android:layout_width="wrap_content" android:layout_height="96.0dip" android:layout_marginRight="@dimen/std_16dp" android:scaleType="centerCrop" />
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:textSize="13.0sp" android:textColor="@color/cat_text_primary" android:ellipsize="end" android:id="@id/content_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/std_8dp" android:maxLines="3" />
+                        <TextView android:textAppearance="?pasteTextAppearanceHeadingSmall" android:textSize="22.0sp" android:ellipsize="end" android:id="@id/content_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="#33ffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/std_16dp" android:layout_marginRight="@dimen/std_16dp" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/std_8dp" android:layout_marginRight="@dimen/std_8dp">
+                    <com.spotify.paste.spotifyicon.SpotifyIconView android:id="@id/play_button" android:padding="@dimen/std_8dp" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/content_description_play_button" android:layout_alignParentStart="true" app:iconSize="24.0dip" app:iconType="icon_play_24" />
+                    <com.spotify.paste.spotifyicon.SpotifyIconView android:id="@id/heart_button" android:padding="@dimen/std_8dp" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_toLeftOf="@id/ban_button" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/ban_button" app:iconSize="24.0dip" app:iconType="icon_heart_32" />
+                    <com.spotify.paste.spotifyicon.SpotifyIconView android:id="@id/ban_button" android:padding="@dimen/std_8dp" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:iconSize="24.0dip" app:iconType="icon_ban_32" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/undo" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+                <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_gravity="center_horizontal" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" app:iconSize="24.0dip" app:iconType="icon_check_32" />
+                <TextView android:textAppearance="@style/TextAppearance.Glue.Body2" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/undo_title" android:paddingLeft="48.0dip" android:paddingRight="48.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:maxLines="3" />
+                <Button android:layout_gravity="center_horizontal" android:id="@id/undo_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="128.0dip" android:filterTouchesWhenObscured="true" style="?pasteButtonStyleSmall" />
+            </LinearLayout>
+        </FrameLayout>
+        <View android:id="@id/feed_overlay" android:background="#66000000" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_alignTop="@id/content" android:layout_alignBottom="@id/content" />
+    </RelativeLayout>
+</FrameLayout>

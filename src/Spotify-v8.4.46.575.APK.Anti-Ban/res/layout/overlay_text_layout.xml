@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.mobile.android.ui.view.MinSizeFrameLayout android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:minHeightParentFraction="0.4"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center|top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="36.0dip" android:layout_marginBottom="16.0dip">
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Header1" android:textSize="24.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/text_view_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:gravity="center" android:id="@id/text_view_description" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <Button android:layout_gravity="center" android:id="@id/button_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:filterTouchesWhenObscured="false" style="@style/Widget.Glue.Button.Primary.White" />
+        <Button android:layout_gravity="center" android:id="@id/cta_dismiss_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/onboarding_overlay_action_dismiss_title" android:filterTouchesWhenObscured="false" style="@style/Widget.Glue.Button.Tertiary" />
+    </LinearLayout>
+</com.spotify.mobile.android.ui.view.MinSizeFrameLayout>

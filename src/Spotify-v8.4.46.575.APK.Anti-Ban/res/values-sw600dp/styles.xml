@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LoginInputFields">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">416.0dip</item>
+    </style>
+    <style name="SignUpDialogFragment" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowMinWidthMajor">45.000004%</item>
+        <item name="android:windowMinWidthMinor">45.000004%</item>
+    </style>
+    <style name="SignupInputFieldsContainer">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">416.0dip</item>
+    </style>
+    <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabMode">fixed</item>
+    </style>
+</resources>

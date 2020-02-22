@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.mobile.android.ui.view.MonthlyListenersView android:id="@id/monthly_listeners_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/creatorartist_padding_size" android:paddingRight="@dimen/creatorartist_padding_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <com.spotify.mobile.android.ui.view.FontFitTextView android:textAppearance="@style/TextAppearance.Glue.Header1" android:id="@id/monthly_listeners" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textAppearance="?pasteTextAppearanceMetadata" android:id="@id/monthly_listeners_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/creator_artist_monthly_listeners_title" android:maxLines="1" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/rank" android:background="@drawable/creatorartist_rank_shape" android:visibility="gone" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" android:layout_marginEnd="24.0dip" android:layout_alignParentEnd="true">
+        <com.spotify.mobile.android.ui.view.FontFitTextView android:textAppearance="@style/TextAppearance.Glue.Header2Bold" android:textSize="22.0dip" android:gravity="center" android:id="@id/rankText" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="-4.0dip" />
+        <com.spotify.mobile.android.ui.view.FontFitTextView android:textAppearance="@style/TextAppearance.Glue.Micro" android:textSize="11.0dip" android:gravity="center_horizontal" android:id="@id/rankLabel" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="@string/creator_artist_rank_label" />
+    </LinearLayout>
+</com.spotify.mobile.android.ui.view.MonthlyListenersView>

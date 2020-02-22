@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/Theme.Glue" android:gravity="center" android:orientation="vertical" android:background="@color/data_saver_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/data_saver_gradient_green" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_width="24.0dip" android:layout_height="24.0dip" app:iconSize="24.0dip" app:iconType="icon_lightning_24" />
+            <TextView android:textAppearance="?pasteTextAppearanceHeadingSmall" android:textSize="18.0sp" android:textColor="?pasteColorTextPrimary" android:ellipsize="end" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/free_tier_data_saver_opt_in_toggle" android:maxLines="1" android:layout_weight="1.0" />
+            <android.support.v7.widget.SwitchCompat android:theme="@style/Theme.DataSaver.Switch" android:id="@id/toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <me.grantland.widget.AutofitTextView android:textAppearance="?pasteTextAppearanceBodyMedium" android:textSize="16.0sp" android:textColor="?pasteColorTextPrimary" android:gravity="center" android:id="@id/desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:maxLines="3" android:minLines="3" />
+        <ImageView android:id="@id/status_icon" android:visibility="invisible" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_margin="16.0dip" />
+    </LinearLayout>
+    <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="fitCenter" android:layout_weight="1.0" />
+    <Button android:textSize="14.0sp" android:ellipsize="end" android:id="@id/learn_more_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/free_tier_data_saver_opt_in_learn_more" android:maxLines="1" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="@style/Widget.Solar.Button.Tertiary.Outline" />
+    <Button android:textSize="14.0sp" android:ellipsize="end" android:id="@id/close_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="24.0dip" android:text="@string/free_tier_data_saver_opt_in_status_close" android:maxLines="1" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="?glueButtonPrimaryWhite" />
+</LinearLayout>

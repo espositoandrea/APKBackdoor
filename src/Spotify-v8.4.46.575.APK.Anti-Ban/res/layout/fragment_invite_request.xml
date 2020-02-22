@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scroll_view" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.mobile.android.service.flow.facebook.ReorderableLinearLayout android:orientation="vertical" android:id="@id/reordering_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?pasteActionBarTitleTextAppearance" android:gravity="center" android:id="@id/login_header" android:background="@color/glue_gray_layer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:text="@string/email_signup_header" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:src="@drawable/inviter_email_icon" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeading" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="45.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="45.0dip" android:text="@string/invite_request_please_enter_email" />
+        <TextView android:textAppearance="?pasteTextAppearanceArticle" android:textSize="17.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="45.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="45.0dip" android:layout_marginBottom="40.0dip" android:text="@string/invite_request_notify_when_available" />
+        <LinearLayout android:orientation="vertical" android:background="@color/cat_grayscale_12" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:gravity="center" android:id="@id/email_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:hint="@string/email_signup_email_hint" android:cursorVisible="true" android:freezesText="true" android:layout_weight="1.0" android:inputType="textEmailAddress" android:imeOptions="actionDone" style="@style/LoginFieldInputCat" />
+            <View android:background="@color/cat_grayscale_20" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </LinearLayout>
+        <Button android:layout_gravity="center" android:id="@id/request_invite_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/invite_request_request_invite" android:filterTouchesWhenObscured="false" style="@style/StartPageButton.Primary" />
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/progress_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/signup_padding" />
+    </com.spotify.mobile.android.service.flow.facebook.ReorderableLinearLayout>
+</ScrollView>

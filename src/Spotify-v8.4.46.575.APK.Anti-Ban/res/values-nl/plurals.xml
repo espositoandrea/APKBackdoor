@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d KEER AFGESPEELD</item>
+        <item quantity="one">%1$,d KEER AFGESPEELD</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d VOLGERS</item>
+        <item quantity="one">%1$,d VOLGER</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d VOLGERS</item>
+        <item quantity="one">%1$,d VOLGER</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d nummers</item>
+        <item quantity="one">%1$,d/%2$,d nummer</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d nummers</item>
+        <item quantity="one">%1$,d nummer</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">Je volgt • %1$,d nummers</item>
+        <item quantity="one">Je volgt • %1$,d nummer</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">%1$,d keer per dag afgespeeld</item>
+        <item quantity="one">%1$,d keer per dag afgespeeld</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d nieuwe toevoegingen</item>
+        <item quantity="one">%1$,d nieuwe toevoeging</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">%1$,d mixes van je favoriete muziek. Altijd vers.</item>
+        <item quantity="one">%1$,d mix van je favoriete muziek. Altijd vers.</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">%1$d dagen geleden bijgewerkt</item>
+        <item quantity="one">%1$d dag geleden bijgewerkt</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">Weet je zeker dat je al je deze %1$,d personen wilt volgen?</item>
+        <item quantity="one">Weet je zeker dat je al je deze %1$,d personen wilt volgen?</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d VOLGERS</item>
+        <item quantity="one">%1$,d VOLGER</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">%1$s VIND-IK-LEUKS</item>
+        <item quantity="one">%1$s VIND-IK-LEUK</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">van %1$s  •  %2$s Vinden dit leuks</item>
+        <item quantity="one">van %1$s  •  %2$s Vinden dit leuk</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d VOLGERS</item>
+        <item quantity="one">%1$,d VOLGER</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">%1$,d VIND-IK-LEUKS</item>
+        <item quantity="one">%1$,d VIND-IK-LEUK</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">%1$,d nummers toegevoegd aan Nummers in Bibliotheek</item>
+        <item quantity="one">%1$,d nummer toegevoegd aan Nummers in Bibliotheek</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d nummers</item>
+        <item quantity="one">%1$,d nummer</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d nummers</item>
+        <item quantity="one">%1$,d nummer</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d van %2$,d (%3$,d%% voltooid)</item>
+        <item quantity="one">%1$,d van %2$,d (%3$,d%% voltooid)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">%1$,d likes</item>
+        <item quantity="one">%1$,d like</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d mappen</item>
+        <item quantity="one">%1$,d map</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d afspeellijsten</item>
+        <item quantity="one">%1$,d afspeellijst</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d nummers</item>
+        <item quantity="one">%1$,d nummer</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d volgers</item>
+        <item quantity="one">%1$,d volger</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d volgers</item>
+        <item quantity="one">%1$,d volger</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d volgers</item>
+        <item quantity="one">%1$,d volger</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">Kies een privé-sessie als je niet wilt delen waar je naar luistert. Elke sessie duurt tot je %1$,d uur inactief bent geweest.</item>
+        <item quantity="one">Kies een privé-sessie als je niet wilt delen waar je naar luistert. Elke sessie duurt tot je %1$,d uur inactief bent geweest.</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">%1$,d nummers toegevoegd</item>
+        <item quantity="one">%1$,d nummer toegevoegd</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">Je kunt Spotify nog &lt;b>%1$,d dagen&lt;/b> gebruiken zonder de bijgewerkte Gebruikersvoorwaarden en Privacybeleid te accepteren. Hierna word je geacht de nieuwe voorwaarden te accepteren om Spotify te kunnen blijven gebruiken.</item>
+        <item quantity="one">Je kunt Spotify nog &lt;b>%1$,d dag &lt;/b> gebruiken zonder de bijgewerkte Gebruikersvoorwaarden en Privacybeleid te accepteren. Hierna word je geacht de nieuwe voorwaarden te accepteren om Spotify te kunnen blijven gebruiken.</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">Je kunt Spotify nog &lt;b>%1$,d dagen&lt;/b> gebruiken zonder de bijgewerkte Gebruikersvoorwaarden te accepteren. Als je de nieuwe voorwaarden niet voor die tijd accepteert, kun je geen gebruik meer maken van Spotify.</item>
+        <item quantity="one">Je kunt Spotify nog &lt;b>%1$,d dag&lt;/b> gebruiken zonder de bijgewerkte Gebruikersvoorwaarden te accepteren. Als je de nieuwe voorwaarden niet voor die tijd accepteert, kun je geen gebruik meer maken van Spotify.</item>
+    </plurals>
+</resources>

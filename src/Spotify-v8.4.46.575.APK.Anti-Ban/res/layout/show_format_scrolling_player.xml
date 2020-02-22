@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yanzhenjie.recyclerview.swipe.widget.StickyScrollView android:background="#ff000000" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.mobile.android.ui.view.OverlayHidingFrameLayout android:id="@id/overlay_hiding_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.spotify.music.nowplaying.common.view.pager.TrackCarouselView android:id="@id/track_carousel" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.spotify.music.nowplaying.common.view.progressbar.TrackProgressBar android:layout_gravity="bottom" android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/player_v2_progress_bar_height" />
+        </FrameLayout>
+        <View android:id="@id/overlay_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/show_format_scrolling_overlay_content" />
+    </com.spotify.mobile.android.ui.view.OverlayHidingFrameLayout>
+</com.yanzhenjie.recyclerview.swipe.widget.StickyScrollView>

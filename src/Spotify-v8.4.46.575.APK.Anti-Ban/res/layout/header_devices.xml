@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/devices_list_header" android:background="@color/bg_picker" android:paddingTop="@dimen/actionbar_height" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/DeviceFragmentHeader"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/devices_list_header_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/device_picker_header_padding" android:src="@drawable/connect_header_img" />
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Header2Bold" android:textSize="@dimen/device_picker_header_title_size" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/devices_list_header_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/device_picker_header_title_image_spacing" android:layout_marginBottom="@dimen/device_picker_header_padding" android:text="@string/connect_picker_header_text" />
+</LinearLayout>

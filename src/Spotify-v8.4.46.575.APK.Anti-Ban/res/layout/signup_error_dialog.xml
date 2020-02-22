@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_signup_dialog" android:padding="@dimen/std_32dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/glue_black" android:gravity="center" android:id="@id/signup_dialog_title" android:padding="@dimen/std_8dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_16dp" android:layout_marginBottom="@dimen/std_16dp" style="@style/TextAppearance.Glue.Body1Bold" />
+    <TextView android:textColor="@color/glue_gray_inactive" android:gravity="center" android:id="@id/sign_up_dialog_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/std_16dp" style="@style/TextAppearance.Glue.Body1" />
+    <Button android:layout_gravity="center" android:id="@id/signup_dialog_positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_16dp" android:layout_marginRight="@dimen/std_16dp" android:filterTouchesWhenObscured="false" style="@style/Widget.Glue.Button.Primary.Green" />
+    <Button android:textSize="14.0sp" android:textColor="@color/glue_black" android:layout_gravity="center" android:id="@id/signup_dialog_negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:filterTouchesWhenObscured="false" style="@style/Widget.Glue.Button.Tertiary" />
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/content_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.CoordinatorLayout android:id="@id/fragment_container" android:background="@drawable/bg_gradient_to_black_80" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/appbar_layout" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+                <android.support.design.widget.CollapsingToolbarLayout android:id="@id/collapsing_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:contentScrim="@android:color/transparent" app:layout_scrollFlags="exitUntilCollapsed|scroll">
+                    <LinearLayout android:orientation="vertical" android:id="@id/collapsing_title_container" android:paddingLeft="@dimen/cat_list_item_paddings" android:paddingRight="@dimen/cat_list_item_paddings" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.5">
+                        <TextView android:textColor="?glueSectionHeaderTitleColor" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:paddingTop="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="@string/onboarding_taste_select_title" android:maxLines="2" style="?pasteTextAppearanceHeading" />
+                        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/body" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/onboarding_taste_select_questionnaire_body" android:maxLines="2" style="?pasteTextAppearance" />
+                    </LinearLayout>
+                </android.support.design.widget.CollapsingToolbarLayout>
+                <FrameLayout android:layout_gravity="bottom" android:id="@id/search_field_container" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_collapseMode="pin" />
+            </android.support.design.widget.AppBarLayout>
+        </android.support.design.widget.CoordinatorLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/footer" android:background="?colorPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <ProgressBar android:id="@id/progress_bar" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="4.0dip" android:max="4" android:progressDrawable="@drawable/taste_onboarding_progress" style="?pasteProgressBarStyleHorizontal" />
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/cat_list_item_paddings" android:paddingRight="@dimen/cat_list_item_paddings" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <me.grantland.widget.AutofitTextView android:textAppearance="@style/TextAppearance.Glue.Body2" android:ellipsize="end" android:gravity="start|center" android:layout_gravity="center_vertical" android:id="@id/progress_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:maxLines="2" android:minLines="2" android:layout_weight="1.0" app:minimumTextSize="11.0sp" />
+                <Button android:textColor="@color/btn_taste_finish" android:layout_gravity="center_vertical" android:id="@id/finish" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/onboarding_taste_finish" android:filterTouchesWhenObscured="true" style="?glueButtonSecondary" />
+                <Button android:textColor="@color/btn_taste_skip" android:layout_gravity="center_vertical" android:id="@id/skip" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/onboarding_taste_skip" android:filterTouchesWhenObscured="true" style="?glueButtonSecondary" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/loading_view" />
+</FrameLayout>

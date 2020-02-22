@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d UPPSPELNINGAR</item>
+        <item quantity="one">%1$,d UPPSPELNING</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d FÖLJARE</item>
+        <item quantity="one">%1$,d FÖLJARE</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d FÖLJARE</item>
+        <item quantity="one">%1$,d FÖLJARE</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d låtar</item>
+        <item quantity="one">%1$,d/%2$,d låt</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d låtar</item>
+        <item quantity="one">%1$,d låt</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">Följer • %1$,d låtar</item>
+        <item quantity="one">Följer • %1$,d låt</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">%1$,d uppspelningar i dag</item>
+        <item quantity="one">%1$,d uppspelning i dag</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d nya poster</item>
+        <item quantity="one">%1$,d ny post</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">%1$,d mixar med din favoritmusik. Alltid rätt.</item>
+        <item quantity="one">%%1$,d mix med din favoritmusik. Alltid rätt.</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">Uppdaterades för %1$d dagar sedan</item>
+        <item quantity="one">Uppdaterades för %1$d dag sedan</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">Vill du följa alla %1$,d personer?</item>
+        <item quantity="one">Vill du följa %1$,d person?</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d FÖLJARE</item>
+        <item quantity="one">%1$,d FÖLJARE</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">%1$s GILLAR</item>
+        <item quantity="one">%1$s GILLAR</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">av %1$s  •  %2$s GILLAR</item>
+        <item quantity="one">av %1$s  •  %2$s GILLAR</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d FÖLJARE</item>
+        <item quantity="one">%1$,d FÖLJARE</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">%1$,d GILLA-MARKERINGAR</item>
+        <item quantity="one">%1$,d GILLA-MARKERING</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">%1$,d låtar har lagts till i Låtar i Ditt bibliotek</item>
+        <item quantity="one">%1$,d låt har lagts till i Låtar i Ditt bibliotek</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d låtar</item>
+        <item quantity="one">%1$,d låt</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d låtar</item>
+        <item quantity="one">%1$,d låt</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d av %2$,d (%3$,d %% klart)</item>
+        <item quantity="one">%1$,d av %2$,d (%3$,d %% klart)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">%1$,d gillar</item>
+        <item quantity="one">%1$,d gillar</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d mappar</item>
+        <item quantity="one">%1$,d mapp</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d spellistor</item>
+        <item quantity="one">%1$,d spellista</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d låtar</item>
+        <item quantity="one">%1$,d låt</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d följare</item>
+        <item quantity="one">%1$,d följare</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d följare</item>
+        <item quantity="one">%1$,d följare</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d följare</item>
+        <item quantity="one">%1$,d följare</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">Välj Dölj aktivitet om du inte vill dela det du lyssnar på. Varje session varar tills du har varit inaktiv i %1$,d timmar.</item>
+        <item quantity="one">Välj Dölj aktivitet om du inte vill dela det du lyssnar på. Varje session varar tills du har varit inaktiv i %1$,d timme.</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">%1$,d låtar har lagts till</item>
+        <item quantity="one">%1$,d låt har lagts till</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">Du får fortsätta använda Spotify i &lt;b>%1$,d dagar&lt;/b> utan att godkänna de uppdaterade användarvillkoren och den uppdaterade sekretesspolicyn. Efter det måste du godkänna de nya villkoren för att kunna fortsätta använda Spotify.</item>
+        <item quantity="one">Du får fortsätta använda Spotify i &lt;b>%1$,d dag&lt;/b> utan att godkänna de uppdaterade användarvillkoren och den uppdaterade sekretesspolicyn. Efter det måste du godkänna de nya villkoren för att kunna fortsätta använda Spotify.</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">Du kan fortsätta använda Spotify i &lt;b>%1$,d dagar&lt;/b> utan att godkänna de uppdaterade användarvillkoren. Om du inte godkänner de nya användarvillkoren innan dess kan du inte fortsätta använda Spotify.</item>
+        <item quantity="one">Du kan fortsätta använda Spotify i &lt;b>%1$,d dag&lt;/b> utan att godkänna de uppdaterade användarvillkoren. Om du inte godkänner de nya användarvillkoren innan dess kan du inte fortsätta använda Spotify.</item>
+    </plurals>
+</resources>

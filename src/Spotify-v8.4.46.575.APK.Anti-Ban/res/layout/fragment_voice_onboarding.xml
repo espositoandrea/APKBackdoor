@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/glue_gray_background" android:paddingLeft="44.0dip" android:paddingTop="@dimen/std_16dp" android:paddingRight="44.0dip" android:paddingBottom="@dimen/std_16dp" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/onboarding_image" android:padding="@dimen/std_16dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_above="@id/onboarding_learn_more" android:layout_alignParentTop="true" />
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:textColor="@color/glue_gray_inactive" android:gravity="center_horizontal" android:id="@id/onboarding_learn_more" android:padding="@dimen/std_16dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/voice_onboarding_learn_more_button" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Header1" android:textColor="@color/voice_onboarding_primary_accent" android:gravity="center_horizontal" android:id="@id/onboarding_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/std_16dp" />
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:textColor="@color/glue_white" android:gravity="center_horizontal" android:id="@id/onboarding_description" android:padding="@dimen/std_24dp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Button android:textAppearance="@style/TextAppearance.Cat.Button.Primary" android:layout_gravity="center_horizontal" android:id="@id/done_button" android:background="@drawable/voice_button_magenta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_8dp" android:layout_marginBottom="@dimen/std_8dp" android:text="@string/voice_onboarding_finish_button" android:filterTouchesWhenObscured="false" />
+</LinearLayout>

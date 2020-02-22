@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_height" android:layout_marginLeft="56.0dip" android:layout_marginRight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:id="@id/context_title" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:fontAsset="?glueFontRegular50" style="@style/NavigationTitle" />
+    <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:id="@id/context_subtitle" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/NavigationSubtitle" />
+</LinearLayout>

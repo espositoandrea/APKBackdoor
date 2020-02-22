@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="24.0sp" android:ellipsize="end" android:id="@android:id/text2" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" style="@style/Widget.Header.Title" />
+    <me.grantland.widget.AutofitTextView android:textSize="60.0sp" android:ellipsize="end" android:id="@android:id/text1" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" style="@style/Widget.Header.Title" />
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Body2" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/header_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip" android:maxLines="2" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/follow_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/followers_count" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="?pasteTextAppearanceMetadata" />
+    </LinearLayout>
+</LinearLayout>

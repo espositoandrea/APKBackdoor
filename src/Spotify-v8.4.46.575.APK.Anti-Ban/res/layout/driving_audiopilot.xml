@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.mobile.android.spotlets.drivingmode.stages.playfirst.audiopilot.AudiopilotView android:orientation="vertical" android:background="@color/glue_black" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/back_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/driving_audiopilot_back_content_description" android:filterTouchesWhenObscured="false" style="@style/Widget.Player.Button.Borderless" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/driving_audiopilot_title_text" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/play_it_button" android:layout_below="@id/toolbar">
+        <TextView android:textSize="30.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/contentTitleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:maxLines="2" />
+        <ImageView android:layout_gravity="center" android:id="@id/content_cover_image" android:layout_width="184.0dip" android:layout_height="184.0dip" android:contentDescription="@string/driving_audiopilot_cover_content_description" />
+    </LinearLayout>
+    <Button android:textSize="42.0sp" android:textStyle="bold" android:id="@id/play_it_button" android:background="@color/glue_green" android:layout_width="fill_parent" android:layout_height="104.0dip" android:layout_margin="@dimen/std_8dp" android:text="@string/driving_audiopilot_play_it_button_text" android:layout_above="@id/switchButton" android:filterTouchesWhenObscured="false" style="@style/Widget.Glue.Button.Primary.Green" />
+    <com.spotify.mobile.android.spotlets.drivingmode.stages.playfirst.audiopilot.widget.SwitchButton android:textStyle="bold" android:id="@id/switchButton" android:layout_width="fill_parent" android:layout_height="104.0dip" android:layout_marginLeft="@dimen/std_8dp" android:layout_marginRight="@dimen/std_8dp" android:layout_marginBottom="@dimen/std_8dp" android:layout_alignParentBottom="true" />
+</com.spotify.mobile.android.spotlets.drivingmode.stages.playfirst.audiopilot.AudiopilotView>

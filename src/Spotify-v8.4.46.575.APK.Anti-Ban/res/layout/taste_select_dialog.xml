@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_taste_dialog" android:paddingLeft="32.0dip" android:paddingTop="56.0dip" android:paddingRight="32.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@android:id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="48.0dip" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/buttonPanel" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@android:id/button1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:filterTouchesWhenObscured="true" style="?glueButtonPrimaryWhite" />
+        <Button android:id="@android:id/button2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:filterTouchesWhenObscured="true" style="?glueButtonSecondary" />
+        <Button android:id="@android:id/button3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:filterTouchesWhenObscured="true" style="?glueButtonSecondary" />
+    </LinearLayout>
+</LinearLayout>

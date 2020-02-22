@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Solar.HeaderLarge" android:gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textAppearance="@style/TextAppearance.Solar.BodyMedium" android:gravity="center_horizontal" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/small" android:layout_marginBottom="@dimen/children_container_margin_top" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/children" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/large" />
+</LinearLayout>

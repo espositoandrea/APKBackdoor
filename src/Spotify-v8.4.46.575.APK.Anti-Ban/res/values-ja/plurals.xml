@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d回再生</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d人のフォロワー</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d人のフォロワー</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d 曲</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d曲</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">フォロー中: %1$,d曲</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">1日あたり%1$,d回再生</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d個の新しいエントリー</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">お気に入り %1$,d 曲のミックス。いつ聴いても新しい。</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">%1$d日前に更新されました</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">%1$,d人全員をフォローしますか?</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d人のフォロワー</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">この曲好き！%1$s件</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">作成者：%1$s • いいね！%2$s件</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d人のフォロワー</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">この曲好き！%1$,d件</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">My Libraryのソングに%1$,d曲追加しました</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d曲</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d曲</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%2$,d中%1$,d（%3$,d%%完了）</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">%1$,d人が評価</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d個のフォルダ</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d個のプレイリスト</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d曲</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d人のフォロワー</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d人のフォロワー</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d人のフォロワー</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">聴いている曲をシェアしたくない場合は、プライベートセッションをオンにしてください。 各セッションはアイドル状態が%1$,d時間になるまで保たれます</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">%1$,d曲追加しました</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">&lt;b>%1$,d日間は、&lt;/b>変更後の利用条件およびプライバシーポリシーに承諾せずに引き続きSpotifyを利用できます。Spotifyを継続して利用する場合は、この期限までに変更後の条件に承諾する必要があります。</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">&lt;b>%1$,d日間&lt;/b>は、変更後のご利用条件の承認なしにSpotifyを利用できますが、期限までに承認を行わないとSpotifyの利用ができなくなります。</item>
+    </plurals>
+</resources>

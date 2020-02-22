@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/bg_login_gradient" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:id="@id/video_surface" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/button_container" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:src="@drawable/img_spotify_logo_text" android:contentDescription="@string/app_name_content_description" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="30.0dip" android:layout_above="@id/button_container">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/inviter_check_icon" android:contentDescription="@string/app_name_content_description" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeading" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/invite_confirmation_result_header" />
+        <TextView android:textAppearance="?pasteTextAppearanceArticle" android:textSize="17.0dip" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/invite_confirmation_result_body" />
+    </LinearLayout>
+    <include android:id="@id/button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/include_start_login_buttons_normal" />
+</RelativeLayout>

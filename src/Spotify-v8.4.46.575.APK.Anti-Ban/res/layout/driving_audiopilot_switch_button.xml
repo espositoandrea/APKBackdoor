@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/glue_gray_inactive" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/background" android:background="@color/glue_blue" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <Button android:textSize="42.0sp" android:textStyle="bold" android:id="@id/button" android:background="@null" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/driving_audiopilot_switch_button_text" android:filterTouchesWhenObscured="false" style="@style/Widget.Glue.Button" />
+</RelativeLayout>

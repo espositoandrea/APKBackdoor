@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/qa_root" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/campaign_id_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:hint="@string/campaign_id" android:inputType="numberDecimal" />
+    <TextView android:id="@id/status_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/status" />
+    <Spinner android:id="@id/filter_messages_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+    <TextView android:id="@id/locale_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/locale" />
+    <Spinner android:id="@id/filter_messages_locale" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+    <TextView android:id="@id/format_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/format" />
+    <Spinner android:id="@id/filter_messages_format" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" />
+    <Button android:gravity="center" android:layout_gravity="center" android:id="@id/submit_campaign_id" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:text="@string/debug_preview_message_start_testing" android:filterTouchesWhenObscured="false" style="?pasteButtonStylePrimary" />
+</LinearLayout>

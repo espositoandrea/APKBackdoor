@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/slate_content_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.CardView android:layout_gravity="center" android:id="@id/slate_content_container" android:layout_width="0.0dip" android:layout_height="0.0dip" app:cardUseCompatPadding="false" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/slate_header_container" android:layout_width="fill_parent" android:layout_alignParentTop="true" app:layout_heightPercent="12.5%" />
+    <FrameLayout android:id="@id/slate_footer_container" android:layout_width="fill_parent" android:layout_alignParentBottom="true" app:layout_heightPercent="12.5%" />
+</merge>

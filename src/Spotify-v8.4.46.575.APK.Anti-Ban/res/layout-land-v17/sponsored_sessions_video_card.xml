@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/glue_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.spotify.mobile.android.video.VideoSurfaceView android:layout_gravity="center" android:id="@id/video_surface" android:layout_width="fill_parent" android:layout_height="fill_parent" app:fullscreen="false" />
+    <RelativeLayout android:id="@id/controls_container" android:padding="25.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Body2" android:textSize="16.0sp" android:id="@id/advertiser_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/ad_choices_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/ad_choices" android:contentDescription="@string/video_ad_content_description_ad_choices" android:layout_marginStart="10.0dip" />
+        <ImageButton android:id="@id/play_pause_button" android:background="@android:color/transparent" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_centerInParent="true" android:contentDescription="@string/player_content_description_play" />
+        <Button android:id="@id/ad_call_to_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:filterTouchesWhenObscured="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_above="@id/ad_call_to_action">
+            <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:textSize="12.0sp" android:textColor="@color/cat_white_70" android:ellipsize="none" android:gravity="center_vertical" android:id="@id/current_track_position" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="2.0dip" android:singleLine="true" android:layout_marginEnd="2.0dip" />
+            <ProgressBar android:id="@id/playback_progress" android:layout_width="0.0dip" android:layout_height="2.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0" style="?pasteProgressBarStyleHorizontal" />
+            <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:textSize="12.0sp" android:textColor="@color/cat_white_70" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/track_duration" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:maxLines="1" android:layout_marginStart="2.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

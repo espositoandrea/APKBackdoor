@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/controls" android:tag="sticky-nonconstant" android:paddingBottom="@dimen/player_v2_scrolling_controls_padding_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/player_v2_scrolling_controls_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.music.nowplaying.common.view.controls.seekbar.SeekbarView android:layout_gravity="center|top" android:id="@id/seek_bar_view" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.spotify.music.nowplaying.freetier.view.FreeTierHeadUnitView android:layout_gravity="bottom|center" android:id="@id/head_unit_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

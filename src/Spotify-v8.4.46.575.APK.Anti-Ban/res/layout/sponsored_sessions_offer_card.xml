@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Header2Bold" android:textSize="32.0sp" android:gravity="center" android:id="@id/reward_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Body2" android:textSize="18.0sp" android:gravity="center" android:id="@id/reward_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/slate_sponsored_session_thanks_to_sponsor" />
+    <Button android:layout_gravity="bottom|center" android:id="@id/accept_offer_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:filterTouchesWhenObscured="true" />
+</LinearLayout>

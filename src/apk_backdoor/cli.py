@@ -51,3 +51,4 @@ def main():
 
     apk = Apk(args.apk)
     apk.decompile()
+    main_activity = apk.get_main_activity()

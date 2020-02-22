@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Header1" android:textSize="15.0sp" android:textColor="@color/free_tier_likes_tab_title" android:gravity="center" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

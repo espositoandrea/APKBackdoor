@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/free_tier_data_saver_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_16dp" android:layout_marginRight="@dimen/std_16dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.spotify.paste.spotifyicon.SpotifyIconView android:id="@id/icn_data_saver" android:duplicateParentState="true" android:layout_width="14.0dip" android:layout_height="@dimen/std_16dp" android:layout_marginRight="@dimen/std_8dp" android:scaleType="centerInside" android:layout_marginEnd="@dimen/std_8dp" app:iconColor="@color/glue_green" app:iconSize="@dimen/std_16dp" app:iconType="icon_lightning_16" />
+    <TextView android:textAppearance="?pasteTextAppearanceSecondary" android:textColor="@color/glue_green" android:gravity="start|center" android:id="@id/text_data_saver" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/free_tier_data_saver_mini_player" style="@style/MarqueeText" />
+</LinearLayout>

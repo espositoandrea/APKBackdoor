@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.mobile.android.service.flow.facebook.ReorderableLinearLayout android:orientation="vertical" android:id="@id/reordering_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?pasteActionBarTitleTextAppearance" android:gravity="center" android:id="@id/login_header" android:background="@color/glue_gray_layer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:text="@string/email_signup_header" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:src="@drawable/inviter_invite_icon" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeading" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="45.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="45.0dip" android:text="@string/invite_start_header" />
+        <TextView android:textAppearance="?pasteTextAppearanceArticle" android:textSize="17.0dip" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="45.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="45.0dip" android:layout_marginBottom="40.0dip" android:text="@string/invite_start_only_for_invite_users" />
+        <Button android:layout_gravity="center" android:id="@id/have_an_invite_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/invite_start_have_an_invite" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="@style/StartPageButton.Primary" />
+        <Button android:layout_gravity="center" android:id="@id/request_an_invite_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/invite_start_request_an_invite" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="@style/StartPageButton.Secondary" />
+    </com.spotify.mobile.android.service.flow.facebook.ReorderableLinearLayout>
+</ScrollView>

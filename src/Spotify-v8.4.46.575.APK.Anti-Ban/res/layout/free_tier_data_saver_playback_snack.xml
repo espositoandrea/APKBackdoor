@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="13.0dip" android:textColor="@color/free_tier_data_saver_playback_snack_text" android:gravity="center" android:id="@id/text" android:background="@drawable/free_tier_data_saver_playback_snack_background" android:layout_width="fill_parent" android:layout_height="25.0dip" android:text="@string/free_tier_data_saver_playback_snack_text"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

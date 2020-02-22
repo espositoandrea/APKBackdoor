@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <include layout="@layout/btl_intro_card" />
+    <include layout="@layout/btl_card" />
+    <include layout="@layout/btl_credits_card" />
+</merge>

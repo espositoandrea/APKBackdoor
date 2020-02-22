@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_url_forgot_password">http://www.spotify.com/us/password-reset/</string>
+</resources>

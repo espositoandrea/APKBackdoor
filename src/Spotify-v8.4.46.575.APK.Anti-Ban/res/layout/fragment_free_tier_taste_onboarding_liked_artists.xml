@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="bottom" android:id="@id/black_gradient" android:background="@color/glue_gray_background" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_heightPercent="100.0%" app:layout_widthPercent="100.0%" />
+    <View android:layout_gravity="top" android:id="@id/top_gradient" android:background="@drawable/bg_free_tier_taste_onboarding_blue_to_pink" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_heightPercent="39.999996%" app:layout_widthPercent="100.0%" />
+    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:paddingBottom="72.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="48.0dip" android:indeterminate="true" />
+</android.support.percent.PercentFrameLayout>

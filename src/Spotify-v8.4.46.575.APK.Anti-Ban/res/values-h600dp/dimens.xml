@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="inline_upsell_entity_artwork_size">110.0dip</dimen>
+    <dimen name="inline_upsell_flexible_padding">16.0dip</dimen>
+    <dimen name="inline_upsell_message_text_size">13.0sp</dimen>
+    <dimen name="inline_upsell_title_text_size">24.0sp</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/image_view_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="8.0dip" android:adjustViewBounds="true" />
+        <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_gravity="end|center|top" android:id="@id/button_dismiss" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:contentDescription="@string/content_description_close_overlay_button" android:layout_marginEnd="16.0dip" app:iconType="icon_x_24" />
+    </FrameLayout>
+    <include layout="@layout/overlay_text_layout" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="card_aspect_ratio">178</integer>
+    <integer name="context_menu_initial_visible_items">3</integer>
+    <integer name="genre_list_columns">2</integer>
+    <item type="integer" name="grid_columns">@integer/grid_columns_land</item>
+    <item type="integer" name="hugs_grid_columns">@integer/hugs_grid_columns_land</item>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.mobile.android.spotlets.connect.picker.education.DevicePickerEducationView android:id="@id/device_picker_education" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/education_parent_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/device_picker_education_margin_top" android:layout_marginBottom="@dimen/device_picker_education_margin_bottom" />
+</com.spotify.mobile.android.spotlets.connect.picker.education.DevicePickerEducationView>

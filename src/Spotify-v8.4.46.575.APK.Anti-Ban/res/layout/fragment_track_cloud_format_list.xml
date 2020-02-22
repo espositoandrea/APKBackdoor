@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.spotify.android.glue.patterns.header.GlueHeaderLayout android:id="@id/glue_header_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.spotify.android.glue.patterns.header.headers.GlueHeaderView android:gravity="center" android:id="@id/header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.GlueHeaderView.ExtraReduced" />
+            <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.spotify.android.glue.patterns.header.behavior.GlueScrollingViewBehavior" />
+        </com.spotify.android.glue.patterns.header.GlueHeaderLayout>
+    </FrameLayout>
+</FrameLayout>

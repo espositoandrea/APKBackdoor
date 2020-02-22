@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="64.0dip" android:layout_height="64.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/avatar_image" android:background="@drawable/drawable_no_avatar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:contentDescription="@string/friend_image" />
+        <View android:layout_gravity="center" android:id="@id/avatar_seen_indicator" android:background="@drawable/drawable_ring_avatar_unseen" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/avatar_loading_progressbar" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip" android:indeterminateDrawable="@drawable/drawable_loading_progressbar" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/avatar_live_indicator" android:background="@drawable/live_animation" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginTop="-10.0dip" android:contentDescription="@string/friend_status" />
+    <TextView android:textSize="12.0sp" android:ellipsize="end" android:layout_gravity="bottom|center" android:id="@id/avatar_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:lines="1" />
+</LinearLayout>

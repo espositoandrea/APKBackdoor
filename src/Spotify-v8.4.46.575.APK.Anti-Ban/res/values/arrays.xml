@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="android_wear_capabilities">
+        <item>spotify_banan_protocol</item>
+    </string-array>
+    <string-array name="password_blacklist">
+        <item>11111111</item>
+        <item>12345678</item>
+        <item>123456789</item>
+        <item>access14</item>
+        <item>alejandra</item>
+        <item>alejandro</item>
+        <item>baseball</item>
+        <item>bigdaddy</item>
+        <item>butthead</item>
+        <item>cocacola</item>
+        <item>computer</item>
+        <item>consumer</item>
+        <item>corvette</item>
+        <item>danielle</item>
+        <item>dolphins</item>
+        <item>einstein</item>
+        <item>estrella</item>
+        <item>firebird</item>
+        <item>football</item>
+        <item>hardcore</item>
+        <item>iloveyou</item>
+        <item>internet</item>
+        <item>jennifer</item>
+        <item>mariposa</item>
+        <item>marlboro</item>
+        <item>maverick</item>
+        <item>mercedes</item>
+        <item>michelle</item>
+        <item>midnight</item>
+        <item>mistress</item>
+        <item>mountain</item>
+        <item>nicholas</item>
+        <item>password</item>
+        <item>password1</item>
+        <item>password12</item>
+        <item>password123</item>
+        <item>princess</item>
+        <item>qwertyui</item>
+        <item>redskins</item>
+        <item>redwings</item>
+        <item>rush2112</item>
+        <item>samantha</item>
+        <item>scorpion</item>
+        <item>sebastian</item>
+        <item>srinivas</item>
+        <item>startrek</item>
+        <item>starwars</item>
+        <item>steelers</item>
+        <item>sunshine</item>
+        <item>superman</item>
+        <item>swimming</item>
+        <item>tequiero</item>
+        <item>trustno1</item>
+        <item>victoria</item>
+        <item>whatever</item>
+        <item>xxxxxxxx</item>
+    </string-array>
+</resources>

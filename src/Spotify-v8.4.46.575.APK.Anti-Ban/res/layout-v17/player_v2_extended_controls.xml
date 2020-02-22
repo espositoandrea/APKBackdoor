@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/btn_left_control" android:background="@null" android:layout_width="@dimen/player_regular_button_size" android:layout_height="@dimen/player_regular_button_size" android:layout_marginRight="@dimen/player_v2_margin_extended_buttons" android:contentDescription="@string/player_content_description_shuffle" android:layout_marginEnd="@dimen/player_v2_margin_extended_buttons" />
+    <include layout="@layout/player_v2_controls" />
+    <ImageButton android:id="@id/btn_right_control" android:background="@null" android:layout_width="@dimen/player_regular_button_size" android:layout_height="@dimen/player_regular_button_size" android:layout_marginLeft="@dimen/player_v2_margin_extended_buttons" android:contentDescription="@string/player_content_description_repeat" android:layout_marginStart="@dimen/player_v2_margin_extended_buttons" />
+</merge>

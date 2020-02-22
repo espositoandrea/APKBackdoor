@@ -15,11 +15,19 @@ class Apk:
         self.full_path = path
         self.apk_name = os.path.splitext(os.path.basename(path))[0]
         self.dir = os.path.dirname(path)
+        self.decompiled_path = None
 
     def decompile(self):
         command = f"java -jar {self.APKTOOL_PATH} d -f -o {self.apk_name} {self.full_path}"
+        logging.info('Decompiling APK...')
         utilities.run_command(command)
-        # print(command)
+        logging.info('    ... Done.')
+        self.decompiled_path = os.path.join(os.getcwd(), self.apk_name)
+        logging.debug(f"Decompiled to '{self.decompiled_path}'")
+
+    def get_main_activity(self):
+        
+        pass
 
     def build(self):
         pass

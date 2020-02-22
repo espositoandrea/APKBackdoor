@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/notification_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/notification_coverart_and_text" />
+    <LinearLayout android:gravity="center|right" android:id="@id/controls" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/coverart" android:layout_below="@id/thirdLine" android:layout_alignParentRight="true">
+        <ImageButton android:id="@id/notification_positive_feedback" android:visibility="visible" android:src="@drawable/icn_heart_rest" android:contentDescription="@string/content_description_radio_thumb_up" style="@style/NotificationButton" />
+        <ImageView android:id="@id/notification_positive_feedback_disabled" android:visibility="gone" android:src="@drawable/icn_heart_inactive" android:contentDescription="@string/content_description_radio_thumb_up_disabled" style="@style/NotificationButton" />
+        <ImageView android:id="@id/notification_positive_feedback_selected" android:visibility="gone" android:src="@drawable/icn_heart_active" android:contentDescription="@string/content_description_radio_thumb_up_selected" style="@style/NotificationButton" />
+        <TextView style="@style/NotificationDividerSmall" />
+        <ImageButton android:id="@id/notification_negative_feedback" android:visibility="visible" android:src="@drawable/icn_ban_rest" android:contentDescription="@string/content_description_negative_feedback" style="@style/NotificationButton" />
+        <ImageView android:id="@id/notification_negative_feedback_disabled" android:visibility="gone" android:src="@drawable/icn_ban_inactive" android:contentDescription="@string/content_description_negative_feedback_disabled" style="@style/NotificationButton" />
+        <ImageView android:id="@id/notification_negative_feedback_selected" android:visibility="gone" android:src="@drawable/icn_ban_active" android:contentDescription="@string/content_description_negative_feedback_selected" style="@style/NotificationButton" />
+        <TextView style="@style/NotificationDividerLarge" />
+        <include layout="@layout/notification_play_pause" />
+        <TextView style="@style/NotificationDividerSmall" />
+        <include layout="@layout/notification_next" />
+    </LinearLayout>
+</RelativeLayout>

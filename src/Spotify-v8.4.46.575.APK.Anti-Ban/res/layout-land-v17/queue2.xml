@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/split_point" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/new_player_controls_width_landscape" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_marginStart="@dimen/new_player_controls_width_landscape" android:layout_alignParentStart="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignRight="@id/split_point" android:layout_alignBottom="@id/split_point" android:layout_alignEnd="@id/split_point">
+        <FrameLayout android:id="@id/header_unit_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.spotify.paste.spotifyicon.SpotifyIconView android:id="@id/btn_close" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="centerInside" android:contentDescription="@string/queue_content_description_btn_close" paste:iconColor="@color/btn_new_now_playing_gray" paste:iconSize="18.0dip" paste:iconType="icon_chevron_down_32" />
+        <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_gravity="end" android:id="@id/queue_btn" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/player_content_description_queue" android:layout_alignParentEnd="true" paste:iconColor="@color/btn_new_now_playing_gray" paste:iconSize="18.0dip" paste:iconType="icon_album_contained_32" />
+    </RelativeLayout>
+    <com.spotify.mobile.android.spotlets.player.queue.playcontrols.PlayQueueControlsView android:id="@id/player_controller" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/split_point" android:layout_alignRight="@id/split_point" android:layout_alignParentBottom="true" android:layout_alignEnd="@id/split_point" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignLeft="@id/split_point" android:layout_alignStart="@id/split_point">
+        <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.spotify.mobile.android.spotlets.player.queue.view.AddRemoveQueueView android:id="@id/add_remove_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

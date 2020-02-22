@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/Theme.Glue" android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:gravity="center" android:id="@id/logo" android:background="@drawable/zero_rating_umobile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:scaleType="fitCenter" />
+        <me.grantland.widget.AutofitTextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:textSize="24.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/zero_rating_plan_title" android:maxLines="3" />
+        <android.support.v7.widget.RecyclerView android:id="@id/picker" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <Button android:textSize="14.0sp" android:ellipsize="end" android:id="@id/continue_button" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/zero_rating_plan_continue" android:maxLines="1" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="?glueButtonPrimaryWhite" />
+    <Button android:textSize="14.0sp" android:ellipsize="end" android:id="@id/learn_more_button" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/zero_rating_learn_more" android:maxLines="1" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="?glueButtonSecondary" />
+</LinearLayout>

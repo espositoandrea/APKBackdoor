@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Header2Bold" android:textSize="@dimen/upsell_header_text_title_size" android:textColor="?glueSectionHeaderTitleColor" android:gravity="center_horizontal" android:id="@id/title" android:paddingLeft="@dimen/std_16dp" android:paddingRight="@dimen/std_16dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_16dp" android:layout_marginBottom="@dimen/std_8dp" />
+    <TextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:textColor="?glueSectionHeaderTitleColor" android:gravity="center_horizontal" android:id="@id/subtitle" android:paddingLeft="@dimen/std_16dp" android:paddingRight="@dimen/std_16dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/std_16dp" />
+</LinearLayout>

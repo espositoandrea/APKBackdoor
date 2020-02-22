@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.mobile.android.spotlets.player.views.CardStack android:id="@id/card_stack" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/secondary_card" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.spotify.paste.widgets.SquareImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" />
+        </FrameLayout>
+    </com.spotify.mobile.android.spotlets.player.views.CardStack>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/peek_placeholder" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/track_icon" android:layout_width="60.0dip" android:layout_height="wrap_content" android:src="@drawable/cat_placeholder_track" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+        <TextView android:textColor="@color/cat_white" android:padding="10.0dip" android:layout_width="170.0dip" android:layout_height="wrap_content" android:text="@string/player_radio_no_forecasting" style="@style/TextAppearance.Cat.Secondary" />
+    </LinearLayout>
+</FrameLayout>

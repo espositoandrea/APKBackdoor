@@ -16,6 +16,8 @@ setup(
     },
     # install_requires=['bar', 'greek'],  # external packages as dependencies
     entry_points={
-        'apk-backdoor = apk_backdoor.cli:main'
+        'console_scripts': [
+            'apk-backdoor = apk_backdoor.cli:main'
+        ]
     }
 )

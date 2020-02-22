@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d LEJÁTSZÁS</item>
+        <item quantity="one">%1$,d LEJÁTSZÁS</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d KÖVETŐ</item>
+        <item quantity="one">%1$,d KÖVETŐ</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d KÖVETŐ</item>
+        <item quantity="one">%1$,d KÖVETŐ</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d szám</item>
+        <item quantity="one">%1$,d/%2$,d szám</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d dal</item>
+        <item quantity="one">%1$,d dal</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">•%1$,d dalt követsz</item>
+        <item quantity="one">•%1$,d dalt követsz</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">%1$,d lejátszás naponta</item>
+        <item quantity="one">%1$,d lejátszás naponta</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d új szereplő</item>
+        <item quantity="one">%1$,d új szereplő</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">%1$,d válogatás kedvenc zenéidből. Mindig friss.</item>
+        <item quantity="one">%1$,d válogatás kedvenc zenéidből. Mindig friss.</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">%1$d napja frissült</item>
+        <item quantity="one">%1$d napja frissült</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">Biztosan követni szeretnéd mind a(z) %1$,d ismerősöd?</item>
+        <item quantity="one">Biztosan követni szeretnéd mind a(z) %1$,d ismerősöd?</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d KÖVETŐ</item>
+        <item quantity="one">%1$,d KÖVETŐ</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">%1$s KEDVELÉS</item>
+        <item quantity="one">%1$s KEDVELÉS</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">készítette: %1$s  •  %2$s kedvelés</item>
+        <item quantity="one">készítette: %1$s  •  %2$s kedvelés</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d KÖVETŐ</item>
+        <item quantity="one">%1$,d KÖVETŐ</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">%1$,d KEDVELÉS</item>
+        <item quantity="one">%1$,d KEDVELÉS</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">%1$,d dal hozzáadva a Gyűjteményed Dalok menüjéhez</item>
+        <item quantity="one">%1$,d dal hozzáadva a Gyűjteményed Dalok menüjéhez</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d dal</item>
+        <item quantity="one">%1$,d dal</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d dal</item>
+        <item quantity="one">%1$,d dal</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d/%2$,d (%3$,d%%) kész</item>
+        <item quantity="one">%1$,d/%2$,d (%3$,d%%) kész</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">%1$,d ember kedveli</item>
+        <item quantity="one">%1$,d ember kedveli</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d mappa</item>
+        <item quantity="one">%1$,d mappa</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d lejátszási lista</item>
+        <item quantity="one">%1$,d lejátszási lista</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d szám</item>
+        <item quantity="one">%1$,d szám</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d követő</item>
+        <item quantity="one">%1$,d követő</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d követő</item>
+        <item quantity="one">%1$,d követő</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d követő</item>
+        <item quantity="one">%1$,d követő</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">Válaszd a privát zenehallgatást, ha nem szeretnéd megosztani, mit hallgatsz. A privát zenehallgatás mindig véget ér %1$,d óra inaktivitás után.</item>
+        <item quantity="one">Válaszd a privát zenehallgatást, ha nem szeretnéd megosztani, mit hallgatsz. A privát zenehallgatás mindig véget ér %1$,d óra inaktivitás után.</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">%1$,d dal hozzáadva</item>
+        <item quantity="one">%1$,d dal hozzáadva</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">Még &lt;b>%1$,d napig&lt;/b> használhatod a Spotifyt a módosított általános szerződési feltételek és a szintén módosított adatvédelmi szabályzat elfogadása nélkül. Ezután csak akkor használhatod a Spotifyt, ha elfogadod a módosított szerződéseket.</item>
+        <item quantity="one">Még &lt;b>%1$,d napig&lt;/b> használhatod a Spotifyt a módosított általános szerződési feltételek és a szintén módosított adatvédelmi szabályzat elfogadása nélkül. Ezután csak akkor használhatod a Spotifyt, ha elfogadod a módosított szerződéseket.</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">Még &lt;b>%1$,d napig&lt;/b> használhatod a Spotifyt a módosított Általános szerződési feltételek elfogadása nélkül. Ha addig nem fogadod el a feltételeket, azután nem fogod tudni használni a Spotifyt.</item>
+        <item quantity="one">Még &lt;b>%1$,d napig&lt;/b> használhatod a Spotifyt a módosított Általános szerződési feltételek elfogadása nélkül. Ha addig nem fogadod el a feltételeket, azután nem fogod tudni használni a Spotifyt.</item>
+    </plurals>
+</resources>

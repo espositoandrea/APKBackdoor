@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="activity_feed_replays">
+        <item quantity="other">%1$,d POWTÓRZENIA</item>
+        <item quantity="one">%1$,d POWTÓRZENIE</item>
+        <item quantity="few">%1$,d POWTÓRZENIA</item>
+        <item quantity="many">%1$,d POWTÓRZEŃ</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d OBSERWUJĄCEGO</item>
+        <item quantity="one">%1$,d OBSERWUJĄCY</item>
+        <item quantity="few">%1$,d OBSERWUJĄCYCH</item>
+        <item quantity="many">%1$,d OBSERWUJĄCYCH</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d OBSERWUJĄCEGO</item>
+        <item quantity="one">%1$,d OBSERWUJĄCY</item>
+        <item quantity="few">%1$,d OBSERWUJĄCYCH</item>
+        <item quantity="many">%1$,d OBSERWUJĄCYCH</item>
+    </plurals>
+    <plurals name="cell_album_tracks_in_collection_and_album_count">
+        <item quantity="other">%1$,d/%2$,d utworu</item>
+        <item quantity="one">%1$,d/%2$,d utwór</item>
+        <item quantity="few">%1$,d/%2$,d utwory</item>
+        <item quantity="many">%1$,d/%2$,d utwórow</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d utworu</item>
+        <item quantity="one">%1$,d utwór</item>
+        <item quantity="few">%1$,d utwory</item>
+        <item quantity="many">%1$,d utworów</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">%1$,d obserwowanego utworu</item>
+        <item quantity="one">%1$,d obserwowany utwór</item>
+        <item quantity="few">%1$,d obserwowane utwory</item>
+        <item quantity="many">%1$,d obserwowanych utworów</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">%1$,d odtworzenia dziennie</item>
+        <item quantity="one">%1$,d odtworzenie dziennie</item>
+        <item quantity="few">%1$,d odtworzenia dziennie</item>
+        <item quantity="many">%1$,d odtworzeń dziennie</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d nowego wpisu</item>
+        <item quantity="one">%1$,d nowy wpis</item>
+        <item quantity="few">%1$,d nowe wpisy</item>
+        <item quantity="many">%1$,d nowych wpisów</item>
+    </plurals>
+    <plurals name="cluster_button_subtitle">
+        <item quantity="other">%1$,d składanki z Twoją ulubioną muzyką Zawsze na czasie.</item>
+        <item quantity="one">%1$,d składanka z Twoją ulubioną muzyką Zawsze na czasie.</item>
+        <item quantity="few">%1$,d składanki z Twoją ulubioną muzyką. Zawsze na czasie.</item>
+        <item quantity="many">%1$,d składanek z Twoją ulubioną muzyką. Zawsze na czasie.</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">Aktualizacja: %1$d dni temu</item>
+        <item quantity="one">Aktualizacja: %1$d dni temu</item>
+        <item quantity="few">Aktualizacja: %1$d dni temu</item>
+        <item quantity="many">Aktualizacja: %1$d dni temu</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">Czy na pewno chcesz obserwować te wszystkie osoby (%1$,d)?</item>
+        <item quantity="one">Czy na pewno chcesz obserwować tę %1$,d osobę?</item>
+        <item quantity="few">Czy na pewno chcesz obserwować te %1$,d osoby?</item>
+        <item quantity="many">Czy na pewno chcesz obserwować tych %1$,d osób?</item>
+    </plurals>
+    <plurals name="free_tier_data_saver_playlist_followers_count">
+        <item quantity="other">%1$,d OBSERWUJĄCYCH</item>
+        <item quantity="one">%1$,d OBSERWUJĄCY</item>
+        <item quantity="few">%1$,d OBSERWUJĄCYCH</item>
+        <item quantity="many">%1$,d OBSERWUJĄCYCH</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_likes">
+        <item quantity="other">POLUBIENIA: %1$s</item>
+        <item quantity="one">POLUBIENIA: %1$s</item>
+        <item quantity="few">POLUBIENIA: %1$s</item>
+        <item quantity="many">POLUBIENIA: %1$s</item>
+    </plurals>
+    <plurals name="free_tier_playlist_header_subtitle_owner_and_likes">
+        <item quantity="other">utworzona przez %1$s  •  %2$s POLUBIENIA</item>
+        <item quantity="one">utworzona przez %1$s  •  %2$s POLUBIENIE</item>
+        <item quantity="few">utworzona przez %1$s  •  %2$s POLUBIENIA</item>
+        <item quantity="many">utworzona przez %1$s  •  %2$s POLUBIEŃ</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d OBSERWUJĄCEGO</item>
+        <item quantity="one">%1$,d OBSERWUJĄCY</item>
+        <item quantity="few">%1$,d OBSERWUJĄCYCH</item>
+        <item quantity="many">%1$,d OBSERWUJĄCYCH</item>
+    </plurals>
+    <plurals name="header_playlist_likes_count">
+        <item quantity="other">POLUBIENIA: %1$,d</item>
+        <item quantity="one">POLUBIENIA: %1$,d</item>
+        <item quantity="few">POLUBIENIA: %1$,d</item>
+        <item quantity="many">POLUBIENIA: %1$,d</item>
+    </plurals>
+    <plurals name="local_files_imported_dialog_body">
+        <item quantity="other">Liczba utworów dodanych do sekcji Utwory w Bibliotece: %1$,d</item>
+        <item quantity="one">%1$,d utwór dodany do sekcji Utwory w Bibliotece</item>
+        <item quantity="few">%1$,d utwory dodane do sekcji Utwory w Bibliotece</item>
+        <item quantity="many">%1$,d utworów dodanych do sekcji Utwory w Bibliotece</item>
+    </plurals>
+    <plurals name="local_files_subtitle_number_of_songs">
+        <item quantity="other">%1$,d utworu</item>
+        <item quantity="one">%1$,d utwór</item>
+        <item quantity="few">%1$,d utwory</item>
+        <item quantity="many">%1$,d utworów</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d utworu</item>
+        <item quantity="one">%1$,d utwór</item>
+        <item quantity="few">%1$,d utwory</item>
+        <item quantity="many">%1$,d utworów</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d z %2$,d (ukończono %3$,d%%)</item>
+        <item quantity="one">%1$,d z %2$,d (ukończono %3$,d%%)</item>
+        <item quantity="few">%1$,d z %2$,d (ukończono %3$,d%%)</item>
+        <item quantity="many">%1$,d z %2$,d (ukończono %3$,d%%)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">%1$,d polubienia</item>
+        <item quantity="one">%1$,d polubienie</item>
+        <item quantity="few">%1$,d polubienia</item>
+        <item quantity="many">%1$,d polubień</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d folderu</item>
+        <item quantity="one">%1$,d folder</item>
+        <item quantity="few">%1$,d foldery</item>
+        <item quantity="many">%1$,d folderów</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d playlisty</item>
+        <item quantity="one">%1$,d playlista</item>
+        <item quantity="few">%1$,d playlisty</item>
+        <item quantity="many">%1$,d playlist</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d utworu</item>
+        <item quantity="one">%1$,d utwór</item>
+        <item quantity="few">%1$,d utwory</item>
+        <item quantity="many">%1$,d utworów</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d obserwującego</item>
+        <item quantity="one">%1$,d obserwujący</item>
+        <item quantity="few">%1$,d obserwujących</item>
+        <item quantity="many">%1$,d obserwujących</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d obserwujących</item>
+        <item quantity="one">%1$,d obserwujący</item>
+        <item quantity="few">%1$,d obserwujących</item>
+        <item quantity="many">%1$,d obserwujących</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d obserwującego</item>
+        <item quantity="one">%1$,d obserwujący</item>
+        <item quantity="few">%1$,d obserwujących</item>
+        <item quantity="many">%1$,d obserwujących</item>
+    </plurals>
+    <plurals name="settings_private_session_description">
+        <item quantity="other">Wybierz prywatną sesję, jeśli nie chcesz, aby inni widzieli, czego słuchasz. Każda sesja kończy się, gdy użytkownik jest nieaktywny przez %1$,d godziny.</item>
+        <item quantity="one">Wybierz prywatną sesję, jeśli nie chcesz, aby inni widzieli, czego słuchasz. Każda sesja kończy się, gdy użytkownik jest nieaktywny przez %1$,d godzinę.</item>
+        <item quantity="few">Wybierz prywatną sesję, jeśli nie chcesz, aby inni widzieli, czego słuchasz. Każda sesja kończy się, gdy użytkownik jest nieaktywny przez %1$,d godziny.</item>
+        <item quantity="many">Wybierz prywatną sesję, jeśli nie chcesz, aby inni widzieli, czego słuchasz. Każda sesja kończy się, gdy użytkownik jest nieaktywny przez %1$,d godzin.</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">Liczba dodanych utworów: %1$,d</item>
+        <item quantity="one">%1$,d dodany utwór</item>
+        <item quantity="few">%1$,d dodane utwory</item>
+        <item quantity="many">%1$,d dodanych utworów</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body">
+        <item quantity="other">Możesz dalej korzystać ze Spotify przez &lt;b>%1$,d dnia&lt;/b> bez konieczności akceptowania Warunków i Polityki prywatności. Po tym czasie zaakceptowanie nowych zasad będzie konieczne w celu dalszego korzystania z serwisu Spotify.</item>
+        <item quantity="one">Możesz dalej korzystać ze Spotify przez &lt;b>%1$,d dzień&lt;/b> bez konieczności akceptowania Warunków i Polityki prywatności. Po tym czasie zaakceptowanie nowych zasad będzie konieczne w celu dalszego korzystania z serwisu Spotify.</item>
+        <item quantity="few">Możesz dalej korzystać ze Spotify przez &lt;b>%1$,d dni&lt;/b> bez konieczności akceptowania Warunków i Polityki prywatności. Po tym czasie zaakceptowanie nowych zasad będzie konieczne w celu dalszego korzystania z serwisu Spotify.</item>
+        <item quantity="many">Możesz dalej korzystać ze Spotify przez &lt;b>%1$,d dni&lt;/b> bez konieczności akceptowania Warunków i Polityki prywatności. Po tym czasie zaakceptowanie nowych zasad będzie konieczne w celu dalszego korzystania z serwisu Spotify.</item>
+    </plurals>
+    <plurals name="tos_changed_postponed_body_us">
+        <item quantity="other">Bez wyrażenia zgody na zaktualizowane Warunki możesz korzystać ze Spotify jeszcze przez &lt;b>%1$,d dnia&lt;/b>. Jeśli do tego czasu nie zostaną zaakceptowane nowe Warunki, nie będzie możliwe korzystanie ze Spotify.</item>
+        <item quantity="one">Bez wyrażenia zgody na zaktualizowane Warunki możesz korzystać ze Spotify jeszcze przez &lt;b>%1$,d dzień&lt;/b>. Jeśli do tego czasu nie zostaną zaakceptowane nowe warunki, nie będzie możliwe korzystanie ze Spotify.</item>
+        <item quantity="few">Bez wyrażenia zgody na zaktualizowane Warunki możesz korzystać ze Spotify jeszcze przez &lt;b>%1$,d dni&lt;/b>. Jeśli do tego czasu nie zostaną zaakceptowane nowe Warunki, nie będzie możliwe korzystanie ze Spotify.</item>
+        <item quantity="many">Bez wyrażenia zgody na zaktualizowane Warunki możesz korzystać ze Spotify jeszcze przez &lt;b>%1$,d dni&lt;/b>. Jeśli do tego czasu nie zostaną zaakceptowane nowe Warunki, nie będzie możliwe korzystanie ze Spotify.</item>
+    </plurals>
+</resources>

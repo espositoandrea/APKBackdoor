@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/appbar" android:background="@drawable/toolbar_tabs_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" app:contentInsetLeft="0.0dip" app:contentInsetStart="0.0dip" app:layout_scrollFlags="enterAlways|scroll">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/std_24dp" android:animateLayoutChanges="true">
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/free_tier_taste_onboarding_artist_picker_tabs_enabled_title" android:layout_marginStart="@dimen/std_16dp" android:layout_marginEnd="@dimen/std_16dp" style="?pasteTextAppearanceHeadingSmall" />
+                <TextView android:gravity="center" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_8dp" android:text="@string/free_tier_taste_onboarding_artist_picker_tabs_enabled_subtitle" android:layout_marginStart="@dimen/std_16dp" android:layout_marginEnd="@dimen/std_16dp" style="?pasteTextAppearanceBodySmall" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.TabLayout android:id="@id/tabs" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_24dp" app:tabBackground="@null" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/next_button_container" android:background="@drawable/free_tier_taste_onboarding_artist_picker_black_gradient" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_heightPercent="20.000004%" app:layout_widthPercent="100.0%">
+        <Button android:ellipsize="end" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/btn_next" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/std_24dp" android:text="@string/free_tier_taste_onboarding_artist_picker_done" android:maxLines="1" android:filterTouchesWhenObscured="false" style="?solarButtonPrimaryWhite" />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

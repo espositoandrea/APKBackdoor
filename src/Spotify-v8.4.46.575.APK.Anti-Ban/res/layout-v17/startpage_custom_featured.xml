@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.common.view.StartPageBackgroundView android:id="@id/background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignTop="@id/card" android:layout_alignBottom="@id/card" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/card" android:paddingLeft="@dimen/cat_list_item_paddings" android:paddingTop="4.0dip" android:paddingRight="@dimen/cat_list_item_paddings" android:paddingBottom="16.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="168.0dip" android:layout_below="@id/header">
+        <ImageView android:id="@android:id/icon" android:layout_width="148.0dip" android:layout_height="148.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/labels" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_toRightOf="@android:id/icon" android:layout_alignParentTop="true" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" android:layout_toEndOf="@android:id/icon">
+            <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?pasteTextAppearanceHeadingSmall" android:ellipsize="end" android:gravity="bottom" android:layout_gravity="fill_vertical" android:id="@id/content_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+                <TextView android:textAppearance="?pasteTextAppearanceSmall" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/content_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" />
+                <TextView android:textAppearance="?pasteTextAppearanceSecondarySmall" android:textColor="@color/cat_text_primary" android:ellipsize="end" android:gravity="top" android:id="@id/content_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="8.0dip" android:maxLines="3" android:layout_weight="1.0" />
+                <TextView android:textAppearance="?pasteTextAppearanceMetadataSmall" android:ellipsize="end" android:gravity="bottom" android:id="@id/content_metadata" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:minHeight="20.0dip" android:maxLines="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/header" android:paddingLeft="@dimen/cat_list_item_paddings" android:paddingTop="16.0dip" android:paddingRight="@dimen/cat_list_item_paddings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="128.0dip">
+        <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeadingSmall" android:textSize="18.0sp" android:ellipsize="end" android:layout_gravity="bottom" android:id="@id/title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeadingSmall" android:ellipsize="end" android:layout_gravity="bottom" android:id="@id/subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+    </LinearLayout>
+</RelativeLayout>

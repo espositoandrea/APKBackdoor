@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fragment_device_holder" android:background="@color/bg_picker" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/volume_bar" android:background="@color/device_picker_volume_background" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/volume_img" android:paddingLeft="@dimen/device_picker_volume_padding" android:paddingRight="@dimen/device_picker_volume_slider_image_spacing" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icn_device_picker_volume" />
+        <com.spotify.mobile.android.ui.view.DraggableSeekBar android:id="@id/volume_slider" android:paddingTop="@dimen/device_picker_volume_padding" android:paddingRight="@dimen/device_picker_volume_padding_right" android:paddingBottom="@dimen/device_picker_volume_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/device_picker_volume_height" android:progress="0" android:indeterminate="false" android:progressDrawable="@drawable/bg_picker_progress" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/devices_layout_content" android:background="@color/bg_picker" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/volume_bar">
+        <android.support.v7.widget.RecyclerView android:id="@id/devices_list" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/DevicePickerRecylerView" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/error_holder" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/volume_bar">
+        <include layout="@layout/header_devices" />
+        <TextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:textColor="?glueRowSubtitleColor" android:gravity="center" android:id="@id/devices_not_available" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/connect_picker_no_internet" />
+    </LinearLayout>
+</RelativeLayout>

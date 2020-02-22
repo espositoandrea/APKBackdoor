@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="top" android:id="@id/background" android:layout_width="fill_parent" app:layout_heightPercent="33.000004%" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:src="@drawable/mft_data_saver_playlist_header" />
+        <TextView android:textAppearance="?pasteTextAppearanceHeaderMedium" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/mft_data_saver_playlist_not_available_title" />
+        <TextView android:textAppearance="?pasteTextAppearanceBodyMedium" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mft_data_saver_playlist_not_available_description" />
+    </LinearLayout>
+</android.support.percent.PercentFrameLayout>

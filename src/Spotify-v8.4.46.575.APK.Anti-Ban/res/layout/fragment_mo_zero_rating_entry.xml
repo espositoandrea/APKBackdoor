@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/Theme.Glue" android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <me.grantland.widget.AutofitTextView android:textAppearance="@style/TextAppearance.Glue.Header1" android:textSize="32.0sp" android:gravity="center" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/zero_rating_entry_title" android:maxLines="2" />
+        <ImageView android:gravity="center" android:background="@drawable/zero_rating_umobile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:scaleType="fitCenter" />
+        <me.grantland.widget.AutofitTextView android:textAppearance="@style/TextAppearance.Glue.Body1" android:textSize="24.0sp" android:gravity="center" android:id="@id/desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/zero_rating_entry_desc" android:maxLines="3" />
+    </LinearLayout>
+    <Button android:textSize="14.0sp" android:ellipsize="end" android:id="@id/button_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/zero_rating_entry_primary_button" android:maxLines="1" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="?glueButtonPrimaryWhite" />
+    <Button android:textSize="14.0sp" android:ellipsize="end" android:id="@id/button_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/zero_rating_entry_secondary_button" android:maxLines="1" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="?glueButtonSecondary" />
+</LinearLayout>

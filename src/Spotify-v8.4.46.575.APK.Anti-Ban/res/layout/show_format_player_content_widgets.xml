@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/widget_container" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.spotify.music.nowplaying.scrolling.behindthelyrics.BehindTheLyricsWidgetView android:id="@id/behind_the_lyrics_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/player_v2_btl_widget_height" android:layout_marginBottom="@dimen/player_v2_widget_margin" />
+    <com.spotify.music.nowplaying.scrolling.artist.view.ArtistWidgetView android:id="@id/artist_widget_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>
