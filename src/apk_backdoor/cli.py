@@ -1,3 +1,4 @@
+import os
 import argparse
 import logging
 
@@ -51,5 +52,5 @@ def main():
 
     apk = Apk(args.apk)
     apk.decompile()
-    main_activity = apk.get_main_activity()
-    print(main_activity)
+    main_activity, main_activity_file = apk.get_main_activity()
+    logging.info(f"The main activity is: '{main_activity}'")

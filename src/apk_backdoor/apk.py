@@ -44,7 +44,10 @@ class Apk:
             if main_activity:
                 break
 
-        return main_activity.get(ANDROID_NAME)
+        if not main_activity: raise RuntimeError('No Main Activity found')
+
+        name = main_activity.get(ANDROID_NAME)
+        return name, os.path.join(self.decompiled_path, name.replace('.','/') + '.smali')
 
     def build(self):
         pass
