@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/show_format_player_track_info" />
-    <com.spotify.music.nowplaying.common.view.controls.seekbar.SeekbarView android:id="@id/seek_bar_view" android:layout_width="fill_parent" android:layout_height="@dimen/player_v2_seekbar_height" />
-    <com.spotify.music.nowplaying.common.view.controls.headunit.HeadUnitView android:layout_gravity="center" android:id="@id/head_unit_view" android:padding="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</LinearLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/voice_mic_wrapper" android:background="@null" android:layout_width="104.0dip" android:layout_height="104.0dip" android:layout_marginBottom="48.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:paste="http://schemas.android.com/apk/res-auto">
-    <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_gravity="center" android:id="@id/microphone" android:layout_width="70.0dip" android:layout_height="70.0dip" paste:iconType="icon_mic_32" />
-</FrameLayout>

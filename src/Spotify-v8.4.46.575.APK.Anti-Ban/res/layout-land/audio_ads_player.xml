@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/audio_ads_player" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/audio_ads_header" />
-    <com.spotify.mobile.android.spotlets.player.v2.ads.AudioAdsInfoView android:id="@id/audio_ads_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:layout_marginBottom="26.0dip" />
-    <com.spotify.music.nowplaying.common.view.controls.seekbar.PersistentSeekbarView android:layout_gravity="center_horizontal" android:id="@id/persistent_seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <com.spotify.mobile.android.spotlets.player.v2.ads.AudioAdsPlaybackControlsView android:layout_gravity="center_horizontal" android:id="@id/playback_control" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</LinearLayout>

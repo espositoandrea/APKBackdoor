@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.spotify.paste.widgets.SquareImageView android:id="@android:id/icon" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/driving_shelf_vertical_shift" android:scaleType="centerCrop" android:layout_weight="1.0" />
-    <TextView android:textAppearance="@style/TextAppearance.Glue.Header2Bold" android:textSize="24.0sp" android:textColor="@color/glue_card_title_color" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:visibility="gone" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="1" />
-</merge>
