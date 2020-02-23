@@ -21,7 +21,7 @@ class Apk:
 
     def decompile(self):
         command = f"java -jar {self.APKTOOL_PATH} d -f -o {self.apk_name} {self.full_path}"
-        logging.info('Decompiling APK...')
+        logging.info(f"Decompiling '{self.apk_name}.apk'...")
         utilities.run_command(command)
         logging.info('    ... Done.')
         self.decompiled_path = os.path.join(os.getcwd(), self.apk_name)
@@ -59,7 +59,13 @@ class Apk:
         self.decompiled_path = None
 
     def build(self):
-        pass
+        if not self.decompiled_path:
+            raise AssertionError('The APK must be decompiled first')
+
+        command = f'java -jar {self.APKTOOL_PATH} b -o {self.apk_name}_MOD.apk {self.decompiled_path}'
+        logging.info(f'Recompiling {self.apk_name} to {os.getcwd()}...')
+        utilities.run_command(command)
+        logging.info('    ... Done')
 
     def sign(self):
         pass

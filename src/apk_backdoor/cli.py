@@ -88,5 +88,5 @@ def main():
     payload.inject(apk)
     payload.delete()
     apk.build()
-    apk.sign()
-    apk.remove_decompiled()
+    # apk.sign()
+    # apk.remove_decompiled()
