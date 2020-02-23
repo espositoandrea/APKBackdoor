@@ -37,6 +37,13 @@ All rights reserved.%
     % \cleardoublepage
 
     % Set all tables rows' colors to be alternating
+    \mainmatter
+    \pagestyle{fancy}
     \rowcolors{2}{gray!25}{white}
     \input{content.tex}
+
+    \backmatter
+    \printbibliography[heading=bibintoc]
+    \appendix
+    \input{includes/license.tex}
 \end{document}

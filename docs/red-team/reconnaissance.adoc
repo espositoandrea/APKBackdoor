@@ -1,0 +1,21 @@
+[.text-center]
+"`__Individuazione del mezzo di trasmissione__`"
+
+L'intera dase di ricognizione in questo attacco è basata sul _social
+engineering_. Si vogliono quindi determinare delle possibili vittime
+dell'attacco in modo da poter preparare un attacco.
+
+Al fine di colpire il maggior numero di dispositivi possibili, la fase di
+ricognizione ha portato al riconoscere l'importanza di applicazioni legate
+all'ascolto di musica on-demand. Una di queste applicazioni è l'applicazione di
+Spotify (https://www.spotify.com/), installata su diversi dispositivi (più di
+248 milioni di utenti attivi stando ad alcune fonti <<spotify-users>>).
+
+Inoltre, è risaputo che parte di tali utenti utilizza una versione "`pirata`" di
+Spotify: nel 2018 si stimava che su 71 milioni di utenti paganti, 2 milioni
+fossero utenti utilizzatori di versioni pirata dell'applicazione (stando a
+<<spotify-pirated>>).
+
+L'attacco sarà quindi così strutturato: si provvederà a generare un APK
+"`pirata`" di Spotify introducendo al suo interno una _backdoor_ che fornisca
+quindi accesso ai dispositivi sui quali è installata e aperta.

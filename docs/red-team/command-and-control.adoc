@@ -1,0 +1,9 @@
+[.text-center]
+"`__Attivazione della backdoor__`"
+
+L'attaccante, una volta condiviso il malware, attiva una shell su una propria
+macchina che intercetti i pacchetti inviati dal malware. In questo modo,
+l'attaccante può essere aggiornato sullo stato del malware e controllare a
+distanza i dispositivi delle vittime, sfruttando la _backdoor_ creata.
+
+// TODO: Write me

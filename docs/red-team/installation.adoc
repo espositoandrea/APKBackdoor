@@ -1,0 +1,11 @@
+[.text-center]
+"`__Installazione da parte dell'utente__`"
+
+// TODO: Add link to backdoor's payload autorun 
+
+Come già detto, durante la creazione del malware si è incluso all'interno
+dell'APK una porzione di codice che apra *automaticamente* la _backdoor_
+all'apertura dell'applicazione modificata. Per questo motivo non è richiesta
+alcuna azione da parte dell'attaccante al fine di installare il malware, già
+installato e attivato *autonomamente* dalla vittima e non è richiesta alcuna
+azione esterna.

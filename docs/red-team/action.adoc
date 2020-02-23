@@ -1,0 +1,6 @@
+[.text-center]
+"`__Sfruttamento della backdoor__`"
+
+L'attacante può ora inviare qualsiasi tipo di comando al dispositivo vittima.
+Trattandosi questo di un "`meta-attacco`", i comandi precisi da inviare
+dipendono fondamentalmente dall'obiettivo specifico del momento.

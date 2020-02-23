@@ -1,0 +1,10 @@
+[.text-center]
+"`__Preparazione dell'esca e condivisione dell'indirizzo di download__`"
+
+Completato il malware, è necessaria la sua diffusione al fine di compiere
+realmente l'attacco. A tal scopo, avendo ottenuto le informazioni descritte in
+<<reconnaissance-red-team>>, si decide di condividerlo mediante internet,
+lasciando all'utente (ignaro) l'onere di installarlo sul proprio dispositivo. A
+tale fine si crea un post su di un blog, fornendo un link di download per l'APK
+modificato (che è descritto come una "`crack`" dell'applicazione originale).
+Successivamente si condivide l'URL di tale post e si attendono i primi download.
