@@ -11,7 +11,9 @@ setup(
     packages=['apk_backdoor'],
     package_data={
         'apk_backdoor': [
-            'tools/apktool.jar'
+            'tools/apktool.jar',
+            'tools/apksigner.jar',
+            'tools/debug.keystore',
         ]
     },
     install_requires=[

@@ -10,7 +10,14 @@ from . import utilities
 
 class Apk:
     APKTOOL_PATH = pkg_resources.resource_filename(
-        'apk_backdoor', 'tools/apktool.jar')
+        'apk_backdoor', 'tools/apktool.jar'
+    )
+    APKSIGNER_PATH = pkg_resources.resource_filename(
+        'apk_backdoor', 'tools/apksigner.jar'
+    )
+    KEYSTORE_PATH = pkg_resources.resource_filename(
+        'apk_backdoor', 'tools/debug.keystore'
+    )
 
     def __init__(self, path):
         logging.debug(f'Creating the APK representation (using {path})')
@@ -68,4 +75,7 @@ class Apk:
         logging.info('    ... Done')
 
     def sign(self):
-        pass
+        command = f"java -jar {self.APKSIGNER_PATH} sign --ks {self.KEYSTORE_PATH} --ks-key-alias androiddebugkey -ks-pass pass:android {self.apk_name}_MOD.apk"
+        logging.info(f"Signing '{self.apk_name}_MOD.apk'...")
+        utilities.run_command(command)
+        logging.info('    ... Done.')

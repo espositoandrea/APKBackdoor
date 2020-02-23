@@ -106,4 +106,4 @@ def main():
     progress.update(4)
     apk.sign()
     progress.update(5)
-    # apk.remove_decompiled()
+    apk.remove_decompiled()
