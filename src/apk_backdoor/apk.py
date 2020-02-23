@@ -75,7 +75,14 @@ class Apk:
         logging.info('    ... Done')
 
     def sign(self):
-        command = f"java -jar {self.APKSIGNER_PATH} sign --ks {self.KEYSTORE_PATH} --ks-key-alias androiddebugkey -ks-pass pass:android {self.apk_name}_MOD.apk"
         logging.info(f"Signing '{self.apk_name}_MOD.apk'...")
+
+        command = f'zipalign -f -v 4 {self.apk_name}_MOD.apk {self.apk_name}_SIGNED.apk'
         utilities.run_command(command)
+
+        os.remove(self.apk_name + '_MOD.apk')
+
+        command = f"java -jar {self.APKSIGNER_PATH} sign --ks {self.KEYSTORE_PATH} --ks-key-alias androiddebugkey -ks-pass pass:android {self.apk_name}_SIGNED.apk"
+        utilities.run_command(command)
+
         logging.info('    ... Done.')

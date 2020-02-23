@@ -63,17 +63,18 @@ def setup_args():
         '-V', '--verbose',
         dest='verbosity',
         action='count',
-        default=0,
-        help='Verbosity level (between 1 and 4 occurrences with '
+        default=5,
+        help='Verbosity level (between 1 and 5 occurrences with '
              'more leading to a more verbose logging). '
-             'CRITICAL = 0, ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4.'
+             'CRITICAL = 1, ERROR = 2, WARN = 3, INFO = 4, DEBUG = 5.'
+             'The default (no option) is DEBUG.'
     )
     log_levels = {
-        0: logging.CRITICAL,
-        1: logging.ERROR,
-        2: logging.WARN,
-        3: logging.INFO,
-        4: logging.DEBUG,
+        1: logging.CRITICAL,
+        2: logging.ERROR,
+        3: logging.WARN,
+        4: logging.INFO,
+        5: logging.DEBUG,
     }
 
     args = parser.parse_args()
