@@ -6,6 +6,7 @@ from collections import namedtuple
 
 from . import __version__
 from .apk import Apk
+from .payload import Payload
 
 
 def ip_port_value(string):
@@ -45,7 +46,9 @@ def setup_args():
 
     parser.add_argument(
         '--host', '-H',
-        metavar='REAL_HOST',
+        dest='public_host',
+        default=None,
+        metavar='PUBLIC_HOST',
         help='The host (in the form IP:PORT) to which the payload will send data.'
              ' Use this if HOST is in a private network: REAL_HOST will be the '
              "router's public IP (and the port that the router will forward to "
@@ -78,6 +81,8 @@ def setup_args():
 def main():
     args = setup_args()
     logging.basicConfig(level=args.verbosity)
+
+    payload = Payload(args.host, args.public_host)
 
     apk = Apk(args.apk)
     apk.decompile()
