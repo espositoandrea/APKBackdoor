@@ -1,5 +1,6 @@
 import subprocess
 import logging
+import platform
 
 
 def run_command(command):
@@ -17,3 +18,34 @@ def run_command(command):
         logging.critical(message)
         raise RuntimeError(message)
     return rc
+
+def get_title(center = False):
+    title = '''
+ ▄▄▄       ██▓███   ██ ▄█▀    ▄▄▄▄    ▄▄▄       ▄████▄   ██ ▄█▀▓█████▄  ▒█████   ▒█████   ██▀███  
+▒████▄    ▓██░  ██▒ ██▄█▒    ▓█████▄ ▒████▄    ▒██▀ ▀█   ██▄█▒ ▒██▀ ██▌▒██▒  ██▒▒██▒  ██▒▓██ ▒ ██▒
+▒██  ▀█▄  ▓██░ ██▓▒▓███▄░    ▒██▒ ▄██▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ░██   █▌▒██░  ██▒▒██░  ██▒▓██ ░▄█ ▒
+░██▄▄▄▄██ ▒██▄█▓▒ ▒▓██ █▄    ▒██░█▀  ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ ░▓█▄   ▌▒██   ██░▒██   ██░▒██▀▀█▄  
+ ▓█   ▓██▒▒██▒ ░  ░▒██▒ █▄   ░▓█  ▀█▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄░▒████▓ ░ ████▓▒░░ ████▓▒░░██▓ ▒██▒
+ ▒▒   ▓▒█░▒▓▒░ ░  ░▒ ▒▒ ▓▒   ░▒▓███▀▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒ ▒▒▓  ▒ ░ ▒░▒░▒░ ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░
+  ▒   ▒▒ ░░▒ ░     ░ ░▒ ▒░   ▒░▒   ░   ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░ ░ ▒  ▒   ░ ▒ ▒░   ░ ▒ ▒░   ░▒ ░ ▒░
+  ░   ▒   ░░       ░ ░░ ░     ░    ░   ░   ▒   ░        ░ ░░ ░  ░ ░  ░ ░ ░ ░ ▒  ░ ░ ░ ▒    ░░   ░ 
+      ░  ░         ░  ░       ░            ░  ░░ ░      ░  ░      ░        ░ ░      ░ ░     ░     
+                                   ░           ░                ░                                 
+    
+A tool developed by Andrea Esposito
+    '''
+
+    if not center:
+        return title
+    
+    return "\n".join([l.center(120) for l in title.splitlines()])
+
+def clear_screen():
+    subprocess.call( "cls" if platform.system() == "Windows" else "clear",
+    shell=True)
+
+def print_phase(msg):
+    print(f' [+] {msg}...', end=' ', flush=True)
+
+def phase_done():
+    print('Done')

