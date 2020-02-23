@@ -3,6 +3,8 @@ import argparse
 import logging
 import re
 from collections import namedtuple
+import progressbar
+from colorama import Fore, Style
 
 from . import __version__
 from .apk import Apk
@@ -10,7 +12,8 @@ from .payload import Payload
 
 
 def ip_port_value(string):
-    ip_pattern = re.compile(r"^((?:(?:25[0-5]|2[0-4][0-5]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:(25[0-5]|2[0-4][0-5]|1[0-9][0-9]|[1-9][0-9]|[0-9]))):(\d+?)$")
+    ip_pattern = re.compile(
+        r"^((?:(?:25[0-5]|2[0-4][0-5]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:(25[0-5]|2[0-4][0-5]|1[0-9][0-9]|[1-9][0-9]|[0-9]))):(\d+?)$")
     match = ip_pattern.match(string)
     if not match:
         raise argparse.ArgumentTypeError(f"The value '{string}' is not in the form IP:PORT")
@@ -79,14 +82,28 @@ def setup_args():
 
 
 def main():
+    widgets = [
+        Fore.YELLOW, ' [', progressbar.Timer(), '] ',
+        progressbar.Bar(), Style.RESET_ALL
+    ]
+
     args = setup_args()
+    progressbar.streams.wrap_stderr()
+    progressbar.streams.wrap_stdout()
     logging.basicConfig(level=args.verbosity)
+    progress = progressbar.ProgressBar(max_value=5, widgets=widgets)
+    progress.update(0)
 
     payload = Payload(args.host, args.public_host)
+    progress.update(1)
 
     apk = Apk(args.apk)
     payload.inject(apk)
+    progress.update(2)
     payload.delete()
+    progress.update(3)
     apk.build()
-    # apk.sign()
+    progress.update(4)
+    apk.sign()
+    progress.update(5)
     # apk.remove_decompiled()

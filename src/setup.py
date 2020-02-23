@@ -14,7 +14,10 @@ setup(
             'tools/apktool.jar'
         ]
     },
-    # install_requires=['bar', 'greek'],  # external packages as dependencies
+    install_requires=[
+        'progressbar2',
+        'colorama'
+    ],
     entry_points={
         'console_scripts': [
             'apk-backdoor = apk_backdoor.cli:main'
