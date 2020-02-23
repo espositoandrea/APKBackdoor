@@ -1,11 +1,12 @@
 import logging
 import os
-import xml.etree.ElementTree as ET
 import shutil
+import xml.etree.ElementTree as ET
 
 import pkg_resources
 
 from . import utilities
+from .utilities import phase
 
 
 class Apk:
@@ -65,6 +66,7 @@ class Apk:
         shutil.rmtree(self.decompiled_path)
         self.decompiled_path = None
 
+    @phase("Building modified target's APK")
     def build(self):
         if not self.decompiled_path:
             raise AssertionError('The APK must be decompiled first')
@@ -74,6 +76,7 @@ class Apk:
         utilities.run_command(command)
         logging.info('    ... Done')
 
+    @phase("Signing modified target's APK")
     def sign(self):
         logging.info(f"Signing '{self.apk_name}_MOD.apk'...")
 
