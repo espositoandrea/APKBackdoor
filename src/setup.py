@@ -17,7 +17,6 @@ setup(
         ]
     },
     install_requires=[
-        'progressbar2',
         'colorama'
     ],
     entry_points={
