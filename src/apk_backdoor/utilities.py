@@ -12,4 +12,8 @@ def run_command(command):
         if output:
             logging.debug(output.decode('utf8').strip())
     rc = process.poll()
+    if rc != 0:
+        message = f"The command '{command}' exited with non-zero code"
+        logging.critical(message)
+        raise RuntimeError(message)
     return rc
