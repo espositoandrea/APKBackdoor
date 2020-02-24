@@ -3,3 +3,11 @@
 "'__Rimuovere l'applicazione malevola__'"
 
 
+Una volta individuata l'applicazione infetta, si procede alla sua rimozione dall'elenco delle applicazioni
+installate sul dispositivo.
+
+Questa operazione potrebbe tuttavia non bastare: se l'applicazione ha generato altri file malevoli, potrebbe
+essere necessario effettuare un Ripristino alle impostazioni di fabbrica del dispositivo.
+
+Inoltre,  è consigliabile controllare i dati sensibili di account collegati al dispositivo, cambiando eventuali
+password e controllando che non vi siano operazioni effettuate a nostra insaputa.
