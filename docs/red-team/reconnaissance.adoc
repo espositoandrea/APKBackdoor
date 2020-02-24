@@ -12,7 +12,7 @@ Spotify (https://www.spotify.com/), installata su diversi dispositivi (più di
 248 milioni di utenti attivi stando ad alcune fonti <<spotify-users>>).
 
 Inoltre, è risaputo che parte di tali utenti utilizza una versione "`pirata`" di
-Spotify: nel 2018 si stimava che su 71 milioni di utenti paganti, 2 milioni
+Spotify: nel 2018 si stimava che su 232 milioni di utenti totali, 124 milioni
 fossero utenti utilizzatori di versioni pirata dell'applicazione (stando a
 <<spotify-pirated>>).
 
