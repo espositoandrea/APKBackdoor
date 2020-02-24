@@ -1,1 +1,8 @@
-// TODO: Write
+[.text-center]
+"`__Prevenire l'installazione di applicazioni da fonti sconosciute__`"
+
+E' importante evitare di installare applicazioni scaricate da fonti sconosciute in quanto sono le prime a contenere un possibile codice malevolo.
+
+Al fine di prevenire eventuali attacchi da parte di terzi è necessario **non** attivare la modalità "`__Installa app sconosciute__`"  come prima forma di tutela da parte dell'utilizzatore del dispositivo.
+
+Tuttavia, se l'utilizzatore del device è uno sviluppatore, è importante che quest'ultimo presti molta attenzione ad installare applicazioni sviluppate solo da lui stesso o da personale fidato (in questa lista di applicazioni sono incluse anche quelle installabili da fonti verificate quali GOOGLE PlayStore, HUAWEI AppGallery o SAMSUNG Galaxy Store).
