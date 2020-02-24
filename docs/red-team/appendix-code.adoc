@@ -1,0 +1,77 @@
+[appendix#appendix-red-team-tool]
+== Codice sorgente: il tool
+
+Di seguito si riporta il codice sorgente del tool sviluppato.
+
+[#appendix-red-team-tool-setup]
+=== File: setup.py
+
+Questo file permette l'installazione del tool.
+
+[source,python]
+---------------
+include::../../src/setup.py[]
+---------------
+
+=== Modulo: apk_backdoor
+
+[#appendix-red-team-tool-init]
+==== File: ++__init__.py++
+
+File di definizione del modulo (richiesto).
+
+[source,python]
+---------------
+include::../../src/apk_backdoor/__init__.py[]
+---------------
+
+[#appendix-red-team-tool-main]
+==== File: ++__main__.py++
+
+File che permette l'esecuzione del modulo mediante il comando `python3 -m apk_backdoor`.
+
+[source,python]
+---------------
+include::../../src/apk_backdoor/__main__.py[]
+---------------
+
+[#appendix-red-team-tool-apk]
+==== File: apk.py
+
+Questo file gestisce gli APK e la loro decompilazione, compilazione e firma.
+
+[source,python]
+---------------
+include::../../src/apk_backdoor/apk.py[]
+---------------
+
+[#appendix-red-team-tool-cli]
+==== File: cli.py
+
+Questo file definisce l'interfaccia da riga di comando (CLI) del tool.
+
+[source,python]
+---------------
+include::../../src/apk_backdoor/cli.py[]
+---------------
+
+[#appendix-red-team-tool-payload]
+==== File: payload.py
+
+Questo file gestisce il payload e la sua creazione e iniezione nell'APK
+originale.
+
+[source,python]
+---------------
+include::../../src/apk_backdoor/payload.py[]
+---------------
+
+[#appendix-red-team-tool-utilities]
+==== File: utilities.py
+
+Questo file contiene delle funzioni e dei decoratori utili al resto del tool.
+
+[source,python]
+---------------
+include::../../src/apk_backdoor/utilities.py[]
+---------------

