@@ -12,13 +12,12 @@ al fine di evitare l'installazione di apk nocive.
 Delivery : Qui non so precisamente, anche perchè la parte di weaponization potrebbe andare bene comuqnue,
   non c'è una vera e propria fase di delivery
 
-Exploit: Controllare in fase di installazione i permessi richiesti dall'applicazione: Un apk come Spotify non richiede 
-l'utilizzo della fotocamera, pertanto se ci si accorge che l'app che si sta installando li richiede, potrebbe essere il
- segnale di presenza di un malware.
-Inoltre su molti S.O è presente ormai una qualsiasi forma di Antivirus, in grado di scansionare il sistema.
+Exploit: Inoltre su molti S.O è presente ormai una qualsiasi forma di Antivirus, in grado di scansionare il sistema.
  All'evenienza è possibile scaricarne altri dal Play Store
  
-Installation. Le cose scritte prima... il fatto dei permessi e di evitare l'installazione di apk non firmate.
+Installation. Controllare in fase di installazione i permessi richiesti dall'applicazione: Un apk come Spotify non richiede 
+l'utilizzo della fotocamera, pertanto se ci si accorge che l'app che si sta installando li richiede, potrebbe essere il
+ segnale di presenza di un malware.
 
 Command & Control: Eseguire periodicamente una scansione del sistema,
  
