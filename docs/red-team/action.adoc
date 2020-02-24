@@ -4,3 +4,26 @@
 L'attacante può ora inviare qualsiasi tipo di comando al dispositivo vittima.
 Trattandosi questo di un "`meta-attacco`", i comandi precisi da inviare
 dipendono fondamentalmente dall'obiettivo specifico del momento.
+
+Esempi di comandi eseguibili una volta avviata la comunicazione, sono i comandi
+`dump_sms` (che memorizzano in un file tutti gli SMS inviati e ricevuti con il
+dispositivo: utile se la vittima non elimina informazioni sensibili ricevute
+mediante SMS, come il PIN della carta di credito) e `webcam_snap` (che scatta
+una foto con una delle fotocamere del telefono, utile per ricattare le vittime e
+chiedere denaro per non divulgare foto compromettenti).
+
+Tuttavia, come già detto, la fase di azione non è realmente interessante in questo
+documento in quanto non prevede alcuna difficoltà (una volta avviato il malware
+le possibili azioni difensive con cui l'attaccante deve scontrarsi sono poche e
+inevitabili, come la disinstallazione dell'applicazione infetta).
+
+Si noti che, se l'attacante dovesse avere necessità di mantenere la backdoor
+aperta anche dopo la disinstallazione dell'applicazione infetta, un'altro
+comando disponibile una volta aperta la sessione è il comando `app_install`, che
+permette l'installazione di una applicazione: basterà quindi preparare una
+seconda applicazione infetta che venga eseguita come servizio (nascondendo la
+sua icona  dal _launcher_ delle applicazioni e mantenendola attiva in
+background) e forzare la sua installazione mediante tale comando. In questo
+modo, anche se l'utente dovesse disinstallare l'applicazione infetta, ne resterà
+comunque un'altra meno evidente (impossibile da individuare per l'utente medio)
+sempre attiva in background.

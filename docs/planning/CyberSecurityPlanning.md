@@ -1,6 +1,6 @@
 ---
 title: Cyber Security - Planning
-date: 2 dicembre 2019
+date: 2/12/2019
 author: Andrea Esposito, Alessandro Annese, Graziano Montanaro
 numbersections: true
 geometry: margin=2cm
