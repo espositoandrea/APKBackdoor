@@ -1,5 +1,5 @@
 [.text-center]
-"'__Rimuovere l'applicazione malevola__'"
+"`__Rimuovere l'applicazione malevola__`"
 
 Una volta individuata l'applicazione infetta, si procede alla sua rimozione dall'elenco delle applicazioni
 installate sul dispositivo.

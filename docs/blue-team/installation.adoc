@@ -3,4 +3,4 @@
 
 Dalla versione 6.0 del sistema Android è stata introdotta un'importante funzione che permette all'utente di gestire i permessi richiesti dalle applicazioni installate sul dispositivo.
 
-E' quindi necessario controllare, in fase di installazione, i permessi richiesti dall'applicazione: Un applicazione come Spotify non richiede l'utilizzo della fotocamera, pertanto se ci si accorge che l'app che si sta installando li richiede, potrebbe essere il segnale di presenza di un malware.
+E' quindi necessario controllare, in fase di installazione, i permessi richiesti dall'applicazione: Un'applicazione come Spotify non richiede l'utilizzo della fotocamera, pertanto se ci si accorge che l'app che si sta installando li richiede, potrebbe essere il segnale di presenza di un malware.
