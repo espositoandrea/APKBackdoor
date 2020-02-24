@@ -1,5 +1,6 @@
 = Cyber Security
 :toc: left
+:toclevels: 4
 :doctype: book
 :sectnums:
 :partnums:
@@ -120,6 +121,9 @@ include::red-team/action.adoc[]
 ==== Blue Team
 
 include::blue-team/action.adoc[]
+
+
+include::red-team/appendix-code.adoc[]
 
 [bibliography]
 == Riferimenti

@@ -1,0 +1,30 @@
+Reconnaissance: Prevenire l'instalazione di apk non presenti su Play Store o certificate, 
+evitando di scaricarle da siti non ufficiali.
+
+Weaponization: Di default, molti SO Android Based  limitano l'installazione di Apk non "ufficiali" o riconosciute 
+, chiedendo conferma all'utente prima di installarle. 
+Questo controllo può essere disabilitato dall'utente,
+ ( generalmente ricade nelle Opzioni Sviluppatore)
+ma è consigliato farlo solo con apk il cui sviluppatore è l'utente stesso.
+ Per tutte le altre applicazioni è fortemente consigliato mantenere abilitata tale funzione,
+al fine di evitare l'installazione di apk nocive.
+
+Delivery : Qui non so precisamente, anche perchè la parte di weaponization potrebbe andare bene comuqnue,
+  non c'è una vera e propria fase di delivery
+
+Exploit: Inoltre su molti S.O è presente ormai una qualsiasi forma di Antivirus, in grado di scansionare il sistema.
+ All'evenienza è possibile scaricarne altri dal Play Store
+ 
+Installation. Controllare in fase di installazione i permessi richiesti dall'applicazione: Un apk come Spotify non richiede 
+l'utilizzo della fotocamera, pertanto se ci si accorge che l'app che si sta installando li richiede, potrebbe essere il
+ segnale di presenza di un malware.
+
+Command & Control: Eseguire periodicamente una scansione del sistema,
+ 
+ Action: Una volta riconosciuta l'apk nociva, procedere alla rimozione, in alcuni casi è consigliato
+ effettuare un Full Wipe del sistema al fine di rimuovere eventuali file aggiuntivi che Android potrebbe tralasciare
+con la normale disinstallazione dell'app. Non essendo a conoscenza dei "danni subiti" ,
+è consigliato effettuare un controllo e aggiornamento delle password dei propri account e in generale dei dati sensibili
+che potrebbero essere compromessi.
+
+//TODO: Da introdurre in una dell fasi i permessi di root.
