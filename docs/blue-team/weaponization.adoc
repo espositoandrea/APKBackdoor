@@ -1,1 +1,8 @@
-// TODO: Write
+[.text-center]
+"`__Implementare restrizioni sull'installazione di applicazioni sconosciute__`"
+
+Molti dispositivi "`__Android Based__`" hanno, nelle ultime versioni del software, delle restrizioni riguardo l'installazione di applicazioni sconosciute. Queste restrizioni, oltre ad implicare l'attivazione della modalità "`__Installa app sconosciute__`", prevedono l'esplicita richiesta dei permessi di **root** o di attivare la "`__Modalità sviluppatore__`".
+
+Pertanto, si consiglia di non sbloccare il proprio telefono (e quindi di evitare l'attivazione dei permessi di _root_) e di non attivare la "`__Modalità sviluppatore__`" se non si sviluppano software.
+
+Nel caso in cui l'utente sia uno sviluppatore, è consigliabile utilizzare il device come "`__Dispositivo secondario__`", ovvero senza dati personali e/o sensibili. Se non è possibile tale scenario, è consigliato non scaricare applicazioni o altre tipologie di file da fonti non autorevoli.
