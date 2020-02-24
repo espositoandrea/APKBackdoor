@@ -1,7 +1,7 @@
 [.text-center]
 "`__Individuazione del mezzo di trasmissione__`"
 
-L'intera dase di ricognizione in questo attacco è basata sul _social
+L'intera fase di ricognizione in questo attacco è basata sul _social
 engineering_. Si vogliono quindi determinare delle possibili vittime
 dell'attacco in modo da poter preparare un attacco.
 
