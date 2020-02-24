@@ -1,12 +1,8 @@
 [.text-center]
 "'__Effettuare scansioni periodiche del sistema__'"
 
-L'utilizzo di un antivirus aggiornato, unito all'esecuzione periodica di scansioni dell'intero sistema, 
-possono aiutare nel rilevare ed intercettare malware e processi anomali in esecuzione di cui non si è 
-a conoscenza.
+L'utilizzo di un antivirus aggiornato, unito all'esecuzione periodica di scansioni dell'intero sistema, possono aiutare nel rilevare ed intercettare malware e processi anomali in esecuzione di cui non si è a conoscenza.
 
-Si consiglia una scansione settimanale del sistema, che può essere anche automatizzata e non limita 
-le funzionalità del dispositivo.
+Si consiglia una scansione settimanale del sistema, che può essere anche automatizzata e non limita le funzionalità del dispositivo.
 
-Inoltre è consigliato effettuare una scansione ogni volta che viene installata una nuova applicazione, specie
-se da fonti non attendibili.
+Inoltre, è consigliato effettuare una scansione ogni volta che viene installata una nuova applicazione, specie se da fonti non attendibili.
