@@ -1,5 +1,5 @@
 [.text-center]
-"`__Implementare restrizioni sull'installazione di applicazioni sconosciute__`"
+"`__Implementare restrizioni sull'attivazione di modalità non consone all'utilizzo del dispositivo__`"
 
 Molti dispositivi "`__Android Based__`" hanno, nelle ultime versioni del software, delle restrizioni riguardo l'installazione di applicazioni sconosciute. Queste restrizioni, oltre ad implicare l'attivazione della modalità "`__Installa app sconosciute__`", prevedono l'esplicita richiesta dei permessi di **root** o di attivare la "`__Modalità sviluppatore__`".
 
