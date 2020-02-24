@@ -96,10 +96,10 @@ def setup_args():
 
 
 def main():
-    utilities.resize_screen()
     args = setup_args()
     logging.basicConfig(level=args.verbosity, filename='apk_backdoor.log', filemode='w')
 
+    utilities.resize_screen()
     utilities.clear_screen()
     print(Fore.RED + utilities.get_title(center=True) + Style.RESET_ALL)
 
