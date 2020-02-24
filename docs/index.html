@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Cyber Security</title>
+<meta name="author" content="TriSec">
+<title>Apk Backdoor</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,9 +440,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Cyber Security</h1>
+<h1>Apk Backdoor</h1>
+<div class="details">
+<span id="author" class="author">TriSec</span><br>
+<span id="revnumber">versione 1.0.0,</span>
+<span id="revdate">24 febbraio 2020</span>
+<br><span id="revremark">Stesura della documentazione</span>
+</div>
 <div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
+<div id="toctitle">Indice</div>
 <ul class="sectlevel1">
 <li><a href="#_introduzione">1. Introduzione</a>
 <ul class="sectlevel2">
@@ -501,7 +508,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#appendix-red-team-tool">Appendix A: Codice sorgente: il tool</a>
+<li><a href="#appendix-red-team-tool">Appendice A: Codice sorgente: il tool</a>
 <ul class="sectlevel2">
 <li><a href="#appendix-red-team-tool-setup">A.1. File: setup.py</a></li>
 <li><a href="#_modulo_apk_backdoor">A.2. Modulo: apk_backdoor</a>
@@ -533,6 +540,12 @@ Moro&#8221;, composto da Andrea <strong>Esposito</strong>, Alessandro <strong>An
 <p>Il nome del team deriva dalla condensazione del prefisso greco &#8220;tri&#8221; (tre,
 come i componenti del gruppo) e &#8220;Sec&#8221; (da &#8220;Security&#8221;).</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/apk_backdoor.svg" alt="Apk Backdoor">
+</div>
+<div class="title">Figura 1. Logo di Apk Backdoor</div>
+</div>
 <div class="paragraph">
 <p>Il progetto, &#8220;<strong>Apk Backdoor</strong>&#8221; rappresenta uno sviluppo di un meta-attacco,
 ovverosia uno sviluppo di una intera classe di attacchi. Tali attacchi sono
@@ -551,7 +564,7 @@ diffusi.</p>
 <div class="paragraph">
 <p>Nello specifico, si realizzerà un <em>tool</em> che consenta l&#8217;automatizzazione
 dell&#8217;iniezione di codice malevole all&#8217;interno di un APK funzionante. Da qui,
-l&#8217;obiettivo è quello di ottenere il controllo remote del dispositivo mobile,
+l&#8217;obiettivo è quello di ottenere il controllo remoto del dispositivo mobile,
 spianando la strada a qualsiasi tipo di obiettivo l&#8217;attaccante possa voler
 raggiungere (per esempio, furto di dati sensibili o ricatti).</p>
 </div>
@@ -584,7 +597,7 @@ spianando la strada a furti di dati o altri danni.</p>
 <h2 id="_killchain">2. Killchain</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Killchain</caption>
+<caption class="title">Tabella 1. Killchain</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -664,7 +677,7 @@ Spotify (<a href="https://www.spotify.com/" class="bare">https://www.spotify.com
 </div>
 <div class="paragraph">
 <p>Inoltre, è risaputo che parte di tali utenti utilizza una versione &#8220;pirata&#8221; di
-Spotify: nel 2018 si stimava che su 232 milioni di utenti totali, 124 milioni
+Spotify: nel 2019 si stimava che su 232 milioni di utenti totali, 124 milioni
 fossero utenti utilizzatori di versioni pirata dell&#8217;applicazione (stando a
 <a href="#spotify-pirated">[spotify-pirated]</a>).</p>
 </div>
@@ -843,7 +856,7 @@ la creazione del malware.</p>
 </div>
 <div class="paragraph">
 <p>Il codice sorgente di tale tool, per non appensantire questa sezione del
-documento, è riportato in <a href="#appendix-red-team-tool">Appendix A</a>.</p>
+documento, è riportato in <a href="#appendix-red-team-tool">Appendice A</a>.</p>
 </div>
 <div class="paragraph">
 <p>L&#8217;installazione è semplicissima: basta eseguire i seguenti comandi:</p>
@@ -1215,7 +1228,7 @@ essere necessario effettuare un "'<em>Ripristino alle impostazioni di fabbrica</
 </div>
 </div>
 <div class="sect1">
-<h2 id="appendix-red-team-tool">Appendix A: Codice sorgente: il tool</h2>
+<h2 id="appendix-red-team-tool">Appendice A: Codice sorgente: il tool</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Di seguito si riporta il codice sorgente del tool sviluppato.</p>
@@ -1784,8 +1797,8 @@ A tool developed by Andrea Esposito
 URL: <a href="https://qz.com/1736762/spotify-grows-monthly-active-users-and-turns-profit-shares-jump-15-percent/" class="bare">https://qz.com/1736762/spotify-grows-monthly-active-users-and-turns-profit-shares-jump-15-percent/</a> (visitato il 20 febbraio 2020)</p>
 </li>
 <li>
-<p><a id="spotify-pirated"></a>[spotify-pirated] Marsha Silva, <em>26 marzo 2018</em>, su &#8220;Digital Music News&#8221;.
-URL: <a href="https://www.digitalmusicnews.com/2018/03/26/spotify-piracy-hacked/" class="bare">https://www.digitalmusicnews.com/2018/03/26/spotify-piracy-hacked/</a> (visitato il 20 febbraio 2020)</p>
+<p><a id="spotify-pirated"></a>[spotify-pirated] Rolling Stone, <em>4 agosto 2019</em>, su &#8220;RollingStone&#8221;.
+URL: <a href="https://www.rollingstone.it/musica/news-musica/spotify-raggiunge-quota-232-milioni-di-utenti-ma-solo-la-meta-paga/471803/" class="bare">https://www.rollingstone.it/musica/news-musica/spotify-raggiunge-quota-232-milioni-di-utenti-ma-solo-la-meta-paga/471803/</a> (visitato il 23 febbraio 2020)</p>
 </li>
 </ul>
 </div>
@@ -1794,7 +1807,8 @@ URL: <a href="https://www.digitalmusicnews.com/2018/03/26/spotify-piracy-hacked/
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-24 17:42:30 +0100
+Versione 1.0.0<br>
+Ultimo aggiornamento 2020-02-24 18:00:34 +0100
 </div>
 </div>
 <style>

@@ -1,4 +1,6 @@
-= Cyber Security
+= Apk Backdoor
+TriSec
+v1.0.0, 24 febbraio 2020: Stesura della documentazione
 :toc: left
 :toclevels: 4
 :doctype: book
@@ -9,6 +11,7 @@
 :source-highlighter: rouge
 :icons: font
 :lang: it
+include::locale/attributes.adoc[]
 
 == Introduzione
 
@@ -18,6 +21,9 @@ Moro`", composto da Andrea *Esposito*, Alessandro *Annese* e Graziano *Montanaro
 
 Il nome del team deriva dalla condensazione del prefisso greco "`tri`" (tre,
 come i componenti del gruppo) e "`Sec`" (da "`Security`").
+
+.Logo di Apk Backdoor
+image::images/apk_backdoor.svg[Apk Backdoor]
 
 Il progetto, "`**Apk Backdoor**`" rappresenta uno sviluppo di un meta-attacco,
 ovverosia uno sviluppo di una intera classe di attacchi. Tali attacchi sono
@@ -34,7 +40,7 @@ diffusi.
 
 Nello specifico, si realizzerà un _tool_ che consenta l'automatizzazione
 dell'iniezione di codice malevole all'interno di un APK funzionante. Da qui,
-l'obiettivo è quello di ottenere il controllo remote del dispositivo mobile,
+l'obiettivo è quello di ottenere il controllo remoto del dispositivo mobile,
 spianando la strada a qualsiasi tipo di obiettivo l'attaccante possa voler
 raggiungere (per esempio, furto di dati sensibili o ricatti).
 
@@ -189,5 +195,5 @@ include::red-team/appendix-code.adoc[]
 
 - [[[spotify-users]]] Matthew De Silva, _28 ottobre 2019_, su "`Quarz`". 
   URL: https://qz.com/1736762/spotify-grows-monthly-active-users-and-turns-profit-shares-jump-15-percent/ (visitato il 20 febbraio 2020)
-- [[[spotify-pirated]]] Marsha Silva, _26 marzo 2018_, su "`Digital Music News`".
-  URL: https://www.digitalmusicnews.com/2018/03/26/spotify-piracy-hacked/ (visitato il 20 febbraio 2020)
+- [[[spotify-pirated]]] Rolling Stone, _4 agosto 2019_, su "`RollingStone`".
+  URL: https://www.rollingstone.it/musica/news-musica/spotify-raggiunge-quota-232-milioni-di-utenti-ma-solo-la-meta-paga/471803/ (visitato il 23 febbraio 2020)
