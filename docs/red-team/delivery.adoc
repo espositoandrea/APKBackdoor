@@ -8,3 +8,11 @@ lasciando all'utente (ignaro) l'onere di installarlo sul proprio dispositivo. A
 tale fine si crea un post su di un blog, fornendo un link di download per l'APK
 modificato (che è descritto come una "`crack`" dell'applicazione originale).
 Successivamente si condivide l'URL di tale post e si attendono i primi download.
+
+Un esempio di post contenente il link al download dell'APK è disponibile
+all'indirizzo
+https://aesposito.altervista.org/spotify-music-premium-apk-mod-no-ban/ (un blog
+vuoto creato appositamente per questo post). A tale proposito, un attaccante
+potrebbe avere intenzione di costruire una certa fiducia (_trust_) nei suoi
+confronti, pubblicando altri post simili (magari anche quelli contenenti APK
+modificati).
