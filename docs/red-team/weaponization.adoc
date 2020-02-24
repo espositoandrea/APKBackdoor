@@ -1,4 +1,166 @@
 [.text-center]
 "`__Preparazione dell'applicazione modificata__`"
 
-// TODO: Write me
+===== Requisiti
+
+Per poter proseguire con l'attacco, sono necessari alcuni prerequisiti software.
+
+Non è necessario alcun sistema operativo particolare per eseguire i comandi
+(benché sia molto consigliato utilizzare un sistema operativo Linux, come
+**Kali** o **Ubuntu**). Tutto quel che è descritto in questo documento è stato
+scritto e testato su **Ubuntu 19.10 (Eoan Ermine)**.
+
+Per iniziare, è necessario installare e/o aggiornare il framework *Metasploit*.
+Su _Kali Linux_, questo tool è già preinstallato e per aggiornarlo basta
+eseguire i seguenti comandi:
+
+[source,shell]
+--------------
+sudo apt update -y && sudo apt upgrade -y
+--------------
+
+Su _Ubuntu_ (o altre distribuzioni) è invece necessario installarlo dal suo
+codice sorgente. Le istruzioni sono comunque disponibili all'interno della loro
+repository, all'indirizzo https://github.com/rapid7/metasploit-framework.
+
+Successivamente è necessario installare il tool `zipalign` (utilizzato durante
+la fase di firma dell'APK). Tale tool, se non precedentemente installato, è
+installabile mediante i seguenti comandi:
+
+[source,shell]
+----------
+sudo apt update -y && sudo apt install -y zipalign
+----------
+
+È inoltre necessario installare *Python 3.7* (o superiore). Oggigiorno le
+distribuzioni Linux citate hanno l'interprete preinstallato. Tuttavia, qualora
+fosse necessario, Python e il suo _package manager_ *PIP* possono essere
+installati eseguendo:
+
+[source,shell]
+--------------
+sudo apt update -y && sudo apt install python3 python3-pip -y
+--------------
+
+Ulteriori dipendenze da installare sono quelle dei tool installati fin'ora, ma
+sono già elencate sui loro siti web o installate automaticamente (con il comando
+`apt install`) ed è quindi superfluo riportarle.
+
+Inoltre, il tool è dipendente da ApkTool
+(https://ibotpeaches.github.io/Apktool/) e ApkSigner
+(https://developer.android.com/studio/command-line/apksigner), tuttavia tali
+eseguibili sono stati inclusi all'interno del programma scritto e non è quindi
+necessaria una loro installazione.
+
+Una dipendenza non necessaria, ma consigliata, è KeyTool
+(https://docs.oracle.com/en/java/javase/12/tools/keytool.html), utilizzato per
+creare il database di chiavi con cui firmare l'APK. Un database di debug è stato
+già incluso all'interno del tool e non è quindi necessario l'installazione di
+KeyTool, ma qualora si volessero modificare le chiavi nel database, è necessaria
+la sua installazione.
+
+Le versioni dei tool con cui il programma scritto è stato testato sono le
+seguenti:
+
+[horizontal]
+Metasploit Framework:: versione `5.0.75-dev-8167fee11e`
+Python:: versione 3.7.5
+Pip:: versione 18.1 (per Python 3)
+Zipalign:: _Unknown_
+ApkTool:: versione 2.4.0
+ApkSigner:: versione 0.8
+
+===== Il tool
+
+I comandi da eseguire al fine di includere una backdoor in un APK sono diversi,
+e richiedono alcune azioni manuali. Poiché ci si occupa di gestire un
+meta-attacco, è impensabile riprodurre numerose volte le stesse azioni su APK
+differenti. Per questo motivo si è deciso di creare un tool che automatizzasse
+la creazione del malware.
+
+Il codice sorgente di tale tool, per non appensantire questa sezione del
+documento, è riportato in <<appendix-red-team-tool>>.
+
+L'installazione è semplicissima: basta eseguire i seguenti comandi:
+
+[source,shell]
+--------------
+git clone https://github.com/espositoandrea/CyberSecurity.git
+cd CyberSecurity/src
+pip3 install .
+--------------
+
+In questo modo il tool sarà installato e disponibile nella variabile `PATH` di
+sistema. Il programma si presenta in questo modo:
+
+[source]
+-------
+andrea@laptop:~$ apk-backdoor -h
+usage: apk-backdoor [-h] [-v] [--host HOST] [--public_host PUBLIC_HOST]
+                    [--meterpreter-config {Y,N}]
+                    [-V {CRITICAL,ERROR,WARN,INFO,DEBUG}]
+                    APK
+
+Inject a meterpreter backdoor in an existing APK
+
+positional arguments:
+  APK                   The APK where the backdoor will be injected
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  --host HOST, -H HOST  The host (in the form IP:PORT) to which the payload
+                        will send data
+  --public_host PUBLIC_HOST, -p PUBLIC_HOST
+                        The host (in the form IP:PORT) to which the payload
+                        will send data. Use this if HOST is in a private
+                        network: REAL_HOST will be the router's public IP (and
+                        the port that the router will forward to the
+                        attacker's machine)
+  --meterpreter-config {Y,N}, -m {Y,N}
+                        Whether or not a meterpreter configuration file should
+                        be written.It can then be used with 'msfconsole -r
+                        config_file'
+  -V {CRITICAL,ERROR,WARN,INFO,DEBUG}, --verbose {CRITICAL,ERROR,WARN,INFO,DEBUG}
+                        Verbosity level (between 1 and 5 occurrences with more
+                        leading to a more verbose logging). CRITICAL = 0,
+                        ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4.
+
+-------
+
+Come comprensibile, il programma richiede un APK in cui iniettare la backdoor e
+dispone di una serie di opzioni che ne consentono la configurazione da riga di
+comando.
+
+===== Il funzionamento del tool
+
+. Il programma, al suo avvio, ottiene un riferimento all'APK target, in modo da
+poterlo utilizzare al suo interno.
+
+. Se non forniti mediante interfaccia da riga di comando, il programma richiede
+l'immissione dell'IP privato dell'host a cui inviare i dati una volta avviata la
+backdoor
+
+.. Se l'attacco è da compiere su rete WAN, deve essere utilizzata l'interfaccia
+da riga di comando e deve essere fornito l'IP pubblico mediante l'opzione `-p`
+
+. È eseguito il comando `msfvenom` per iniettare la backdoor all'interno
+dell'APK (si veda <<appendix-red-team-tool-payload>> per il comando completo).
+Poiché l'APK non funziona a dovere sin da questo punto, è necessario apportarvi
+delle modifiche
+
+. L'APK generato viene decompilato con ApkTool (si veda
+<<appendix-red-team-tool-apk>>)
+
+. Viene iniettato all'interno del Manifest dell'APK decompilato una riga XML che
+consente l'uso dei permessi richiesti sui dispositivi Android più recenti
+
+. È ricompilato l'APK modificato con ApkTool (si veda
+<<appendix-red-team-tool-apk>>)
+
+. L'APK viene riallineato con ZipAlign (si veda <<appendix-red-team-tool-apk>>)
+
+. L'APK appena ricompilato è firmato con ApkSigner (si veda
+<<appendix-red-team-tool-apk>>)
+
+A questo punto l'APK infetto è pronto e può essere condiviso.

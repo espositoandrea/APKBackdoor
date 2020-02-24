@@ -11,10 +11,14 @@ setup(
     packages=['apk_backdoor'],
     package_data={
         'apk_backdoor': [
-            'tools/apktool.jar'
+            'tools/apktool.jar',
+            'tools/apksigner.jar',
+            'tools/debug.keystore',
         ]
     },
-    # install_requires=['bar', 'greek'],  # external packages as dependencies
+    install_requires=[
+        'colorama'
+    ],
     entry_points={
         'console_scripts': [
             'apk-backdoor = apk_backdoor.cli:main'
