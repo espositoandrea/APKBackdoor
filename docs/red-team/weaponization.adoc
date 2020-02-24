@@ -171,3 +171,10 @@ consente l'uso dei permessi richiesti sui dispositivi Android più recenti
 <<appendix-red-team-tool-apk>>)
 
 A questo punto l'APK infetto è pronto e può essere condiviso.
+
+NOTE: Per semplicità si è utilizzato un APK già precedentemente crackato
+(ovverosia in cui le limitazioni della versione gratuita di Spotify sono state
+rimosse). Questo perché l'obiettivo di questo documento è presentare l'attacco e
+la difesa per un intera classe di attacchi non legata allo specifico APK
+obiettivo, ed era quindi superfluo modificare l'APK originale per rimuovere le
+limitazioni.
