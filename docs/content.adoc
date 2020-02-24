@@ -12,6 +12,19 @@
 
 == Killchain
 
+.Killchain
+[cols="<.^,^.^h,>.^",options="header"]
+|===
+|Red Team|Phase|Blue Team
+|Individuazione del mezzo di trasmisisone (app)|Reconnaissance|Prevenire l'installazione di applicazioni da fonti sconosciute
+|Preparazione dell'applicazione modificata|Weaponization|Implementare restrizioni sull'attivazione di modalità non consone all'utilizzo del dispositivo
+|Preparazione dell'esca e condivisione del link di download|Delivery|Visitare solo siti internet attendibili
+|Autoesecuzione del payload|Exploit|Utilizzare antivirus sempre aggiornati
+|Installazione da parte dell'utente|Installation|Controllare sempre le autorizzazioni richieste dalle applicazioni
+|Attivazione della backdoor|Command & Control|Effettuare scansioni periodiche del sistema
+|Sfruttamento della backdoor|Action|Rimuovere l'applicazione malevola
+|===
+
 [#reconnaissance]
 === Reconnaissance
 
