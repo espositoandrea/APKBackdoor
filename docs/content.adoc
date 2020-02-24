@@ -11,6 +11,7 @@ v1.0.0, 24 febbraio 2020: Stesura della documentazione
 :source-highlighter: rouge
 :icons: font
 :lang: it
+:title-logo-image: image:images/trisec_and_apkbackdoor.svg[]
 include::locale/attributes.adoc[]
 
 == Introduzione
