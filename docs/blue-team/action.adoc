@@ -1,1 +1,5 @@
-// TODO: Write
+[.text-center]
+
+"'__Rimuovere l'applicazione malevola__'"
+
+
