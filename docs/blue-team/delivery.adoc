@@ -1,1 +1,6 @@
-// TODO: Write
+[.text-center]
+"`__Visitare solo siti internet attendibili__`"
+
+La maggior parte delle app "`__piratate__`" viene distribuita attraverso blog, siti internet improvvisati o gruppi social (Facebook, Telegram ecc...). 
+
+E' consigliato non visitare o frequentare tali fonti in quanto distributrici di applicazioni funzionali ma contententi, nella maggior parte dei casi, codice malevolo.
