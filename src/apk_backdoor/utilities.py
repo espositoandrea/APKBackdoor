@@ -9,18 +9,18 @@ from colorama import Fore, Style
 def phase(msg):
     def phase_decorator(func):
         def function_wrapper(*args):
-            print_phase(msg)
+            print(f' [+] {msg}...', end=' ', flush=True)
             try:
                 func(*args)
             except BaseException as e:
-                phase_not_done()
+                print(f'{Fore.RED}ERROR{Style.RESET_ALL}')
                 logging.critical(f"{type(e).__name__} --- {str(e)}")
                 print(f"{Fore.RED}{type(e).__name__} - {str(e)}\n"
                       "    To get more information about the error, take a look at the log file (apk_backdoor.log).\n"
                       "    You can increase the verbosity level of the log file using the --verbose option")
                 sys.exit(1)
             else:
-                phase_done()
+                print(f'{Fore.GREEN}Done{Style.RESET_ALL}')
 
         return function_wrapper
 
@@ -29,7 +29,8 @@ def phase(msg):
 
 def run_command(command):
     logging.debug(f"Executing command: '{command}'")
-    process = subprocess.Popen(command.split(' '), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    process = subprocess.Popen(command.split(
+        ' '), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     while True:
         output = process.stdout.readline()
         if output == b'' and process.poll() is not None:
@@ -71,13 +72,8 @@ def clear_screen():
                     shell=True)
 
 
-def print_phase(msg):
-    print(f' [+] {msg}...', end=' ', flush=True)
-
-
-def phase_done():
-    print(f'{Fore.GREEN}Done{Style.RESET_ALL}')
-
-
-def phase_not_done():
-    print(f'{Fore.RED}ERROR{Style.RESET_ALL}')
+def resize_screen(rows=40, cols=120):
+    subprocess.call(
+        f'mode con: cols={cols} lines={rows}' if platform.system() == "Windows" else f'resize -s {rows} {cols} > /dev/null',
+        shell=True
+    )
