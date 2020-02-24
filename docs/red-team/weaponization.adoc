@@ -42,15 +42,22 @@ installati eseguendo:
 sudo apt update -y && sudo apt install python3 python3-pip -y
 --------------
 
+Inoltre, il tool è dipendente da ApkTool
+(https://ibotpeaches.github.io/Apktool/), da installare preventivamente. Il metodo di installazione varia in base al sistema su cui si opera, ma su Ubuntu 19.10 basta eseguire i seguenti comandi:
+
+[source,shell]
+--------------
+sudo apt update -y && sudo apt install apktool -y
+--------------
+
 Ulteriori dipendenze da installare sono quelle dei tool installati fin'ora, ma
 sono già elencate sui loro siti web o installate automaticamente (con il comando
 `apt install`) ed è quindi superfluo riportarle.
 
-Inoltre, il tool è dipendente da ApkTool
-(https://ibotpeaches.github.io/Apktool/) e ApkSigner
-(https://developer.android.com/studio/command-line/apksigner), tuttavia tali
-eseguibili sono stati inclusi all'interno del programma scritto e non è quindi
-necessaria una loro installazione.
+Inoltre, il tool è dipendente da ApkSigner
+(https://developer.android.com/studio/command-line/apksigner), tuttavia tale
+eseguibile è stato incluso all'interno del programma scritto e non è quindi
+necessaria una sua installazione.
 
 Una dipendenza non necessaria, ma consigliata, è KeyTool
 (https://docs.oracle.com/en/java/javase/12/tools/keytool.html), utilizzato per

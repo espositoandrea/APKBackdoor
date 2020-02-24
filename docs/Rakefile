@@ -4,6 +4,7 @@ require "asciidoctor"
 
 task :asciidoc do
   Asciidoctor.convert_file "content.adoc", backend: "docbook5", safe: :unsafe
+  Asciidoctor.convert_file "content.adoc", backend: "html", safe: :unsafe, to_file: 'index.html'
 end
 
 task :default => :asciidoc do

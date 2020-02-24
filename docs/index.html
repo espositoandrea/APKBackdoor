@@ -443,54 +443,60 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_killchain">1. Killchain</a>
+<li><a href="#_introduzione">1. Introduzione</a>
 <ul class="sectlevel2">
-<li><a href="#reconnaissance">1.1. Reconnaissance</a>
-<ul class="sectlevel3">
-<li><a href="#reconnaissance-red-team">1.1.1. Red Team</a></li>
-<li><a href="#reconnaissance-blue-team">1.1.2. Blue Team</a></li>
+<li><a href="#_contesto">1.1. Contesto</a></li>
+<li><a href="#_scenario">1.2. Scenario</a></li>
 </ul>
 </li>
-<li><a href="#weaponization">1.2. Weaponization</a>
+<li><a href="#_killchain">2. Killchain</a>
+<ul class="sectlevel2">
+<li><a href="#reconnaissance">2.1. Reconnaissance</a>
 <ul class="sectlevel3">
-<li><a href="#weaponization-red-team">1.2.1. Red Team</a>
+<li><a href="#reconnaissance-red-team">2.1.1. Red Team</a></li>
+<li><a href="#reconnaissance-blue-team">2.1.2. Blue Team</a></li>
+</ul>
+</li>
+<li><a href="#weaponization">2.2. Weaponization</a>
+<ul class="sectlevel3">
+<li><a href="#weaponization-red-team">2.2.1. Red Team</a>
 <ul class="sectlevel4">
 <li><a href="#_requisiti">Requisiti</a></li>
 <li><a href="#_il_tool">Il tool</a></li>
 <li><a href="#_il_funzionamento_del_tool">Il funzionamento del tool</a></li>
 </ul>
 </li>
-<li><a href="#weaponization-blue-team">1.2.2. Blue Team</a></li>
+<li><a href="#weaponization-blue-team">2.2.2. Blue Team</a></li>
 </ul>
 </li>
-<li><a href="#delivery">1.3. Delivery</a>
+<li><a href="#delivery">2.3. Delivery</a>
 <ul class="sectlevel3">
-<li><a href="#delivery-red-team">1.3.1. Red Team</a></li>
-<li><a href="#delivery-blue-team">1.3.2. Blue Team</a></li>
+<li><a href="#delivery-red-team">2.3.1. Red Team</a></li>
+<li><a href="#delivery-blue-team">2.3.2. Blue Team</a></li>
 </ul>
 </li>
-<li><a href="#exploit">1.4. Exploit</a>
+<li><a href="#exploit">2.4. Exploit</a>
 <ul class="sectlevel3">
-<li><a href="#exploit-red-team">1.4.1. Red Team</a></li>
-<li><a href="#exploit-blue-team">1.4.2. Blue Team</a></li>
+<li><a href="#exploit-red-team">2.4.1. Red Team</a></li>
+<li><a href="#exploit-blue-team">2.4.2. Blue Team</a></li>
 </ul>
 </li>
-<li><a href="#installation">1.5. Installation</a>
+<li><a href="#installation">2.5. Installation</a>
 <ul class="sectlevel3">
-<li><a href="#installation-red-team">1.5.1. Red Team</a></li>
-<li><a href="#installation-blue-team">1.5.2. Blue Team</a></li>
+<li><a href="#installation-red-team">2.5.1. Red Team</a></li>
+<li><a href="#installation-blue-team">2.5.2. Blue Team</a></li>
 </ul>
 </li>
-<li><a href="#command-and-control">1.6. Command &amp; Control</a>
+<li><a href="#command-and-control">2.6. Command &amp; Control</a>
 <ul class="sectlevel3">
-<li><a href="#command-and-control-red-team">1.6.1. Red Team</a></li>
-<li><a href="#command-and-control-blue-team">1.6.2. Blue Team</a></li>
+<li><a href="#command-and-control-red-team">2.6.1. Red Team</a></li>
+<li><a href="#command-and-control-blue-team">2.6.2. Blue Team</a></li>
 </ul>
 </li>
-<li><a href="#action">1.7. Action</a>
+<li><a href="#action">2.7. Action</a>
 <ul class="sectlevel3">
-<li><a href="#action-red-team">1.7.1. Red Team</a></li>
-<li><a href="#action-blue-team">1.7.2. Blue Team</a></li>
+<li><a href="#action-red-team">2.7.1. Red Team</a></li>
+<li><a href="#action-blue-team">2.7.2. Blue Team</a></li>
 </ul>
 </li>
 </ul>
@@ -516,10 +522,121 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_killchain">1. Killchain</h2>
+<h2 id="_introduzione">1. Introduzione</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p><strong>TriSec</strong> è un gruppo di studenti al terzo anno del Corso di Laurea in
+Informatica e Comunicazione Digitale dell&#8217;Università degli Studi di Bari &#8220;A.
+Moro&#8221;, composto da Andrea <strong>Esposito</strong>, Alessandro <strong>Annese</strong> e Graziano <strong>Montanaro</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Il nome del team deriva dalla condensazione del prefisso greco &#8220;tri&#8221; (tre,
+come i componenti del gruppo) e &#8220;Sec&#8221; (da &#8220;Security&#8221;).</p>
+</div>
+<div class="paragraph">
+<p>Il progetto, &#8220;<strong>Apk Backdoor</strong>&#8221; rappresenta uno sviluppo di un meta-attacco,
+ovverosia uno sviluppo di una intera classe di attacchi. Tali attacchi sono
+accumunati da tutte le fasi della killchain fatta eccezione per la fase di
+azione (che varia in base agli obiettivi specifici). L&#8217;intera classe di attacchi
+si basa sulla introduzione di una <em>backdoor</em> (&#8220;porta sul retro&#8221;) all&#8217;interno
+di APK validi e funzionanti.</p>
+</div>
 <div class="sect2">
-<h3 id="reconnaissance">1.1. Reconnaissance</h3>
+<h3 id="_contesto">1.1. Contesto</h3>
+<div class="paragraph">
+<p>Si è deciso di realizzare una intera classe di attacchi aventi l&#8217;obiettivo di
+ottenere l&#8217;accesso a un sistema Android, uno dei sistemi operativi mobile più
+diffusi.</p>
+</div>
+<div class="paragraph">
+<p>Nello specifico, si realizzerà un <em>tool</em> che consenta l&#8217;automatizzazione
+dell&#8217;iniezione di codice malevole all&#8217;interno di un APK funzionante. Da qui,
+l&#8217;obiettivo è quello di ottenere il controllo remote del dispositivo mobile,
+spianando la strada a qualsiasi tipo di obiettivo l&#8217;attaccante possa voler
+raggiungere (per esempio, furto di dati sensibili o ricatti).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scenario">1.2. Scenario</h3>
+<div class="paragraph">
+<p>Al giorno d&#8217;oggi, la maggioranza delle persone utilizzano applicazioni per
+l&#8217;ascolto di musica on-demand online. Esempi di questi sistemi sono Spotify,
+Amazon Music, iTunes, Google Music, ecc.</p>
+</div>
+<div class="paragraph">
+<p>Molti di questi sistemi prevedono un sistema di abbonamento mensile per
+permettere agli utenti di usufruire dei loro servizi. Tuttavia, una gran parte
+degli utenti non è disposta a pagare per servizi digitali e quindi le aziende
+forniscono una versione &#8220;limitata&#8221; dei loro servizi gratuitamente.</p>
+</div>
+<div class="paragraph">
+<p>Ma queste limitazioni non sono spesso accettate da tutti: molti utenti
+preferiscono, infatti, &#8220;crackare&#8221; l&#8217;applicazione in modo da poterla utilizzare
+senza alcun tipo di limitazione. Ed è in questo scenario che l&#8217;attacco si
+colloca: gli attaccanti hanno l&#8217;obiettivo di fornire una crack corrotta agli
+utenti che, una volta installata, fornisca una porta di accesso al sistema
+spianando la strada a furti di dati o altri danni.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_killchain">2. Killchain</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Killchain</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Red Team</th>
+<th class="tableblock halign-center valign-middle">Phase</th>
+<th class="tableblock halign-right valign-middle">Blue Team</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Individuazione del mezzo di trasmisisone (app)</p></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">Reconnaissance</p></th>
+<td class="tableblock halign-right valign-middle"><p class="tableblock">Prevenire l&#8217;installazione di applicazioni da fonti sconosciute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Preparazione dell&#8217;applicazione modificata</p></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">Weaponization</p></th>
+<td class="tableblock halign-right valign-middle"><p class="tableblock">Implementare restrizioni sull&#8217;attivazione di modalità non consone all&#8217;utilizzo del dispositivo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Preparazione dell&#8217;esca e condivisione del link di download</p></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">Delivery</p></th>
+<td class="tableblock halign-right valign-middle"><p class="tableblock">Visitare solo siti internet attendibili</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Autoesecuzione del payload</p></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">Exploit</p></th>
+<td class="tableblock halign-right valign-middle"><p class="tableblock">Utilizzare antivirus sempre aggiornati</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Installazione da parte dell&#8217;utente</p></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">Installation</p></th>
+<td class="tableblock halign-right valign-middle"><p class="tableblock">Controllare sempre le autorizzazioni richieste dalle applicazioni</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Attivazione della backdoor</p></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">Command &amp; Control</p></th>
+<td class="tableblock halign-right valign-middle"><p class="tableblock">Effettuare scansioni periodiche del sistema</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Sfruttamento della backdoor</p></td>
+<th class="tableblock halign-center valign-middle"><p class="tableblock">Action</p></th>
+<td class="tableblock halign-right valign-middle"><p class="tableblock">Rimuovere l&#8217;applicazione malevola</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="reconnaissance">2.1. Reconnaissance</h3>
 <div class="paragraph">
 <p>La fase di "ricognizione" è una delle fasi principali di tutti gli attacchi in
 quanto dedicata alla raccolta delle informazioni sull&#8217;obiettivo e alla
@@ -529,12 +646,12 @@ assets in quanto impedire la ricognizione impedisce, di fatto, di strutturare un
 attacco ben definito.</p>
 </div>
 <div class="sect3">
-<h4 id="reconnaissance-red-team">1.1.1. Red Team</h4>
+<h4 id="reconnaissance-red-team">2.1.1. Red Team</h4>
 <div class="paragraph text-center">
 <p>&#8220;<em>Individuazione del mezzo di trasmissione</em>&#8221;</p>
 </div>
 <div class="paragraph">
-<p>L&#8217;intera dase di ricognizione in questo attacco è basata sul <em>social
+<p>L&#8217;intera fase di ricognizione in questo attacco è basata sul <em>social
 engineering</em>. Si vogliono quindi determinare delle possibili vittime
 dell&#8217;attacco in modo da poter preparare un attacco.</p>
 </div>
@@ -547,7 +664,7 @@ Spotify (<a href="https://www.spotify.com/" class="bare">https://www.spotify.com
 </div>
 <div class="paragraph">
 <p>Inoltre, è risaputo che parte di tali utenti utilizza una versione &#8220;pirata&#8221; di
-Spotify: nel 2018 si stimava che su 71 milioni di utenti paganti, 2 milioni
+Spotify: nel 2018 si stimava che su 232 milioni di utenti totali, 124 milioni
 fossero utenti utilizzatori di versioni pirata dell&#8217;applicazione (stando a
 <a href="#spotify-pirated">[spotify-pirated]</a>).</p>
 </div>
@@ -558,17 +675,28 @@ quindi accesso ai dispositivi sui quali è installata e aperta.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="reconnaissance-blue-team">1.1.2. Blue Team</h4>
-
+<h4 id="reconnaissance-blue-team">2.1.2. Blue Team</h4>
+<div class="paragraph text-center">
+<p>&#8220;<em>Prevenire l&#8217;installazione di applicazioni da fonti sconosciute</em>&#8221;</p>
+</div>
+<div class="paragraph">
+<p>E' importante evitare di installare applicazioni scaricate da fonti sconosciute in quanto sono le prime a contenere un possibile codice malevolo.</p>
+</div>
+<div class="paragraph">
+<p>Al fine di prevenire eventuali attacchi da parte di terzi è necessario <strong>non</strong> attivare la modalità &#8220;<em>Installa app sconosciute</em>&#8221; come prima forma di tutela da parte dell&#8217;utilizzatore del dispositivo.</p>
+</div>
+<div class="paragraph">
+<p>Tuttavia, se l&#8217;utilizzatore del device è uno sviluppatore, è importante che quest&#8217;ultimo presti molta attenzione ad installare solo applicazioni sviluppate da lui stesso o da personale fidato (in questa lista di applicazioni sono incluse anche quelle installabili da fonti verificate quali GOOGLE PlayStore, HUAWEI AppGallery o SAMSUNG Galaxy Store).</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="weaponization">1.2. Weaponization</h3>
+<h3 id="weaponization">2.2. Weaponization</h3>
 <div class="paragraph">
 <p>Questa fase riguarda la preparazione del malware vero e proprio.</p>
 </div>
 <div class="sect3">
-<h4 id="weaponization-red-team">1.2.1. Red Team</h4>
+<h4 id="weaponization-red-team">2.2.1. Red Team</h4>
 <div class="paragraph text-center">
 <p>&#8220;<em>Preparazione dell&#8217;applicazione modificata</em>&#8221;</p>
 </div>
@@ -620,16 +748,24 @@ installati eseguendo:</p>
 </div>
 </div>
 <div class="paragraph">
+<p>Inoltre, il tool è dipendente da ApkTool
+(<a href="https://ibotpeaches.github.io/Apktool/" class="bare">https://ibotpeaches.github.io/Apktool/</a>), da installare preventivamente. Il metodo di installazione varia in base al sistema su cui si opera, ma su Ubuntu 19.10 basta eseguire i seguenti comandi:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="shell"><span class="nb">sudo </span>apt update <span class="nt">-y</span> <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>apktool <span class="nt">-y</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Ulteriori dipendenze da installare sono quelle dei tool installati fin&#8217;ora, ma
 sono già elencate sui loro siti web o installate automaticamente (con il comando
 <code>apt install</code>) ed è quindi superfluo riportarle.</p>
 </div>
 <div class="paragraph">
-<p>Inoltre, il tool è dipendente da ApkTool
-(<a href="https://ibotpeaches.github.io/Apktool/" class="bare">https://ibotpeaches.github.io/Apktool/</a>) e ApkSigner
-(<a href="https://developer.android.com/studio/command-line/apksigner" class="bare">https://developer.android.com/studio/command-line/apksigner</a>), tuttavia tali
-eseguibili sono stati inclusi all&#8217;interno del programma scritto e non è quindi
-necessaria una loro installazione.</p>
+<p>Inoltre, il tool è dipendente da ApkSigner
+(<a href="https://developer.android.com/studio/command-line/apksigner" class="bare">https://developer.android.com/studio/command-line/apksigner</a>), tuttavia tale
+eseguibile è stato incluso all&#8217;interno del programma scritto e non è quindi
+necessaria una sua installazione.</p>
 </div>
 <div class="paragraph">
 <p>Una dipendenza non necessaria, ma consigliata, è KeyTool
@@ -817,24 +953,35 @@ consente l&#8217;uso dei permessi richiesti sui dispositivi Android più recenti
 </div>
 </div>
 <div class="sect3">
-<h4 id="weaponization-blue-team">1.2.2. Blue Team</h4>
-
+<h4 id="weaponization-blue-team">2.2.2. Blue Team</h4>
+<div class="paragraph text-center">
+<p>&#8220;<em>Implementare restrizioni sull&#8217;attivazione di modalità non consone all&#8217;utilizzo del dispositivo</em>&#8221;</p>
+</div>
+<div class="paragraph">
+<p>Molti dispositivi &#8220;<em>Android Based</em>&#8221; hanno, nelle ultime versioni del software, delle restrizioni riguardo l&#8217;installazione di applicazioni sconosciute. Queste restrizioni, oltre ad implicare l&#8217;attivazione della modalità &#8220;<em>Installa app sconosciute</em>&#8221;, prevedono l&#8217;esplicita richiesta dei permessi di <strong>root</strong> o di attivare la &#8220;<em>Modalità sviluppatore</em>&#8221;.</p>
+</div>
+<div class="paragraph">
+<p>Pertanto, si consiglia di non sbloccare il proprio telefono (e quindi di evitare l&#8217;attivazione dei permessi di <em>root</em>) e di non attivare la &#8220;<em>Modalità sviluppatore</em>&#8221; se non si sviluppano software.</p>
+</div>
+<div class="paragraph">
+<p>Nel caso in cui l&#8217;utente sia uno sviluppatore, è consigliabile utilizzare il device come &#8220;<em>Dispositivo secondario</em>&#8221;, ovvero senza dati personali e/o sensibili. Se non è possibile tale scenario, è consigliato non scaricare applicazioni o altre tipologie di file da fonti non autorevoli.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delivery">1.3. Delivery</h3>
+<h3 id="delivery">2.3. Delivery</h3>
 <div class="paragraph">
 <p>In questa fase avviene la &#8220;consegna&#8221; del malware creato precedentemente.</p>
 </div>
 <div class="sect3">
-<h4 id="delivery-red-team">1.3.1. Red Team</h4>
+<h4 id="delivery-red-team">2.3.1. Red Team</h4>
 <div class="paragraph text-center">
 <p>&#8220;<em>Preparazione dell&#8217;esca e condivisione dell&#8217;indirizzo di download</em>&#8221;</p>
 </div>
 <div class="paragraph">
 <p>Completato il malware, è necessaria la sua diffusione al fine di compiere
 realmente l&#8217;attacco. A tal scopo, avendo ottenuto le informazioni descritte in
-<a href="#reconnaissance-red-team">Section 1.1.1</a>, si decide di condividerlo mediante internet,
+<a href="#reconnaissance-red-team">Section 2.1.1</a>, si decide di condividerlo mediante internet,
 lasciando all&#8217;utente (ignaro) l&#8217;onere di installarlo sul proprio dispositivo. A
 tale fine si crea un post su di un blog, fornendo un link di download per l&#8217;APK
 modificato (che è descritto come una &#8220;crack&#8221; dell&#8217;applicazione originale).
@@ -842,24 +989,32 @@ Successivamente si condivide l&#8217;URL di tale post e si attendono i primi dow
 </div>
 </div>
 <div class="sect3">
-<h4 id="delivery-blue-team">1.3.2. Blue Team</h4>
-
+<h4 id="delivery-blue-team">2.3.2. Blue Team</h4>
+<div class="paragraph text-center">
+<p>&#8220;<em>Visitare solo siti internet attendibili</em>&#8221;</p>
+</div>
+<div class="paragraph">
+<p>La maggior parte delle app &#8220;<em>piratate</em>&#8221; viene distribuita attraverso blog, siti internet improvvisati o gruppi social (Facebook, Telegram ecc&#8230;&#8203;).</p>
+</div>
+<div class="paragraph">
+<p>E' consigliato non visitare o frequentare tali fonti in quanto distributrici di applicazioni funzionali ma contententi, nella maggior parte dei casi, codice malevolo.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exploit">1.4. Exploit</h3>
+<h3 id="exploit">2.4. Exploit</h3>
 <div class="paragraph">
 <p>Fase in cui l&#8217;attaccante utilizza un software inviando comandi per far compiere azioni malevoli</p>
 </div>
 <div class="sect3">
-<h4 id="exploit-red-team">1.4.1. Red Team</h4>
+<h4 id="exploit-red-team">2.4.1. Red Team</h4>
 <div class="paragraph text-center">
 <p>&#8220;<em>Autoesecuzione del payload</em>&#8221;</p>
 </div>
 <div class="paragraph">
 <p>Durante la creazione del malware, si è incluso all&#8217;interno dell&#8217;APK una porzione
 di codice che apra <strong>automaticamente</strong> la <em>backdoor</em> all&#8217;apertura
-dell&#8217;applicazione modificata (si veda <a href="#weaponization-red-team">Section 1.2.1</a>). Per questo
+dell&#8217;applicazione modificata (si veda <a href="#weaponization-red-team">Section 2.2.1</a>). Per questo
 motivo, data la struttura dell&#8217;attacco, non sono richieste particolari azioni
 alla squadra attaccante, ma solo un po' di pazienza nell&#8217;attendere che un utente
 apra l&#8217;applicazione modificata.</p>
@@ -871,41 +1026,57 @@ creazione del malware.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="exploit-blue-team">1.4.2. Blue Team</h4>
-
+<h4 id="exploit-blue-team">2.4.2. Blue Team</h4>
+<div class="paragraph text-center">
+<p>&#8220;<em>Utilizzare antivirus sempre aggiornati</em>&#8221;</p>
+</div>
+<div class="paragraph">
+<p>Sui vari store sono presenti delle applicazioni <em>antivirus</em> che si occupano di scansionare tutti i file in entrata nel dispositivo.</p>
+</div>
+<div class="paragraph">
+<p>Si consiglia di installrne uno e di tenerlo sempre aggiornato in modo da riconoscere un&#8217;eventuale applicazione malevola o con eventuali firme non riconosciute.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="installation">1.5. Installation</h3>
+<h3 id="installation">2.5. Installation</h3>
 <div class="paragraph">
 <p>Dopo aver compromesso il sistema, l&#8217;attaccante installa il malware necessario a compiere le azioni malevoli.</p>
 </div>
 <div class="sect3">
-<h4 id="installation-red-team">1.5.1. Red Team</h4>
+<h4 id="installation-red-team">2.5.1. Red Team</h4>
 <div class="paragraph text-center">
 <p>&#8220;<em>Installazione da parte dell&#8217;utente</em>&#8221;</p>
 </div>
 <div class="paragraph">
 <p>Come già detto, durante la creazione del malware si è incluso all&#8217;interno
 dell&#8217;APK una porzione di codice che apra <strong>automaticamente</strong> la <em>backdoor</em>
-all&#8217;apertura dell&#8217;applicazione modificata (si veda <a href="#weaponization-red-team">Section 1.2.1</a>).
+all&#8217;apertura dell&#8217;applicazione modificata (si veda <a href="#weaponization-red-team">Section 2.2.1</a>).
 Per questo motivo non è richiesta alcuna azione da parte dell&#8217;attaccante al fine
 di installare il malware, già installato e attivato <strong>autonomamente</strong> dalla
 vittima e non è richiesta alcuna azione esterna.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="installation-blue-team">1.5.2. Blue Team</h4>
-
+<h4 id="installation-blue-team">2.5.2. Blue Team</h4>
+<div class="paragraph text-center">
+<p>&#8220;<em>Controllare sempre le autorizzazioni richieste dalle applicazioni</em>&#8221;</p>
+</div>
+<div class="paragraph">
+<p>Dalla versione 6.0 del sistema Android è stata introdotta un&#8217;importante funzione che permette all&#8217;utente di gestire i permessi richiesti dalle applicazioni installate sul dispositivo.</p>
+</div>
+<div class="paragraph">
+<p>E' quindi necessario controllare, in fase di installazione, i permessi richiesti dall&#8217;applicazione: Un applicazione come Spotify non richiede l&#8217;utilizzo della fotocamera, pertanto se ci si accorge che l&#8217;app che si sta installando li richiede, potrebbe essere il segnale di presenza di un malware.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="command-and-control">1.6. Command &amp; Control</h3>
+<h3 id="command-and-control">2.6. Command &amp; Control</h3>
 <div class="paragraph">
 <p>In questa fase l&#8217;attaccante assume il controllo da remoto del sistema compromesso.</p>
 </div>
 <div class="sect3">
-<h4 id="command-and-control-red-team">1.6.1. Red Team</h4>
+<h4 id="command-and-control-red-team">2.6.1. Red Team</h4>
 <div class="paragraph text-center">
 <p>&#8220;<em>Attivazione della backdoor</em>&#8221;</p>
 </div>
@@ -966,17 +1137,28 @@ exploit <span class="nt">-j</span> <span class="nt">-z</span></code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="command-and-control-blue-team">1.6.2. Blue Team</h4>
-
+<h4 id="command-and-control-blue-team">2.6.2. Blue Team</h4>
+<div class="paragraph text-center">
+<p>"'<em>Effettuare scansioni periodiche del sistema</em>'"</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;utilizzo di un antivirus aggiornato, unito all&#8217;esecuzione periodica di scansioni dell&#8217;intero sistema, possono aiutare nel rilevare ed intercettare malware e processi anomali in esecuzione di cui non si è a conoscenza.</p>
+</div>
+<div class="paragraph">
+<p>Si consiglia una scansione settimanale del sistema, che può essere anche automatizzata e non limita le funzionalità del dispositivo.</p>
+</div>
+<div class="paragraph">
+<p>Inoltre, è consigliato effettuare una scansione ogni volta che viene installata una nuova applicazione, specie se da fonti non attendibili.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="action">1.7. Action</h3>
+<h3 id="action">2.7. Action</h3>
 <div class="paragraph">
 <p>Gli attaccanti eseguono le operazioni a utili al proprio scopo e/o sferrano attacchi ad altri dispositivi di rete.</p>
 </div>
 <div class="sect3">
-<h4 id="action-red-team">1.7.1. Red Team</h4>
+<h4 id="action-red-team">2.7.1. Red Team</h4>
 <div class="paragraph text-center">
 <p>&#8220;<em>Sfruttamento della backdoor</em>&#8221;</p>
 </div>
@@ -1013,8 +1195,21 @@ sempre attiva in background.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="action-blue-team">1.7.2. Blue Team</h4>
-
+<h4 id="action-blue-team">2.7.2. Blue Team</h4>
+<div class="paragraph text-center">
+<p>"'<em>Rimuovere l&#8217;applicazione malevola</em>'"</p>
+</div>
+<div class="paragraph">
+<p>Una volta individuata l&#8217;applicazione infetta, si procede alla sua rimozione dall&#8217;elenco delle applicazioni
+installate sul dispositivo.</p>
+</div>
+<div class="paragraph">
+<p>Questa operazione potrebbe tuttavia non bastare: se l&#8217;applicazione ha generato altri file malevoli, potrebbe
+essere necessario effettuare un "'<em>Ripristino alle impostazioni di fabbrica</em>'" del dispositivo.</p>
+</div>
+<div class="paragraph">
+<p>Inoltre, è consigliabile controllare i dati sensibili di account collegati al dispositivo, cambiando eventuali password e controllando che non vi siano operazioni effettuate a nostra insaputa.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1298,10 +1493,10 @@ sempre attiva in background.</p>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">utilities</span><span class="o">.</span><span class="n">resize_screen</span><span class="p">()</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">setup_args</span><span class="p">()</span>
     <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">verbosity</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'apk_backdoor.log'</span><span class="p">,</span> <span class="n">filemode</span><span class="o">=</span><span class="s">'w'</span><span class="p">)</span>
 
+    <span class="n">utilities</span><span class="o">.</span><span class="n">resize_screen</span><span class="p">()</span>
     <span class="n">utilities</span><span class="o">.</span><span class="n">clear_screen</span><span class="p">()</span>
     <span class="k">print</span><span class="p">(</span><span class="n">Fore</span><span class="o">.</span><span class="n">RED</span> <span class="o">+</span> <span class="n">utilities</span><span class="o">.</span><span class="n">get_title</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">+</span> <span class="n">Style</span><span class="o">.</span><span class="n">RESET_ALL</span><span class="p">)</span>
 
@@ -1599,7 +1794,7 @@ URL: <a href="https://www.digitalmusicnews.com/2018/03/26/spotify-piracy-hacked/
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-24 13:21:57 +0100
+Last updated 2020-02-24 17:42:30 +0100
 </div>
 </div>
 <style>

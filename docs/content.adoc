@@ -10,6 +10,52 @@
 :icons: font
 :lang: it
 
+== Introduzione
+
+*TriSec* è un gruppo di studenti al terzo anno del Corso di Laurea in
+Informatica e Comunicazione Digitale dell'Università degli Studi di Bari "`A.
+Moro`", composto da Andrea *Esposito*, Alessandro *Annese* e Graziano *Montanaro*.
+
+Il nome del team deriva dalla condensazione del prefisso greco "`tri`" (tre,
+come i componenti del gruppo) e "`Sec`" (da "`Security`").
+
+Il progetto, "`**Apk Backdoor**`" rappresenta uno sviluppo di un meta-attacco,
+ovverosia uno sviluppo di una intera classe di attacchi. Tali attacchi sono
+accumunati da tutte le fasi della killchain fatta eccezione per la fase di
+azione (che varia in base agli obiettivi specifici). L'intera classe di attacchi
+si basa sulla introduzione di una _backdoor_ ("`porta sul retro`") all'interno
+di APK validi e funzionanti.
+
+=== Contesto
+
+Si è deciso di realizzare una intera classe di attacchi aventi l'obiettivo di
+ottenere l'accesso a un sistema Android, uno dei sistemi operativi mobile più
+diffusi.
+
+Nello specifico, si realizzerà un _tool_ che consenta l'automatizzazione
+dell'iniezione di codice malevole all'interno di un APK funzionante. Da qui,
+l'obiettivo è quello di ottenere il controllo remote del dispositivo mobile,
+spianando la strada a qualsiasi tipo di obiettivo l'attaccante possa voler
+raggiungere (per esempio, furto di dati sensibili o ricatti).
+
+=== Scenario
+
+Al giorno d'oggi, la maggioranza delle persone utilizzano applicazioni per
+l'ascolto di musica on-demand online. Esempi di questi sistemi sono Spotify,
+Amazon Music, iTunes, Google Music, ecc.
+
+Molti di questi sistemi prevedono un sistema di abbonamento mensile per
+permettere agli utenti di usufruire dei loro servizi. Tuttavia, una gran parte
+degli utenti non è disposta a pagare per servizi digitali e quindi le aziende
+forniscono una versione "`limitata`" dei loro servizi gratuitamente.
+
+Ma queste limitazioni non sono spesso accettate da tutti: molti utenti
+preferiscono, infatti, "`crackare`" l'applicazione in modo da poterla utilizzare
+senza alcun tipo di limitazione. Ed è in questo scenario che l'attacco si
+colloca: gli attaccanti hanno l'obiettivo di fornire una crack corrotta agli
+utenti che, una volta installata, fornisca una porta di accesso al sistema
+spianando la strada a furti di dati o altri danni.
+
 == Killchain
 
 .Killchain
