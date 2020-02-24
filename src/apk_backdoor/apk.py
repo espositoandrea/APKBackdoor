@@ -80,6 +80,9 @@ class Apk:
     def sign(self):
         logging.info(f"Signing '{self.apk_name}_MOD.apk'...")
 
+        # command = f"jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore {self.KEYSTORE_PATH} -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA {self.apk_name}_SIGNED.apk androiddebugkey"
+        # utilities.run_command(command)
+
         command = f'zipalign -f -v 4 {self.apk_name}_MOD.apk {self.apk_name}_SIGNED.apk'
         utilities.run_command(command)
 
@@ -89,3 +92,4 @@ class Apk:
         utilities.run_command(command)
 
         logging.info('    ... Done.')
+
