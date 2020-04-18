@@ -13,14 +13,14 @@ def phase(msg):
             try:
                 func(*args)
             except BaseException as e:
-                print(f'{Fore.RED}ERROR{Style.RESET_ALL}')
+                print(f'\r {Fore.RED}[X]{Style.RESET_ALL} {msg}   ')
                 logging.critical(f"{type(e).__name__} --- {str(e)}")
                 print(f"{Fore.RED}{type(e).__name__} - {str(e)}\n"
                       "    To get more information about the error, take a look at the log file (apk_backdoor.log).\n"
                       "    You can increase the verbosity level of the log file using the --verbose option")
                 sys.exit(1)
             else:
-                print(f'{Fore.GREEN}Done{Style.RESET_ALL}')
+                print(f'\r {Fore.GREEN}[✓]{Style.RESET_ALL} {msg}   ')
 
         return function_wrapper
 
